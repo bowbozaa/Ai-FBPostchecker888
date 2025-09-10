@@ -859,5 +859,12 @@
     "type": "user",
     "message": "จัดไป",
     "timestamp": "2025-09-10T19:56:12.996Z"
+  },
+  {
+    "sessionId": "de7f29e3-f543-4d26-a830-574ddd5cf72d",
+    "messageId": 87,
+    "type": "user",
+    "message": "เริ่ม",
+    "timestamp": "2025-09-10T19:57:56.309Z"
   }
 ]

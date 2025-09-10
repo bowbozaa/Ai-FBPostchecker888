@@ -1,3 +1,55 @@
+# Dependencies
 node_modules
-node_modules
+
+# Build output
+dist
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.production
+
+# IDEs and editors
+.vscode
+.idea
+.project
+.classpath
+*.swp
+
+# OS-generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Cloud Shell / System specific
+.cache
+.config
+.local
+.claude
+.codeoss
+.gemini
+.mcdc
+.n8n
+.nh
+.npm
+.pki
+.ssh
+
+# Other
 .vercel
+server.pid
+*.zip
