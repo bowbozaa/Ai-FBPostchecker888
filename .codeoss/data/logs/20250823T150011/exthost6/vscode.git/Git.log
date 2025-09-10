@@ -1,0 +1,53 @@
+2025-08-23 16:00:46.751 [info] [main] Log level: Info
+2025-08-23 16:00:46.751 [info] [main] Validating found git in: "git"
+2025-08-23 16:00:46.751 [info] [main] Using git "2.43.0" from "git"
+2025-08-23 16:00:46.751 [info] [Model][doInitialScan] Initial repository scan started
+2025-08-23 16:00:46.751 [info] > git rev-parse --show-toplevel [41ms]
+2025-08-23 16:00:46.751 [info] > git rev-parse --git-dir --git-common-dir [31ms]
+2025-08-23 16:00:46.751 [info] [Model][openRepository] Opened repository (path): /home/bankstartup2025
+2025-08-23 16:00:46.751 [info] [Model][openRepository] Opened repository (real path): /home/bankstartup2025
+2025-08-23 16:00:46.752 [info] > git config --get commit.template [24ms]
+2025-08-23 16:00:46.762 [info] [Git][getRemotes] No remotes found in the git config file
+2025-08-23 16:00:46.766 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [6ms]
+2025-08-23 16:00:46.766 [warning] [Git][getBranch] No such branch: main
+2025-08-23 16:00:46.825 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [36ms]
+2025-08-23 16:00:53.328 [info] > git rev-parse --show-toplevel [6468ms]
+2025-08-23 16:00:53.337 [info] > git check-ignore -v -z --stdin [58ms]
+2025-08-23 16:00:53.359 [info] > git rev-parse --show-toplevel [8ms]
+2025-08-23 16:00:53.390 [info] > git status -z -uall [6615ms] (cancelled)
+2025-08-23 16:00:53.403 [info] > git rev-parse --show-toplevel [30ms]
+2025-08-23 16:00:56.590 [info] > git check-ignore -v -z --stdin [3203ms]
+2025-08-23 16:00:58.861 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2011ms]
+2025-08-23 16:00:58.861 [warning] [Git][getBranch] No such branch: main
+2025-08-23 16:00:58.863 [error] [GitHistoryProvider][resolveHEADMergeBase] Failed to resolve merge base for main: Error: No such branch: main.
+2025-08-23 16:00:58.959 [info] > git config --get commit.template [201ms]
+2025-08-23 16:00:58.963 [info] > git rev-parse --show-toplevel [216ms]
+2025-08-23 16:00:59.371 [info] [Git][getRemotes] No remotes found in the git config file
+2025-08-23 16:00:59.399 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [28ms]
+2025-08-23 16:00:59.399 [warning] [Git][getBranch] No such branch: main
+2025-08-23 16:00:59.426 [info] > git rev-parse --show-toplevel [419ms]
+2025-08-23 16:00:59.487 [info] > git rev-parse --show-toplevel [38ms]
+2025-08-23 16:00:59.488 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [61ms]
+2025-08-23 16:00:59.511 [info] > git rev-parse --show-toplevel [3ms]
+2025-08-23 16:00:59.533 [info] > git rev-parse --show-toplevel [10ms]
+2025-08-23 16:00:59.554 [info] > git rev-parse --show-toplevel [9ms]
+2025-08-23 16:00:59.595 [info] > git rev-parse --show-toplevel [31ms]
+2025-08-23 16:00:59.608 [info] > git rev-parse --show-toplevel [4ms]
+2025-08-23 16:00:59.620 [info] > git rev-parse --show-toplevel [3ms]
+2025-08-23 16:00:59.621 [info] [Model][doInitialScan] Initial repository scan completed - repositories (1), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2025-08-23 16:01:02.171 [info] > git status -z -uall [2763ms] (cancelled)
+2025-08-23 16:01:04.275 [info] > git config --get --local branch.main.github-pr-owner-number [4ms]
+2025-08-23 16:01:04.275 [warning] [Git][config] git config failed: Failed to execute git
+2025-08-23 16:01:04.297 [info] > git config --get --local branch.main.remote [4ms]
+2025-08-23 16:01:04.297 [warning] [Git][config] git config failed: Failed to execute git
+2025-08-23 16:01:04.318 [info] > git config --get --local branch.main.merge [2ms]
+2025-08-23 16:01:04.318 [warning] [Git][config] git config failed: Failed to execute git
+2025-08-23 16:02:20.108 [info] > git check-ignore -v -z --stdin [9ms]
+2025-08-23 16:02:57.498 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z --shortstat --diff-merges=first-parent -n50 --skip=0 --topo-order --decorate=full --stdin [4ms]
+2025-08-23 16:02:57.499 [info] fatal: bad revision 'refs/heads/main'
+2025-08-23 16:02:57.503 [error] [GitHistoryProvider][provideHistoryItems] Failed to get history items with options '{"historyItemRefs":["refs/heads/main"],"limit":50,"skip":0}': Failed to execute git {
+  "exitCode": 128,
+  "gitCommand": "log",
+  "stdout": "",
+  "stderr": "fatal: bad revision 'refs/heads/main'\n"
+}

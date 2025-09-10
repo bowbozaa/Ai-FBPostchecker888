@@ -1,0 +1,10 @@
+2025-08-24 12:40:28.001 [info] GitLens (pre-release) v2025.8.2205 activating in Code OSS for Cloud Shell (1.100.3-cde) on the web; language='en', logLevel='warn', defaultDateLocale='null' (someValue.machineId|someValue.sessionId)
+To enable debug logging, set `"gitlens.outputLevel": "debug"` or run "GitLens: Enable Debug Logging" from the Command Palette
+[2025-08-24 12:40:27.777] [GIT          ] [/tmp/apt-dpkg-install-VEUvgG] git rev-parse --show-toplevel • spawn /usr/bin/git EACCES [5ms]
+[2025-08-24 12:40:27.781]  — FAILED
+Error: EACCES: permission denied, scandir '/tmp/apt-dpkg-install-VEUvgG'
+
+2025-08-24 12:40:28.932 [info] [2025-08-24 12:40:28.789] [GIT          ] [/tmp/apt-dpkg-install-VEUvgG] git rev-parse --show-toplevel • spawn /usr/bin/git EACCES [5ms]
+[2025-08-24 12:40:28.790]  — FAILED
+Error: EACCES: permission denied, scandir '/tmp/apt-dpkg-install-VEUvgG'
+

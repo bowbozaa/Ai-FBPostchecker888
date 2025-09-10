@@ -1,0 +1,156 @@
+{
+	"name": "cloud-debug",
+	"displayName": "cloud-debug",
+	"description": "Cloud Studio Debug",
+	"version": "0.0.5",
+	"publisher": "CloudStudio",
+	"engines": {
+		"vscode": "^1.56.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://devops.codingcorp.net/p/cloud-studio-next/d/cloud-studio-extensions/git"
+	},
+	"main": "./dist/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "CloudDebug.startDevMode",
+				"title": "%command.startDevMode%",
+				"icon": "assets/icon/dev_start.svg",
+				"group": "devspace"
+			},
+			{
+				"command": "CloudDebug.endDevMode",
+				"title": "%command.endDevMode%",
+				"icon": "assets/icon/dev_end.svg",
+				"group": "devspace"
+			},
+			{
+				"command": "CloudDebug.startSpaceDev",
+				"title": "%command.startDevMode%",
+				"icon": "assets/icon/dev_start.svg"
+			},
+			{
+				"command": "CloudDebug.startDuplicateDevMode",
+				"title": "%command.startDuplicateDev%"
+			},
+			{
+				"command": "CloudDebug.viewManifest",
+				"title": "%command.viewManifest%"
+			},
+			{
+				"command": "CloudDebug.refreshTree",
+				"title": "%command.refreshTree%",
+				"icon": "$(refresh)"
+			},
+			{
+				"command": "CloudDebug.refreshing",
+				"title": "%command.refreshing%",
+				"icon": "$(sync~spin)"
+			}
+		],
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"icon": "assets/logo.svg",
+					"id": "CloudDebugView",
+					"title": "云调试"
+				}
+			]
+		},
+		"views": {
+			"CloudDebugView": [
+				{
+					"id": "CloudDebug",
+					"name": "CloudDebug",
+					"type": "tree"
+				}
+			]
+		},
+		"menus": {
+			"view/title": [
+				{
+					"command": "CloudDebug.refreshTree",
+					"when": "!refreshing && view == CloudDebug",
+					"group": "navigation"
+				},
+				{
+					"command": "CloudDebug.refreshing",
+					"when": "refreshing && view == CloudDebug",
+					"group": "navigation"
+				}
+			],
+			"view/item/context": [
+				{
+					"command": "CloudDebug.startDevMode",
+					"when": "viewItem =~ /^workload-(?!Develop)/i",
+					"group": "inline@0"
+				},
+				{
+					"command": "CloudDebug.endDevMode",
+					"when": "viewItem =~ /^workload-Develop/i",
+					"group": "inline@0"
+				},
+				{
+					"command": "CloudDebug.startDuplicateDevMode",
+					"when": "viewItem =~ /^workload/i",
+					"group": "navigation"
+				},
+				{
+					"command": "CloudDebug.startSpaceDev",
+					"when": "viewItem =~ /^namespace$/i",
+					"group": "inline@0"
+				},
+				{
+					"command": "CloudDebug.viewManifest",
+					"when": "viewItem =~ /^workload/i",
+					"group": "navigation"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run package",
+		"compile": "webpack",
+		"watch": "webpack --watch",
+		"package": "webpack --mode production --devtool hidden-source-map",
+		"compile-tests": "tsc -p . --outDir out",
+		"watch-tests": "tsc -p . -w --outDir out",
+		"pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.2.0",
+		"@types/mocha": "^9.1.1",
+		"@types/node": "16.x",
+		"@typescript-eslint/eslint-plugin": "^5.30.0",
+		"@typescript-eslint/parser": "^5.30.0",
+		"@vscode/test-electron": "^2.1.5",
+		"eslint": "^8.18.0",
+		"glob": "^8.0.3",
+		"mocha": "^10.0.0",
+		"ts-loader": "^9.3.1",
+		"typescript": "^4.7.4",
+		"webpack": "^5.73.0",
+		"webpack-cli": "^4.10.0"
+	},
+	"dependencies": {
+		"@types/vscode": "1.56.0",
+		"axios": "^0.27.2",
+		"copy-webpack-plugin": "^11.0.0",
+		"vscode-nls": "^5.2.0"
+	},
+	"__metadata": {
+		"installedTimestamp": 1755962025493,
+		"targetPlatform": "universal",
+		"size": 823870
+	}
+}

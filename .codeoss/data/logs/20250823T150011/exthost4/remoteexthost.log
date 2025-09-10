@@ -1,0 +1,106 @@
+2025-08-23 15:19:04.317 [info] Extension host with pid 23593 started
+2025-08-23 15:19:04.317 [error] Error: EEXIST: file already exists, open '/home/bankstartup2025/.codeoss/data/User/workspaceStorage/1926c3c5/vscode.lock'
+2025-08-23 15:19:04.317 [info] Lock '/home/bankstartup2025/.codeoss/data/User/workspaceStorage/1926c3c5/vscode.lock': Could not acquire lock, checking if the file is stale.
+2025-08-23 15:19:04.319 [info] Lock '/home/bankstartup2025/.codeoss/data/User/workspaceStorage/1926c3c5/vscode.lock': The lock does not look stale, elapsed: 6496 ms, giving up.
+2025-08-23 15:19:04.329 [error] Error: EEXIST: file already exists, open '/home/bankstartup2025/.codeoss/data/User/workspaceStorage/1926c3c5-1/vscode.lock'
+2025-08-23 15:19:04.332 [info] Lock '/home/bankstartup2025/.codeoss/data/User/workspaceStorage/1926c3c5-1/vscode.lock': Could not acquire lock, checking if the file is stale.
+2025-08-23 15:19:04.333 [info] Lock '/home/bankstartup2025/.codeoss/data/User/workspaceStorage/1926c3c5-1/vscode.lock': The pid 2164 appears to be gone.
+2025-08-23 15:19:04.333 [info] Lock '/home/bankstartup2025/.codeoss/data/User/workspaceStorage/1926c3c5-1/vscode.lock': Deleting a stale lock.
+2025-08-23 15:19:04.475 [info] ExtensionService#_doActivateExtension google.geminicodeassist, startup: false, activationEvent: 'onView:cloudcode.gemini.chatView'
+2025-08-23 15:19:04.477 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-08-23 15:19:04.478 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: false, activationEvent: '*', root cause: vscode.git
+2025-08-23 15:19:04.479 [info] ExtensionService#_doActivateExtension mtxr.sqltools, startup: false, activationEvent: '*', root cause: google-cloud-spanner-ecosystem.google-cloud-spanner-driver
+2025-08-23 15:19:04.480 [info] ExtensionService#_doActivateExtension GustavoASC.google-drive-vscode, startup: false, activationEvent: '*'
+2025-08-23 15:19:04.480 [info] ExtensionService#_doActivateExtension nocalhost.nocalhost, startup: false, activationEvent: '*'
+2025-08-23 15:19:04.481 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-08-23 15:19:04.482 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-08-23 15:19:04.482 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-08-23 15:19:04.483 [info] ExtensionService#_doActivateExtension google.cloud-shell, startup: false, activationEvent: 'onTerminalProfile:cloudshell.default'
+2025-08-23 15:19:09.073 [info] ExtensionService#_doActivateExtension vscode.npm, startup: true, activationEvent: 'workspaceContains:package.json'
+2025-08-23 15:19:09.140 [info] Lock '/home/bankstartup2025/.codeoss/data/User/workspaceStorage/1926c3c5-1/vscode.lock': Lock acquired.
+2025-08-23 15:19:09.336 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: '*'
+2025-08-23 15:19:09.336 [info] ExtensionService#_doActivateExtension vscode.github, startup: false, activationEvent: '*'
+2025-08-23 15:19:09.520 [info] ExtensionService#_doActivateExtension google-cloud-spanner-ecosystem.google-cloud-spanner-driver, startup: false, activationEvent: '*'
+2025-08-23 15:19:11.465 [info] Eager extensions activated
+2025-08-23 15:19:11.466 [info] ExtensionService#_doActivateExtension EditorConfig.EditorConfig, startup: false, activationEvent: 'onStartupFinished'
+2025-08-23 15:19:11.467 [info] ExtensionService#_doActivateExtension googlecloudtools.cloudcode, startup: false, activationEvent: 'onStartupFinished'
+2025-08-23 15:19:11.470 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-08-23 15:19:11.471 [info] ExtensionService#_doActivateExtension google.gemini-cli-vscode-ide-companion, startup: false, activationEvent: 'onStartupFinished'
+2025-08-23 15:19:11.474 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-08-23 15:19:11.474 [info] ExtensionService#_doActivateExtension CloudStudio.cloud-debug, startup: false, activationEvent: 'onStartupFinished'
+2025-08-23 15:19:11.475 [info] ExtensionService#_doActivateExtension dbaeumer.vscode-eslint, startup: false, activationEvent: 'onStartupFinished'
+2025-08-23 15:19:11.475 [info] ExtensionService#_doActivateExtension eamodio.gitlens, startup: false, activationEvent: 'onStartupFinished'
+2025-08-23 15:19:11.476 [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode, startup: false, activationEvent: 'onStartupFinished'
+2025-08-23 15:19:11.476 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onStartupFinished', root cause: GitHub.vscode-pull-request-github
+2025-08-23 15:19:11.476 [info] ExtensionService#_doActivateExtension Postman.postman-for-vscode, startup: false, activationEvent: 'onStartupFinished'
+2025-08-23 15:19:11.477 [info] ExtensionService#_doActivateExtension Tencent-Cloud.coding-copilot, startup: false, activationEvent: 'onStartupFinished'
+2025-08-23 15:19:18.792 [warning] [Decorations] CAPPING events from decorations provider vscode.git 10000
+2025-08-23 15:19:22.514 [info] ExtensionService#_doActivateExtension GitHub.vscode-pull-request-github, startup: false, activationEvent: 'onStartupFinished'
+2025-08-23 15:19:24.543 [warning] [Decorations] CAPPING events from decorations provider vscode.git 10001
+2025-08-23 15:19:32.461 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:json'
+2025-08-23 15:19:33.115 [warning] DiagnosticCollection with name 'eslint' does already exist.
+2025-08-23 15:25:52.942 [info] Extension host terminating: received terminate message from renderer
+2025-08-23 15:25:52.943 [info] Lock '/home/bankstartup2025/.codeoss/data/User/workspaceStorage/1926c3c5-1/vscode.lock': Marking the lockfile as scheduled to be released in 6000 ms.
+2025-08-23 15:25:53.011 [error] An error occurred when disposing the subscriptions for extension 'eamodio.gitlens':
+2025-08-23 15:25:53.046 [error] TypeError: Cannot read properties of undefined (reading 'dispose')
+    at Object.dispose (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:145:120067)
+    at m0.<anonymous> (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:115:8921)
+    at m0.dispose (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:115:9017)
+    at Object.dispose (/home/bankstartup2025/.codeoss/extensions/eamodio.gitlens-2025.8.2205-universal/dist/gitlens.js:105:29281)
+    at /home/bankstartup2025/.codeoss/extensions/eamodio.gitlens-2025.8.2205-universal/dist/gitlens.js:384:17184
+    at Array.forEach (<anonymous>)
+    at Object.dispose (/home/bankstartup2025/.codeoss/extensions/eamodio.gitlens-2025.8.2205-universal/dist/gitlens.js:384:17166)
+    at Er (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:25:746)
+    at file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:123:15046
+    at file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:25:1056
+    at Object.dispose (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+    at TJ.eb (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:123:11919)
+    at file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:123:9874
+    at Array.map (<anonymous>)
+    at TJ.$ (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:123:9862)
+    at TJ.terminate (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:123:10105)
+    at v2.terminate (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:124:1434)
+    at us (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:225:5702)
+    at ed.value (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:225:3862)
+    at P.B (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:27:2373)
+    at P.fire (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:27:2591)
+    at lo.fire (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:9458)
+    at J1.A (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:12574)
+    at ed.value (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:10994)
+    at P.B (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:27:2373)
+    at P.fire (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:27:2591)
+    at Qx.acceptChunk (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:7941)
+    at ed.value (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:7227)
+    at P.B (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:27:2373)
+    at P.fire (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:27:2591)
+    at zL.z (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:21744)
+    at zL.acceptFrame (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:21550)
+    at HL.n (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:20078)
+    at file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:17310
+    at Socket.t (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:15251)
+    at Socket.emit (node:events:524:28)
+    at Socket.emit (node:domain:489:12)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Socket.Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:191:23)
+    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)
+2025-08-23 15:25:57.772 [error] Error: Channel has been closed
+    at s (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:125:2431)
+    at Object.appendLine (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:125:2570)
+    at R.logOutputMessage (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:316524)
+    at R.error (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:316415)
+    at /google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:324783
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:545:9)
+    at processTimers (node:internal/timers:519:7)
+    at Object.dispose (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:9482)
+    at Object.dispose (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:549)
+    at Object.t.deactivate (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:22116)
+    at async Promise.all (index 13)
+    at TJ.$ (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:123:9888)
+2025-08-23 15:25:57.776 [error] Error: Stopping the server timed out
+    at /home/bankstartup2025/.codeoss/extensions/dbaeumer.vscode-eslint-3.0.16-universal/client/out/extension.js:1:433057
+    at async Promise.all (index 18)
+    at TJ.$ (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:123:9888)
+2025-08-23 15:25:57.779 [info] Extension host with pid 23593 exiting with code 0

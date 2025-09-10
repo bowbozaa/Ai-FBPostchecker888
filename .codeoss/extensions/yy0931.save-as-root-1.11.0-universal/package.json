@@ -1,0 +1,76 @@
+{
+	"name": "save-as-root",
+	"displayName": "Save as Root in Remote - SSH",
+	"description": "Edit configuration files with root privileges while using the Remote - SSH extension",
+	"version": "1.11.0",
+	"publisher": "yy0931",
+	"engines": {
+		"vscode": "^1.100.0"
+	},
+	"repository": {
+		"url": "https://github.com/yy0931/save-as-root",
+		"type": "git"
+	},
+	"bugs": {
+		"url": "https://github.com/yy0931/save-as-root/issues"
+	},
+	"icon": "icon.png",
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [],
+	"keywords": [
+		"remote",
+		"ssh",
+		"root",
+		"sudo"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "save-as-root.saveFile",
+				"title": "Save as Root"
+			},
+			{
+				"command": "save-as-root.saveFileAsSpecifiedUser",
+				"title": "Save as Specified User…"
+			},
+			{
+				"command": "save-as-root.newFile",
+				"title": "New File as Root..."
+			}
+		],
+		"configuration": {
+			"properties": {
+				"save-as-root.command": {
+					"type": "string",
+					"default": "sudo"
+				}
+			}
+		},
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "save-as-root.newFile",
+					"group": "navigation@9",
+					"when": "resourceScheme == file && explorerResourceIsFolder && remoteName != ''"
+				}
+			]
+		}
+	},
+	"capabilities": {
+		"virtualWorkspaces": false,
+		"untrustedWorkspaces": {
+			"supported": "limited",
+			"restrictedConfigurations": [
+				"save-as-root.command"
+			]
+		}
+	},
+	"__metadata": {
+		"installedTimestamp": 1755967885933,
+		"targetPlatform": "universal",
+		"size": 637142
+	}
+}

@@ -1,0 +1,44 @@
+2025-08-23 16:04:00.217 [info] [main] Log level: Info
+2025-08-23 16:04:00.220 [info] [main] Validating found git in: "git"
+2025-08-23 16:04:00.220 [info] [main] Using git "2.43.0" from "git"
+2025-08-23 16:04:00.220 [info] [Model][doInitialScan] Initial repository scan started
+2025-08-23 16:04:00.220 [info] > git rev-parse --show-toplevel [4ms]
+2025-08-23 16:04:00.220 [info] > git rev-parse --git-dir --git-common-dir [44ms]
+2025-08-23 16:04:00.220 [info] [Model][openRepository] Opened repository (path): /home/bankstartup2025
+2025-08-23 16:04:00.220 [info] [Model][openRepository] Opened repository (real path): /home/bankstartup2025
+2025-08-23 16:04:00.220 [info] > git config --get commit.template [19ms]
+2025-08-23 16:04:00.220 [info] [Git][getRemotes] No remotes found in the git config file
+2025-08-23 16:04:00.220 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [5ms]
+2025-08-23 16:04:00.220 [warning] [Git][getBranch] No such branch: main
+2025-08-23 16:04:00.220 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [39ms]
+2025-08-23 16:04:00.258 [info] > git rev-parse --show-toplevel [7ms]
+2025-08-23 16:04:00.286 [info] > git rev-parse --show-toplevel [12ms]
+2025-08-23 16:04:00.302 [info] > git rev-parse --show-toplevel [8ms]
+2025-08-23 16:04:00.317 [info] > git rev-parse --show-toplevel [5ms]
+2025-08-23 16:04:00.333 [info] > git rev-parse --show-toplevel [5ms]
+2025-08-23 16:04:00.353 [info] > git rev-parse --show-toplevel [8ms]
+2025-08-23 16:04:00.368 [info] > git rev-parse --show-toplevel [1ms]
+2025-08-23 16:04:00.383 [info] > git rev-parse --show-toplevel [2ms]
+2025-08-23 16:04:00.398 [info] > git rev-parse --show-toplevel [2ms]
+2025-08-23 16:04:04.461 [info] > git rev-parse --show-toplevel [4052ms]
+2025-08-23 16:04:04.487 [info] > git rev-parse --show-toplevel [19ms]
+2025-08-23 16:04:04.500 [info] > git status -z -uall [4376ms] (cancelled)
+2025-08-23 16:04:04.501 [info] > git rev-parse --show-toplevel [6ms]
+2025-08-23 16:04:04.501 [info] [Model][doInitialScan] Initial repository scan completed - repositories (1), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2025-08-23 16:04:04.518 [info] > git check-ignore -v -z --stdin [9ms]
+2025-08-23 16:04:06.824 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2136ms]
+2025-08-23 16:04:06.824 [warning] [Git][getBranch] No such branch: main
+2025-08-23 16:04:06.825 [error] [GitHistoryProvider][resolveHEADMergeBase] Failed to resolve merge base for main: Error: No such branch: main.
+2025-08-23 16:04:06.874 [info] > git config --get commit.template [427ms]
+2025-08-23 16:04:06.887 [info] [Git][getRemotes] No remotes found in the git config file
+2025-08-23 16:04:09.267 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2381ms]
+2025-08-23 16:04:09.267 [warning] [Git][getBranch] No such branch: main
+2025-08-23 16:04:09.365 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [74ms]
+2025-08-23 16:04:09.723 [info] > git status -z -uall [447ms] (cancelled)
+2025-08-23 16:04:09.741 [info] > git check-ignore -v -z --stdin [28ms]
+2025-08-23 16:04:13.799 [info] > git config --get --local branch.main.github-pr-owner-number [5ms]
+2025-08-23 16:04:13.799 [warning] [Git][config] git config failed: Failed to execute git
+2025-08-23 16:04:13.821 [info] > git config --get --local branch.main.remote [5ms]
+2025-08-23 16:04:13.821 [warning] [Git][config] git config failed: Failed to execute git
+2025-08-23 16:04:13.842 [info] > git config --get --local branch.main.merge [5ms]
+2025-08-23 16:04:13.842 [warning] [Git][config] git config failed: Failed to execute git

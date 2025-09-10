@@ -1,0 +1,13 @@
+const scrapePost = require('./scrape');
+
+const url = process.argv[2]; // รับ URL จาก args
+if (!url) {
+  console.error('❌ กรุณาใส่ URL โพสต์ Facebook');
+  process.exit(1);
+}
+
+scrapePost(url).then((postText) => {
+  console.log('\n✅ ข้อความในโพสต์ Facebook:');
+  console.log(postText);
+});
+

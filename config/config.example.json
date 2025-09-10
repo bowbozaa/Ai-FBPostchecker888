@@ -1,0 +1,16 @@
+{
+  "facebook": {
+    "access_token": "YOUR_FACEBOOK_ACCESS_TOKEN",
+    "page_id": "YOUR_FACEBOOK_PAGE_ID"
+  },
+  "line": {
+    "token": "YOUR_LINE_NOTIFY_TOKEN"
+  },
+  "google_sheets": {
+    "credentials_file": "path/to/credentials.json",
+    "sheet_id": "YOUR_SHEET_ID"
+  },
+  "policy": {
+    "banned_keywords": ["ban", "forbidden", "secret"]
+  }
+}

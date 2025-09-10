@@ -1,0 +1,3005 @@
+npm warn config cache-max This option has been deprecated in favor of `--prefer-online`
+
+> web-creator@1.0.0 dev
+> node scripts/build.mjs
+
+Running on:
+http://127.0.0.1:8000
+http://10.88.0.4:8000
+http://172.17.0.1:8000
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "scheduler"[0m
+
+    node_modules/react-dom/cjs/react-dom.development.js:27:24:
+[37m      27 │ var Scheduler = require([32m'scheduler'[37m);
+         ╵                         [32m~~~~~~~~~~~[0m
+
+  You can mark the path "scheduler" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle. You can also surround this "require" call with a try/catch block to handle this failure at run-time instead of bundle-time.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/PostCreator.tsx:23:7:
+[37m      23 │ } from [32m'lucide-react'[37m
+         ╵        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/Stats.tsx:7:96:
+[37m      7 │ ...le, CheckCircle, Users, Clock, Shield, Target } from [32m'lucide-react'[37m
+        ╵                                                         [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "class-variance-authority"[0m
+
+    src/components/ui/button.tsx:3:39:
+[37m      3 │ import { cva, type VariantProps } from [32m"class-variance-authority"[37m
+        ╵                                        [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "class-variance-authority" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/Home.tsx:20:7:
+[37m      20 │ } from [32m'lucide-react'[37m
+         ╵        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/Login.tsx:2:48:
+[37m      2 │ import { Shield, Eye, EyeOff, Lock, User } from [32m'lucide-react'[37m
+        ╵                                                 [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/Settings.tsx:8:41:
+[37m      8 │ import { Settings as SettingsIcon } from [32m'lucide-react'[37m
+        ╵                                          [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/Users.tsx:2:106:
+[37m      2 │ ...ld, Eye, EyeOff, Save, X, Lock, AlertTriangle } from [32m'lucide-react'[37m
+        ╵                                                         [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/Layout.tsx:11:7:
+[37m      11 │ } from [32m'lucide-react'[37m
+         ╵        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/N8nBuilder.tsx:13:102:
+[37m      13 │ ...es, Code, Shield, AlertTriangle, CheckCircle } from [32m'lucide-react'[37m
+         ╵                                                        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/ErrorBoundary.tsx:5:30:
+[37m      5 │ import { AlertTriangle } from [32m'lucide-react'[37m
+        ╵                               [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/postCreator/PageSelector.tsx:12:57:
+[37m      12 │ ...t { Globe, Plus, Link2, Trash2, CheckCircle2 } from [32m'lucide-react'[37m
+         ╵                                                        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "class-variance-authority"[0m
+
+    src/components/ui/label.tsx:5:39:
+[37m      5 │ import { cva, type VariantProps } from [32m"class-variance-authority"[37m
+        ╵                                        [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "class-variance-authority" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/postCreator/SchedulePicker.tsx:8:22:
+[37m      8 │ import { Clock } from [32m'lucide-react'[37m
+        ╵                       [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "class-variance-authority"[0m
+
+    src/components/ui/badge.tsx:2:39:
+[37m      2 │ import { cva, type VariantProps } from [32m"class-variance-authority"[37m
+        ╵                                        [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "class-variance-authority" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/settings/AppearancePanel.tsx:9:26:
+[37m      9 │ import { Sun, Moon } from [32m'lucide-react'[37m
+        ╵                           [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/dashboard/RecentAlerts.tsx:5:64:
+[37m      5 │ ...ll, CheckCircle, XCircle, AlertTriangle, Info } from [32m'lucide-react'[37m
+        ╵                                                         [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/analyzer/FBPostAnalysisForm.tsx:14:138:
+[37m      14 │ ...le, CheckCircle2, Loader2, Wifi, ShieldCheck } from [32m'lucide-react'[37m
+         ╵                                                        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/onboarding/OnboardingSection.tsx:28:7:
+[37m      28 │ } from [32m'lucide-react'[37m
+         ╵        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "jspdf-autotable"[0m
+
+    src/components/onboarding/OnboardingSection.tsx:32:22:
+[37m      32 │ import autoTable from [32m'jspdf-autotable'[37m
+         ╵                       [32m~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "jspdf-autotable" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/ui/dialog.tsx:5:18:
+[37m      5 │ import { X } from [32m"lucide-react"[37m
+        ╵                   [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/settings/BannedKeywordsPanel.tsx:14:65:
+[37m      14 │ ..., Trash2, Upload, RefreshCcw, Save, Download } from [32m'lucide-react'[37m
+         ╵                                                        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/settings/ApiConfigPanel.tsx:16:53:
+[37m      16 │ import { Link2, Save, Wifi, Info, ShieldCheck } from [32m'lucide-react'[37m
+         ╵                                                      [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "@babel/runtime/helpers/typeof"[0m
+
+    node_modules/jspdf/dist/jspdf.es.min.js:51:13:
+[37m      51 │ import t from[32m"@babel/runtime/helpers/typeof"[37m;import{zlibSync as e}...
+         ╵              [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "@babel/runtime/helpers/typeof" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "tslib"[0m
+
+    node_modules/react-remove-scroll/dist/es2015/Combination.js:1:25:
+[37m      1 │ import { __assign } from [32m"tslib"[37m;
+        ╵                          [32m~~~~~~~[0m
+
+  You can mark the path "tslib" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/ui/accordion.tsx:5:28:
+[37m      5 │ import { ChevronDown } from [32m"lucide-react"[37m
+        ╵                             [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "fflate"[0m
+
+    node_modules/jspdf/dist/jspdf.es.min.js:51:70:
+[37m      51 │ ...f";import{zlibSync as e}from[32m"fflate"[37m;import n from"@babel/runti...
+         ╵                                [32m~~~~~~~~[0m
+
+  You can mark the path "fflate" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "immer"[0m
+
+    node_modules/recharts/es6/state/tooltipSlice.js:2:26:
+[37m      2 │ import { castDraft } from [32m'immer'[37m;
+        ╵                           [32m~~~~~~~[0m
+
+  You can mark the path "immer" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "d3-scale"[0m
+
+    node_modules/victory-vendor/es/d3-scale.js:6:14:
+[37m      6 │ export * from [32m"d3-scale"[37m;
+        │               [32m~~~~~~~~~~[37m
+        ╵               [32m"./d3-scale"[0m
+
+  Use the relative path "./d3-scale" to reference the file "node_modules/victory-vendor/es/d3-scale.js". Without the leading "./", the path "d3-scale" is being interpreted as a package path instead.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "../../array/last.js"[0m
+
+    node_modules/es-toolkit/dist/compat/array/last.js:5:23:
+[37m      5 │ const last$1 = require([32m'../../array/last.js'[37m);
+        ╵                        [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react-redux"[0m
+
+    node_modules/recharts/es6/state/RechartsStoreProvider.js:3:25:
+[37m      3 │ import { Provider } from [32m'react-redux'[37m;
+        ╵                          [32m~~~~~~~~~~~~~[0m
+
+  You can mark the path "react-redux" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "../../array/flatten.js"[0m
+
+    node_modules/es-toolkit/dist/compat/array/sortBy.js:6:24:
+[37m      6 │ const flatten = require([32m'../../array/flatten.js'[37m);
+        ╵                         [32m~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "@babel/runtime/helpers/slicedToArray"[0m
+
+    node_modules/jspdf/dist/jspdf.es.min.js:51:92:
+[37m      51 │ ...import n from[32m"@babel/runtime/helpers/slicedToArray"[37m;import{deco...
+         ╵                 [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "@babel/runtime/helpers/slicedToArray" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCannot read file: /home/bankstartup2025/node_modules/es-toolkit/dist/compat/array/orderBy.js[0m
+
+    node_modules/es-toolkit/dist/compat/array/sortBy.js:5:24:
+[37m      5 │ const orderBy = require([32m'./orderBy.js'[37m);
+        ╵                         [32m~~~~~~~~~~~~~~[0m
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "../../function/identity.js"[0m
+
+    node_modules/es-toolkit/dist/compat/array/uniqBy.js:6:25:
+[37m      6 │ const identity = require([32m'../../function/identity.js'[37m);
+        ╵                          [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react-is"[0m
+
+    node_modules/recharts/es6/util/ReactUtils.js:3:27:
+[37m      3 │ import { isFragment } from [32m'react-is'[37m;
+        ╵                            [32m~~~~~~~~~~[0m
+
+  You can mark the path "react-is" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCannot read file: /home/bankstartup2025/node_modules/es-toolkit/compat/throttle.js[0m
+
+    node_modules/recharts/es6/component/ResponsiveContainer.js:9:21:
+[37m      9 │ import throttle from [32m'es-toolkit/compat/throttle'[37m;
+        ╵                      [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "d3-shape"[0m
+
+    node_modules/victory-vendor/es/d3-shape.js:6:14:
+[37m      6 │ export * from [32m"d3-shape"[37m;
+        │               [32m~~~~~~~~~~[37m
+        ╵               [32m"./d3-shape"[0m
+
+  Use the relative path "./d3-shape" to reference the file "node_modules/victory-vendor/es/d3-shape.js". Without the leading "./", the path "d3-shape" is being interpreted as a package path instead.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCannot read file: /home/bankstartup2025/node_modules/es-toolkit/compat/minBy.js[0m
+
+    node_modules/recharts/es6/polar/PolarRadiusAxis.js:14:18:
+[37m      14 │ import minBy from [32m'es-toolkit/compat/minBy'[37m;
+         ╵                   [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "../../predicate/isLength.js"[0m
+
+    node_modules/es-toolkit/dist/compat/predicate/isArrayLike.js:5:25:
+[37m      5 │ const isLength = require([32m'../../predicate/isLength.js'[37m);
+        ╵                          [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "../predicate/isArrayLikeObject.js"[0m
+
+    node_modules/es-toolkit/dist/compat/array/uniqBy.js:7:34:
+[37m      7 │ ...t isArrayLikeObject = require([32m'../predicate/isArrayLikeObject.js'[37m);
+        ╵                                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "../util/iteratee.js"[0m
+
+    node_modules/es-toolkit/dist/compat/array/uniqBy.js:8:25:
+[37m      8 │ const iteratee = require([32m'../util/iteratee.js'[37m);
+        ╵                          [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCannot read file: /home/bankstartup2025/node_modules/es-toolkit/dist/array/uniqBy.js[0m
+
+    node_modules/es-toolkit/dist/compat/array/uniqBy.js:5:25:
+[37m      5 │ const uniqBy$1 = require([32m'../../array/uniqBy.js'[37m);
+        ╵                          [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "immer"[0m
+
+    node_modules/recharts/es6/state/legendSlice.js:2:26:
+[37m      2 │ import { castDraft } from [32m'immer'[37m;
+        ╵                           [32m~~~~~~~[0m
+
+  You can mark the path "immer" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCannot read file: /home/bankstartup2025/node_modules/es-toolkit/compat/omit.js[0m
+
+    node_modules/recharts/es6/cartesian/Funnel.js:14:17:
+[37m      14 │ import omit from [32m'es-toolkit/compat/omit'[37m;
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "./sidecar"[0m
+
+    node_modules/react-remove-scroll/dist/es2015/Combination.js:4:20:
+[37m      4 │ import SideCar from [32m'./sidecar'[37m;
+        ╵                     [32m~~~~~~~~~~~[0m
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCannot read file: /home/bankstartup2025/node_modules/react-remove-scroll/dist/es2015/UI.js[0m
+
+    node_modules/react-remove-scroll/dist/es2015/Combination.js:3:29:
+[37m      3 │ import { RemoveScroll } from [32m'./UI'[37m;
+        ╵                              [32m~~~~~~[0m
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "dompurify"[0m
+
+    node_modules/jspdf/dist/jspdf.es.min.js:204:885:
+[37m      204 │ ...solve(i.DOMPurify):import([32m"dompurify"[37m)).catch(function(t){retu...
+          ╵                              [32m~~~~~~~~~~~[0m
+
+  You can mark the path "dompurify" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle. You can also add ".catch()" here to handle this failure at run-time instead of bundle-time.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCannot read file: /home/bankstartup2025/node_modules/tiny-invariant/dist/esm/tiny-invariant.js[0m
+
+    node_modules/recharts/es6/util/BarUtils.js:11:22:
+[37m      11 │ import invariant from [32m'tiny-invariant'[37m;
+         ╵                       [32m~~~~~~~~~~~~~~~~[0m
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCannot read file: /home/bankstartup2025/node_modules/es-toolkit/compat/maxBy.js[0m
+
+    node_modules/recharts/es6/polar/PolarRadiusAxis.js:13:18:
+[37m      13 │ import maxBy from [32m'es-toolkit/compat/maxBy'[37m;
+         ╵                   [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCannot read file: /home/bankstartup2025/node_modules/es-toolkit/compat/isPlainObject.js[0m
+
+    node_modules/recharts/es6/util/ActiveShapeUtils.js:11:26:
+[37m      11 │ import isPlainObject from [32m'es-toolkit/compat/isPlainObject'[37m;
+         ╵                           [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "canvg"[0m
+
+    node_modules/jspdf/dist/jspdf.es.min.js:241:1438:
+[37m      241 │ ...ise.resolve(i.canvg):import([32m"canvg"[37m)).catch(function(t){return...
+          ╵                                [32m~~~~~~~[0m
+
+  The module "./dist/index.js" was not found on the file system:
+
+    node_modules/canvg/package.json:56:14:
+[37m      56 │     "import": [32m"./dist/index.js"[37m
+         ╵               [32m~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "canvg" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle. You can also add ".catch()" here to handle this failure at run-time instead of bundle-time.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "immer"[0m
+
+    node_modules/recharts/es6/state/graphicalItemsSlice.js:2:26:
+[37m      2 │ import { castDraft } from [32m'immer'[37m;
+        ╵                           [32m~~~~~~~[0m
+
+  You can mark the path "immer" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "immer"[0m
+
+    node_modules/recharts/es6/state/cartesianAxisSlice.js:7:26:
+[37m      7 │ import { castDraft } from [32m'immer'[37m;
+        ╵                           [32m~~~~~~~[0m
+
+  You can mark the path "immer" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "immer"[0m
+
+    node_modules/@reduxjs/toolkit/dist/redux-toolkit.modern.mjs:3:97:
+[37m      3 │ ... freeze, original as original2, isDraft as isDraft5 } from [32m"immer"[37m;
+        ╵                                                               [32m~~~~~~~[0m
+
+  You can mark the path "immer" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "redux-thunk"[0m
+
+    node_modules/@reduxjs/toolkit/dist/redux-toolkit.modern.mjs:40:60:
+[37m      40 │ ... thunk as thunkMiddleware, withExtraArgument } from [32m"redux-thunk"[37m;
+         ╵                                                        [32m~~~~~~~~~~~~~[0m
+
+  You can mark the path "redux-thunk" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "eventemitter3"[0m
+
+    node_modules/recharts/es6/util/Events.js:1:25:
+[37m      1 │ import EventEmitter from [32m'eventemitter3'[37m;
+        ╵                          [32m~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "eventemitter3" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCannot read file: /home/bankstartup2025/node_modules/es-toolkit/dist/index.mjs[0m
+
+    node_modules/recharts/es6/animation/JavascriptAnimate.js:2:21:
+[37m      2 │ import { noop } from [32m'es-toolkit'[37m;
+        ╵                      [32m~~~~~~~~~~~~[0m
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCannot read file: /home/bankstartup2025/node_modules/es-toolkit/compat/sumBy.js[0m
+
+    node_modules/recharts/es6/chart/Sankey.js:14:18:
+[37m      14 │ import sumBy from [32m'es-toolkit/compat/sumBy'[37m;
+         ╵                   [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "immer"[0m
+
+    node_modules/recharts/es6/state/polarAxisSlice.js:2:26:
+[37m      2 │ import { castDraft } from [32m'immer'[37m;
+        ╵                           [32m~~~~~~~[0m
+
+  You can mark the path "immer" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCannot read file: /home/bankstartup2025/node_modules/redux/dist/redux.mjs[0m
+
+    node_modules/@reduxjs/toolkit/dist/redux-toolkit.modern.mjs:2:14:
+[37m      2 │ export * from [32m"redux"[37m;
+        ╵               [32m~~~~~~~[0m
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react-dom/client"[0m
+
+    src/main.tsx:6:27:
+[37m      6 │ import { createRoot } from [32m'react-dom/client'[37m
+        ╵                            [32m~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "react-dom/client" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/main.tsx:15:12:
+[37m      15 │ root.render([32m[37m<App />)
+         ╵             [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react-router"[0m
+
+    src/App.tsx:1:52:
+[37m      1 │ import { HashRouter, Route, Routes, Navigate } from [32m'react-router'[37m
+        ╵                                                     [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "react-router" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/App.tsx:2:36:
+[37m      2 │ import { useState, useEffect } from [32m'react'[37m
+        ╵                                     [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/App.tsx:135:8:
+[37m      135 │         [32m[37m<div className="text-center">
+          ╵         [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/pages/PostCreator.tsx:11:58:
+[37m      11 │ import { useEffect, useMemo, useState, useCallback } from [32m'react'[37m
+         ╵                                                           [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/pages/Users.tsx:1:36:
+[37m      1 │ import { useState, useEffect } from [32m'react'[37m
+        ╵                                     [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/Users.tsx:2:106:
+[37m      2 │ ...ld, Eye, EyeOff, Save, X, Lock, AlertTriangle } from [32m'lucide-react'[37m
+        ╵                                                         [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/pages/Users.tsx:373:14:
+[37m      373 │         icon={[32m[37m<UsersIcon className="text-purple-400" />}
+          ╵               [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/common/PageHeader.tsx:32:12:
+[37m      32 │             [32m[37m<div
+         ╵             [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/pages/Home.tsx:8:53:
+[37m      8 │ import { useEffect, useMemo, useState, useRef } from [32m'react'[37m
+        ╵                                                      [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/Home.tsx:20:7:
+[37m      20 │ } from [32m'lucide-react'[37m
+         ╵        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/PostCreator.tsx:23:7:
+[37m      23 │ } from [32m'lucide-react'[37m
+         ╵        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react-router"[0m
+
+    src/pages/PostCreator.tsx:32:28:
+[37m      32 │ import { useNavigate } from [32m'react-router'[37m
+         ╵                             [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "react-router" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/pages/PostCreator.tsx:378:14:
+[37m      378 │               [32m[37m<SquarePen className={isDark ? 'text-blue-400' : 't...
+          ╵               [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/hooks/useDebounce.ts:6:36:
+[37m      6 │ import { useEffect, useState } from [32m'react'[37m
+        ╵                                     [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/Layout.tsx:5:36:
+[37m      5 │ import { useState, useEffect } from [32m'react'[37m
+        ╵                                     [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react-router"[0m
+
+    src/components/Layout.tsx:6:49:
+[37m      6 │ import { Outlet, useNavigate, useLocation } from [32m'react-router'[37m
+        ╵                                                  [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "react-router" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/Layout.tsx:11:7:
+[37m      11 │ } from [32m'lucide-react'[37m
+         ╵        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/pages/Home.tsx:266:10:
+[37m      266 │           [32m[37m<TrendingUp className="w-3.5 h-3.5" />
+          ╵           [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/Layout.tsx:113:29:
+[37m      113 │       case 'success': return [32m[37m<CheckCircle className="w-5 h-5 text...
+          ╵                              [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/Settings.tsx:8:41:
+[37m      8 │ import { Settings as SettingsIcon } from [32m'lucide-react'[37m
+        ╵                                          [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/pages/Settings.tsx:31:12:
+[37m      31 │             [32m[37m<SettingsIcon className={isDark ? 'text-blue-400' : 't...
+         ╵             [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/settings/AppearancePanel.tsx:9:26:
+[37m      9 │ import { Sun, Moon } from [32m'lucide-react'[37m
+        ╵                           [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/settings/AppearancePanel.tsx:29:6:
+[37m      29 │       [32m[37m<CardHeader>
+         ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/pages/Login.tsx:1:25:
+[37m      1 │ import { useState } from [32m'react'[37m
+        ╵                          [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/Login.tsx:2:48:
+[37m      2 │ import { Shield, Eye, EyeOff, Lock, User } from [32m'lucide-react'[37m
+        ╵                                                 [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/pages/Login.tsx:86:8:
+[37m      86 │         [32m[37m<div className="text-center mb-8">
+         ╵         [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/settings/BannedKeywordsPanel.tsx:8:53:
+[37m      8 │ import { useEffect, useMemo, useRef, useState } from [32m'react'[37m
+        ╵                                                      [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/settings/BannedKeywordsPanel.tsx:14:65:
+[37m      14 │ ..., Trash2, Upload, RefreshCcw, Save, Download } from [32m'lucide-react'[37m
+         ╵                                                        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/settings/BannedKeywordsPanel.tsx:126:6:
+[37m      126 │       [32m[37m<CardHeader>
+          ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/settings/ApiConfigPanel.tsx:9:44:
+[37m      9 │ import { useEffect, useRef, useState } from [32m'react'[37m
+        ╵                                             [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/settings/ApiConfigPanel.tsx:16:53:
+[37m      16 │ import { Link2, Save, Wifi, Info, ShieldCheck } from [32m'lucide-react'[37m
+         ╵                                                      [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/settings/ApiConfigPanel.tsx:147:6:
+[37m      147 │       [32m[37m<CardHeader>
+          ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/pages/Stats.tsx:6:36:
+[37m      6 │ import { useState, useEffect } from [32m'react'[37m
+        ╵                                     [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/Stats.tsx:7:96:
+[37m      7 │ ...le, CheckCircle, Users, Clock, Shield, Target } from [32m'lucide-react'[37m
+        ╵                                                         [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/pages/Stats.tsx:68:10:
+[37m      68 │           [32m[37m<Button
+         ╵           [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/hooks/useTheme.ts:4:36:
+[37m      4 │ import { useState, useEffect } from [32m'react'[37m
+        ╵                                     [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "class-variance-authority"[0m
+
+    src/components/ui/badge.tsx:2:39:
+[37m      2 │ import { cva, type VariantProps } from [32m"class-variance-authority"[37m
+        ╵                                        [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "class-variance-authority" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ErrorBoundary.tsx:4:18:
+[37m      4 │ import React from [32m'react'[37m
+        ╵                   [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/hooks/useNotifications.ts:5:49:
+[37m      5 │ import { useState, useCallback, useEffect } from [32m'react'[37m
+        ╵                                                  [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/ErrorBoundary.tsx:5:30:
+[37m      5 │ import { AlertTriangle } from [32m'lucide-react'[37m
+        ╵                               [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/postCreator/SchedulePicker.tsx:8:22:
+[37m      8 │ import { Clock } from [32m'lucide-react'[37m
+        ╵                       [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/separator.tsx:3:23:
+[37m      3 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ErrorBoundary.tsx:39:14:
+[37m      39 │               [32m[37m<AlertTriangle className="w-8 h-8 text-red-500" />
+         ╵               [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "@radix-ui/react-separator"[0m
+
+    src/components/ui/separator.tsx:4:36:
+[37m      4 │ import * as SeparatorPrimitive from [32m"@radix-ui/react-separator"[37m
+        ╵                                     [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "@radix-ui/react-separator" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/badge.tsx:32:4:
+[37m      32 │     [32m[37m<div className={cn(badgeVariants({ variant }), className)} {.....
+         ╵     [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/postCreator/SchedulePicker.tsx:22:6:
+[37m      22 │       [32m[37m<Label htmlFor="schedule" className="flex items-center gap-2">
+         ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/alert-dialog.tsx:3:23:
+[37m      3 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "@radix-ui/react-alert-dialog"[0m
+
+    src/components/ui/alert-dialog.tsx:4:38:
+[37m      4 │ import * as AlertDialogPrimitive from [32m"@radix-ui/react-alert-dialog"[37m
+        ╵                                       [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "@radix-ui/react-alert-dialog" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/alert-dialog.tsx:19:2:
+[37m      19 │   [32m[37m<AlertDialogPrimitive.Overlay
+         ╵   [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/input.tsx:1:23:
+[37m      1 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/input.tsx:8:6:
+[37m      8 │       [32m[37m<input
+        ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/postCreator/RiskMeter.tsx:40:8:
+[37m      40 │         [32m[37m<div className="text-sm font-semibold">Risk {risk.level}/5...
+         ╵         [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/postCreator/PageSelector.tsx:7:43:
+[37m      7 │ import React, { useEffect, useState } from [32m'react'[37m
+        ╵                                            [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/postCreator/PageSelector.tsx:12:57:
+[37m      12 │ ...t { Globe, Plus, Link2, Trash2, CheckCircle2 } from [32m'lucide-react'[37m
+         ╵                                                        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/postCreator/PageSelector.tsx:82:6:
+[37m      82 │       [32m[37m<Label className="flex items-center gap-2"><Globe className=...
+         ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/label.tsx:3:23:
+[37m      3 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "@radix-ui/react-label"[0m
+
+    src/components/ui/label.tsx:4:32:
+[37m      4 │ import * as LabelPrimitive from [32m"@radix-ui/react-label"[37m
+        ╵                                 [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "@radix-ui/react-label" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "class-variance-authority"[0m
+
+    src/components/ui/label.tsx:5:39:
+[37m      5 │ import { cva, type VariantProps } from [32m"class-variance-authority"[37m
+        ╵                                        [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "class-variance-authority" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/label.tsx:18:2:
+[37m      18 │   [32m[37m<LabelPrimitive.Root
+         ╵   [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/textarea.tsx:1:23:
+[37m      1 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/textarea.tsx:10:4:
+[37m      10 │     [32m[37m<textarea
+         ╵     [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "axios"[0m
+
+    src/services/postService.ts:6:18:
+[37m      6 │ import axios from [32m'axios'[37m
+        ╵                   [32m~~~~~~~[0m
+
+  You can mark the path "axios" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "clsx"[0m
+
+    src/lib/utils.ts:1:38:
+[37m      1 │ import { clsx, type ClassValue } from [32m"clsx"[37m
+        ╵                                       [32m~~~~~~[0m
+
+  You can mark the path "clsx" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/hooks/useAnalytics.ts:17:58:
+[37m      17 │ import { useCallback, useEffect, useMemo, useState } from [32m'react'[37m
+         ╵                                                           [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/pages/N8nBuilder.tsx:6:45:
+[37m      6 │ import { useEffect, useMemo, useState } from [32m'react'[37m
+        ╵                                              [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/dashboard/RecentAlerts.tsx:5:64:
+[37m      5 │ ...ll, CheckCircle, XCircle, AlertTriangle, Info } from [32m'lucide-react'[37m
+        ╵                                                         [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/analyzer/FBPostAnalysisForm.tsx:7:34:
+[37m      7 │ import { useMemo, useState } from [32m'react'[37m
+        ╵                                   [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/dashboard/RecentAlerts.tsx:24:27:
+[37m      24 │     case 'success': return [32m[37m<CheckCircle className="w-4 h-4 text-gr...
+         ╵                            [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/common/TimeRangeSelector.tsx:31:4:
+[37m      31 │     [32m[37m<div
+         ╵     [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/dashboard/RiskScoreCard.tsx:92:6:
+[37m      92 │       [32m[37m<div
+         ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/analyzer/FBPostAnalysisForm.tsx:14:138:
+[37m      14 │ ...le, CheckCircle2, Loader2, Wifi, ShieldCheck } from [32m'lucide-react'[37m
+         ╵                                                        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/analyzer/FBPostAnalysisForm.tsx:272:6:
+[37m      272 │       [32m[37m<CardHeader className={frameless ? 'p-0 mb-2' : undefined}>
+          ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/separator.tsx:16:4:
+[37m      16 │     [32m[37m<SeparatorPrimitive.Root
+         ╵     [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "tailwind-merge"[0m
+
+    src/lib/utils.ts:2:24:
+[37m      2 │ import { twMerge } from [32m"tailwind-merge"[37m
+        ╵                         [32m~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "tailwind-merge" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/N8nBuilder.tsx:13:102:
+[37m      13 │ ...es, Code, Shield, AlertTriangle, CheckCircle } from [32m'lucide-react'[37m
+         ╵                                                        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/pages/N8nBuilder.tsx:286:16:
+[37m      286 │           icon={[32m[37m<Bot className={isDark ? 'text-blue-400' : 'text-...
+          ╵                 [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/dialog.tsx:3:23:
+[37m      3 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "@radix-ui/react-dialog"[0m
+
+    src/components/ui/dialog.tsx:4:33:
+[37m      4 │ import * as DialogPrimitive from [32m"@radix-ui/react-dialog"[37m
+        ╵                                  [32m~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "@radix-ui/react-dialog" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/ui/dialog.tsx:5:18:
+[37m      5 │ import { X } from [32m"lucide-react"[37m
+        ╵                   [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/dashboard/KpiCard.tsx:28:6:
+[37m      28 │       [32m[37m<div className="shrink-0">
+         ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/tabs.tsx:3:23:
+[37m      3 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/button.tsx:1:23:
+[37m      1 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/card.tsx:1:23:
+[37m      1 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/dashboard/RiskTrendCard.tsx:32:8:
+[37m      32 │         [32m[37m<h3 className={`text-base font-semibold ${isDark ? 'text-w...
+         ╵         [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/onboarding/OnboardingSection.tsx:9:45:
+[37m      9 │ import { useEffect, useMemo, useState } from [32m'react'[37m
+        ╵                                              [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/onboarding/OnboardingSection.tsx:28:7:
+[37m      28 │ } from [32m'lucide-react'[37m
+         ╵        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "jspdf"[0m
+
+    src/components/onboarding/OnboardingSection.tsx:31:18:
+[37m      31 │ import jsPDF from [32m'jspdf'[37m
+         ╵                   [32m~~~~~~~[0m
+
+  You can mark the path "jspdf" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "jspdf-autotable"[0m
+
+    src/components/onboarding/OnboardingSection.tsx:32:22:
+[37m      32 │ import autoTable from [32m'jspdf-autotable'[37m
+         ╵                       [32m~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "jspdf-autotable" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/onboarding/OnboardingSection.tsx:337:12:
+[37m      337 │             [32m[37m<ul className="flex flex-wrap gap-3 text-sm">
+          ╵             [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/accordion.tsx:3:23:
+[37m      3 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "@radix-ui/react-accordion"[0m
+
+    src/components/ui/accordion.tsx:4:36:
+[37m      4 │ import * as AccordionPrimitive from [32m"@radix-ui/react-accordion"[37m
+        ╵                                     [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "@radix-ui/react-accordion" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/ui/accordion.tsx:5:28:
+[37m      5 │ import { ChevronDown } from [32m"lucide-react"[37m
+        ╵                             [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/accordion.tsx:15:2:
+[37m      15 │   [32m[37m<AccordionPrimitive.Item
+         ╵   [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/dialog.tsx:21:2:
+[37m      21 │   [32m[37m<DialogPrimitive.Overlay
+         ╵   [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "@radix-ui/react-tabs"[0m
+
+    src/components/ui/tabs.tsx:4:31:
+[37m      4 │ import * as TabsPrimitive from [32m"@radix-ui/react-tabs"[37m
+        ╵                                [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "@radix-ui/react-tabs" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/tabs.tsx:14:2:
+[37m      14 │   [32m[37m<TabsPrimitive.List
+         ╵   [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "@radix-ui/react-slot"[0m
+
+    src/components/ui/button.tsx:2:21:
+[37m      2 │ import { Slot } from [32m"@radix-ui/react-slot"[37m
+        ╵                      [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "@radix-ui/react-slot" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "class-variance-authority"[0m
+
+    src/components/ui/button.tsx:3:39:
+[37m      3 │ import { cva, type VariantProps } from [32m"class-variance-authority"[37m
+        ╵                                        [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "class-variance-authority" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/button.tsx:47:6:
+[37m      47 │       [32m[37m<Comp
+         ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/card.tsx:9:2:
+[37m      9 │   [32m[37m<div
+        ╵   [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/charts/RiskTrendChart.tsx:4:24:
+[37m      4 │ import { useMemo } from [32m'react'[37m
+        ╵                         [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "recharts"[0m
+
+    src/components/charts/RiskTrendChart.tsx:13:7:
+[37m      13 │ } from [32m'recharts'[37m
+         ╵        [32m~~~~~~~~~~[0m
+
+  You can mark the path "recharts" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/charts/RiskTrendChart.tsx:86:10:
+[37m      86 │           [32m[37m<linearGradient id="totalGradient" x1="0" y1="0" x2="0" ...
+         ╵           [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mExpected string in JSON but found "<<"[0m
+
+    package.json:37:0:
+[37m      37 │ [32m<<[37m<<<<< HEAD
+         ╵ [32m~~[0m
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react-dom/client"[0m
+
+    src/main.tsx:6:27:
+[37m      6 │ import { createRoot } from [32m'react-dom/client'[37m
+        ╵                            [32m~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "react-dom/client" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mExpected string in JSON but found "<<"[0m [1m[35m[plugin esbuild-style-plugin][0m
+
+    package.json:37:0:
+[37m      37 │ [32m<<[37m<<<<< HEAD
+         ╵ [32m~~[0m
+
+  The plugin "esbuild-style-plugin" was triggered by this import
+
+    src/main.tsx:7:7:
+[37m      7 │ import [32m'./shadcn.css'[37m
+        ╵        [32m~~~~~~~~~~~~~~[0m
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/main.tsx:15:12:
+[37m      15 │ root.render([32m[37m<App />)
+         ╵             [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react-router"[0m
+
+    src/App.tsx:1:52:
+[37m      1 │ import { HashRouter, Route, Routes, Navigate } from [32m'react-router'[37m
+        ╵                                                     [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "react-router" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/App.tsx:2:36:
+[37m      2 │ import { useState, useEffect } from [32m'react'[37m
+        ╵                                     [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/App.tsx:135:8:
+[37m      135 │         [32m[37m<div className="text-center">
+          ╵         [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/Layout.tsx:5:36:
+[37m      5 │ import { useState, useEffect } from [32m'react'[37m
+        ╵                                     [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/pages/Login.tsx:1:25:
+[37m      1 │ import { useState } from [32m'react'[37m
+        ╵                          [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/pages/Users.tsx:1:36:
+[37m      1 │ import { useState, useEffect } from [32m'react'[37m
+        ╵                                     [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/Settings.tsx:8:41:
+[37m      8 │ import { Settings as SettingsIcon } from [32m'lucide-react'[37m
+        ╵                                          [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ErrorBoundary.tsx:4:18:
+[37m      4 │ import React from [32m'react'[37m
+        ╵                   [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/pages/Settings.tsx:31:12:
+[37m      31 │             [32m[37m<SettingsIcon className={isDark ? 'text-blue-400' : 't...
+         ╵             [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/Users.tsx:2:106:
+[37m      2 │ ...ld, Eye, EyeOff, Save, X, Lock, AlertTriangle } from [32m'lucide-react'[37m
+        ╵                                                         [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/pages/N8nBuilder.tsx:6:45:
+[37m      6 │ import { useEffect, useMemo, useState } from [32m'react'[37m
+        ╵                                              [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/pages/Users.tsx:373:14:
+[37m      373 │         icon={[32m[37m<UsersIcon className="text-purple-400" />}
+          ╵               [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/hooks/useNotifications.ts:5:49:
+[37m      5 │ import { useState, useCallback, useEffect } from [32m'react'[37m
+        ╵                                                  [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/settings/BannedKeywordsPanel.tsx:8:53:
+[37m      8 │ import { useEffect, useMemo, useRef, useState } from [32m'react'[37m
+        ╵                                                      [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/settings/BannedKeywordsPanel.tsx:14:65:
+[37m      14 │ ..., Trash2, Upload, RefreshCcw, Save, Download } from [32m'lucide-react'[37m
+         ╵                                                        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/settings/ApiConfigPanel.tsx:9:44:
+[37m      9 │ import { useEffect, useRef, useState } from [32m'react'[37m
+        ╵                                             [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/settings/BannedKeywordsPanel.tsx:126:6:
+[37m      126 │       [32m[37m<CardHeader>
+          ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/settings/ApiConfigPanel.tsx:16:53:
+[37m      16 │ import { Link2, Save, Wifi, Info, ShieldCheck } from [32m'lucide-react'[37m
+         ╵                                                      [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/settings/AppearancePanel.tsx:9:26:
+[37m      9 │ import { Sun, Moon } from [32m'lucide-react'[37m
+        ╵                           [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/common/PageHeader.tsx:32:12:
+[37m      32 │             [32m[37m<div
+         ╵             [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/card.tsx:1:23:
+[37m      1 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/button.tsx:1:23:
+[37m      1 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/hooks/useTheme.ts:4:36:
+[37m      4 │ import { useState, useEffect } from [32m'react'[37m
+        ╵                                     [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/input.tsx:1:23:
+[37m      1 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/input.tsx:8:6:
+[37m      8 │       [32m[37m<input
+        ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "clsx"[0m
+
+    src/lib/utils.ts:1:38:
+[37m      1 │ import { clsx, type ClassValue } from [32m"clsx"[37m
+        ╵                                       [32m~~~~~~[0m
+
+  You can mark the path "clsx" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "tailwind-merge"[0m
+
+    src/lib/utils.ts:2:24:
+[37m      2 │ import { twMerge } from [32m"tailwind-merge"[37m
+        ╵                         [32m~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "tailwind-merge" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "@radix-ui/react-slot"[0m
+
+    src/components/ui/button.tsx:2:21:
+[37m      2 │ import { Slot } from [32m"@radix-ui/react-slot"[37m
+        ╵                      [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "@radix-ui/react-slot" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "class-variance-authority"[0m
+
+    src/components/ui/button.tsx:3:39:
+[37m      3 │ import { cva, type VariantProps } from [32m"class-variance-authority"[37m
+        ╵                                        [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "class-variance-authority" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/button.tsx:47:6:
+[37m      47 │       [32m[37m<Comp
+         ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/pages/Stats.tsx:6:36:
+[37m      6 │ import { useState, useEffect } from [32m'react'[37m
+        ╵                                     [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/Stats.tsx:7:96:
+[37m      7 │ ...le, CheckCircle, Users, Clock, Shield, Target } from [32m'lucide-react'[37m
+        ╵                                                         [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/pages/Home.tsx:8:53:
+[37m      8 │ import { useEffect, useMemo, useState, useRef } from [32m'react'[37m
+        ╵                                                      [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/Home.tsx:20:7:
+[37m      20 │ } from [32m'lucide-react'[37m
+         ╵        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/settings/ApiConfigPanel.tsx:147:6:
+[37m      147 │       [32m[37m<CardHeader>
+          ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/ErrorBoundary.tsx:5:30:
+[37m      5 │ import { AlertTriangle } from [32m'lucide-react'[37m
+        ╵                               [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react-router"[0m
+
+    src/components/Layout.tsx:6:49:
+[37m      6 │ import { Outlet, useNavigate, useLocation } from [32m'react-router'[37m
+        ╵                                                  [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "react-router" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ErrorBoundary.tsx:39:14:
+[37m      39 │               [32m[37m<AlertTriangle className="w-8 h-8 text-red-500" />
+         ╵               [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/N8nBuilder.tsx:13:102:
+[37m      13 │ ...es, Code, Shield, AlertTriangle, CheckCircle } from [32m'lucide-react'[37m
+         ╵                                                        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/Layout.tsx:11:7:
+[37m      11 │ } from [32m'lucide-react'[37m
+         ╵        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/pages/N8nBuilder.tsx:286:16:
+[37m      286 │           icon={[32m[37m<Bot className={isDark ? 'text-blue-400' : 'text-...
+          ╵                 [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/pages/PostCreator.tsx:11:58:
+[37m      11 │ import { useEffect, useMemo, useState, useCallback } from [32m'react'[37m
+         ╵                                                           [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/Layout.tsx:113:29:
+[37m      113 │       case 'success': return [32m[37m<CheckCircle className="w-5 h-5 text...
+          ╵                              [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/card.tsx:9:2:
+[37m      9 │   [32m[37m<div
+        ╵   [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/label.tsx:3:23:
+[37m      3 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "@radix-ui/react-label"[0m
+
+    src/components/ui/label.tsx:4:32:
+[37m      4 │ import * as LabelPrimitive from [32m"@radix-ui/react-label"[37m
+        ╵                                 [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "@radix-ui/react-label" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "class-variance-authority"[0m
+
+    src/components/ui/label.tsx:5:39:
+[37m      5 │ import { cva, type VariantProps } from [32m"class-variance-authority"[37m
+        ╵                                        [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "class-variance-authority" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/label.tsx:18:2:
+[37m      18 │   [32m[37m<LabelPrimitive.Root
+         ╵   [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/PostCreator.tsx:23:7:
+[37m      23 │ } from [32m'lucide-react'[37m
+         ╵        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/pages/Home.tsx:266:10:
+[37m      266 │           [32m[37m<TrendingUp className="w-3.5 h-3.5" />
+          ╵           [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "class-variance-authority"[0m
+
+    src/components/ui/badge.tsx:2:39:
+[37m      2 │ import { cva, type VariantProps } from [32m"class-variance-authority"[37m
+        ╵                                        [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "class-variance-authority" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/textarea.tsx:1:23:
+[37m      1 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/settings/AppearancePanel.tsx:29:6:
+[37m      29 │       [32m[37m<CardHeader>
+         ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/separator.tsx:3:23:
+[37m      3 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/Login.tsx:2:48:
+[37m      2 │ import { Shield, Eye, EyeOff, Lock, User } from [32m'lucide-react'[37m
+        ╵                                                 [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/pages/Stats.tsx:68:10:
+[37m      68 │           [32m[37m<Button
+         ╵           [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react-router"[0m
+
+    src/pages/PostCreator.tsx:32:28:
+[37m      32 │ import { useNavigate } from [32m'react-router'[37m
+         ╵                             [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "react-router" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/dashboard/RiskScoreCard.tsx:92:6:
+[37m      92 │       [32m[37m<div
+         ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/onboarding/OnboardingSection.tsx:9:45:
+[37m      9 │ import { useEffect, useMemo, useState } from [32m'react'[37m
+        ╵                                              [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/pages/PostCreator.tsx:378:14:
+[37m      378 │               [32m[37m<SquarePen className={isDark ? 'text-blue-400' : 't...
+          ╵               [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/onboarding/OnboardingSection.tsx:28:7:
+[37m      28 │ } from [32m'lucide-react'[37m
+         ╵        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "jspdf"[0m
+
+    src/components/onboarding/OnboardingSection.tsx:31:18:
+[37m      31 │ import jsPDF from [32m'jspdf'[37m
+         ╵                   [32m~~~~~~~[0m
+
+  You can mark the path "jspdf" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/hooks/useDebounce.ts:6:36:
+[37m      6 │ import { useEffect, useState } from [32m'react'[37m
+        ╵                                     [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/postCreator/RiskMeter.tsx:40:8:
+[37m      40 │         [32m[37m<div className="text-sm font-semibold">Risk {risk.level}/5...
+         ╵         [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/badge.tsx:32:4:
+[37m      32 │     [32m[37m<div className={cn(badgeVariants({ variant }), className)} {.....
+         ╵     [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/textarea.tsx:10:4:
+[37m      10 │     [32m[37m<textarea
+         ╵     [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/postCreator/SchedulePicker.tsx:8:22:
+[37m      8 │ import { Clock } from [32m'lucide-react'[37m
+        ╵                       [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "@radix-ui/react-separator"[0m
+
+    src/components/ui/separator.tsx:4:36:
+[37m      4 │ import * as SeparatorPrimitive from [32m"@radix-ui/react-separator"[37m
+        ╵                                     [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "@radix-ui/react-separator" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "axios"[0m
+
+    src/services/postService.ts:6:18:
+[37m      6 │ import axios from [32m'axios'[37m
+        ╵                   [32m~~~~~~~[0m
+
+  You can mark the path "axios" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/analyzer/FBPostAnalysisForm.tsx:7:34:
+[37m      7 │ import { useMemo, useState } from [32m'react'[37m
+        ╵                                   [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/postCreator/PageSelector.tsx:7:43:
+[37m      7 │ import React, { useEffect, useState } from [32m'react'[37m
+        ╵                                            [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/analyzer/FBPostAnalysisForm.tsx:14:138:
+[37m      14 │ ...le, CheckCircle2, Loader2, Wifi, ShieldCheck } from [32m'lucide-react'[37m
+         ╵                                                        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/pages/Login.tsx:86:8:
+[37m      86 │         [32m[37m<div className="text-center mb-8">
+         ╵         [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "jspdf-autotable"[0m
+
+    src/components/onboarding/OnboardingSection.tsx:32:22:
+[37m      32 │ import autoTable from [32m'jspdf-autotable'[37m
+         ╵                       [32m~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "jspdf-autotable" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/tabs.tsx:3:23:
+[37m      3 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/dashboard/KpiCard.tsx:28:6:
+[37m      28 │       [32m[37m<div className="shrink-0">
+         ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/dashboard/RiskTrendCard.tsx:32:8:
+[37m      32 │         [32m[37m<h3 className={`text-base font-semibold ${isDark ? 'text-w...
+         ╵         [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/dashboard/RecentAlerts.tsx:5:64:
+[37m      5 │ ...ll, CheckCircle, XCircle, AlertTriangle, Info } from [32m'lucide-react'[37m
+        ╵                                                         [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/common/TimeRangeSelector.tsx:31:4:
+[37m      31 │     [32m[37m<div
+         ╵     [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/separator.tsx:16:4:
+[37m      16 │     [32m[37m<SeparatorPrimitive.Root
+         ╵     [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "@radix-ui/react-tabs"[0m
+
+    src/components/ui/tabs.tsx:4:31:
+[37m      4 │ import * as TabsPrimitive from [32m"@radix-ui/react-tabs"[37m
+        ╵                                [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "@radix-ui/react-tabs" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/tabs.tsx:14:2:
+[37m      14 │   [32m[37m<TabsPrimitive.List
+         ╵   [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/charts/RiskTrendChart.tsx:4:24:
+[37m      4 │ import { useMemo } from [32m'react'[37m
+        ╵                         [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/dashboard/RecentAlerts.tsx:24:27:
+[37m      24 │     case 'success': return [32m[37m<CheckCircle className="w-4 h-4 text-gr...
+         ╵                            [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/postCreator/SchedulePicker.tsx:22:6:
+[37m      22 │       [32m[37m<Label htmlFor="schedule" className="flex items-center gap-2">
+         ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "recharts"[0m
+
+    src/components/charts/RiskTrendChart.tsx:13:7:
+[37m      13 │ } from [32m'recharts'[37m
+         ╵        [32m~~~~~~~~~~[0m
+
+  You can mark the path "recharts" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/onboarding/OnboardingSection.tsx:337:12:
+[37m      337 │             [32m[37m<ul className="flex flex-wrap gap-3 text-sm">
+          ╵             [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/charts/RiskTrendChart.tsx:86:10:
+[37m      86 │           [32m[37m<linearGradient id="totalGradient" x1="0" y1="0" x2="0" ...
+         ╵           [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/analyzer/FBPostAnalysisForm.tsx:272:6:
+[37m      272 │       [32m[37m<CardHeader className={frameless ? 'p-0 mb-2' : undefined}>
+          ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/alert-dialog.tsx:3:23:
+[37m      3 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/postCreator/PageSelector.tsx:12:57:
+[37m      12 │ ...t { Globe, Plus, Link2, Trash2, CheckCircle2 } from [32m'lucide-react'[37m
+         ╵                                                        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/postCreator/PageSelector.tsx:82:6:
+[37m      82 │       [32m[37m<Label className="flex items-center gap-2"><Globe className=...
+         ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/hooks/useAnalytics.ts:17:58:
+[37m      17 │ import { useCallback, useEffect, useMemo, useState } from [32m'react'[37m
+         ╵                                                           [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/dialog.tsx:3:23:
+[37m      3 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "@radix-ui/react-dialog"[0m
+
+    src/components/ui/dialog.tsx:4:33:
+[37m      4 │ import * as DialogPrimitive from [32m"@radix-ui/react-dialog"[37m
+        ╵                                  [32m~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "@radix-ui/react-dialog" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/ui/dialog.tsx:5:18:
+[37m      5 │ import { X } from [32m"lucide-react"[37m
+        ╵                   [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/accordion.tsx:3:23:
+[37m      3 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "@radix-ui/react-accordion"[0m
+
+    src/components/ui/accordion.tsx:4:36:
+[37m      4 │ import * as AccordionPrimitive from [32m"@radix-ui/react-accordion"[37m
+        ╵                                     [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "@radix-ui/react-accordion" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/ui/accordion.tsx:5:28:
+[37m      5 │ import { ChevronDown } from [32m"lucide-react"[37m
+        ╵                             [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "@radix-ui/react-alert-dialog"[0m
+
+    src/components/ui/alert-dialog.tsx:4:38:
+[37m      4 │ import * as AlertDialogPrimitive from [32m"@radix-ui/react-alert-dialog"[37m
+        ╵                                       [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "@radix-ui/react-alert-dialog" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/accordion.tsx:15:2:
+[37m      15 │   [32m[37m<AccordionPrimitive.Item
+         ╵   [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/alert-dialog.tsx:19:2:
+[37m      19 │   [32m[37m<AlertDialogPrimitive.Overlay
+         ╵   [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/dialog.tsx:21:2:
+[37m      21 │   [32m[37m<DialogPrimitive.Overlay
+         ╵   [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react-dom/client"[0m
+
+    src/main.tsx:6:27:
+[37m      6 │ import { createRoot } from [32m'react-dom/client'[37m
+        ╵                            [32m~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "react-dom/client" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/main.tsx:15:12:
+[37m      15 │ root.render([32m[37m<App />)
+         ╵             [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react-router"[0m
+
+    src/App.tsx:1:52:
+[37m      1 │ import { HashRouter, Route, Routes, Navigate } from [32m'react-router'[37m
+        ╵                                                     [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "react-router" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/App.tsx:2:36:
+[37m      2 │ import { useState, useEffect } from [32m'react'[37m
+        ╵                                     [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/App.tsx:135:8:
+[37m      135 │         [32m[37m<div className="text-center">
+          ╵         [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/pages/PostCreator.tsx:11:58:
+[37m      11 │ import { useEffect, useMemo, useState, useCallback } from [32m'react'[37m
+         ╵                                                           [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/pages/Home.tsx:8:53:
+[37m      8 │ import { useEffect, useMemo, useState, useRef } from [32m'react'[37m
+        ╵                                                      [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/Home.tsx:20:7:
+[37m      20 │ } from [32m'lucide-react'[37m
+         ╵        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/hooks/useTheme.ts:4:36:
+[37m      4 │ import { useState, useEffect } from [32m'react'[37m
+        ╵                                     [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/pages/Login.tsx:1:25:
+[37m      1 │ import { useState } from [32m'react'[37m
+        ╵                          [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/hooks/useNotifications.ts:5:49:
+[37m      5 │ import { useState, useCallback, useEffect } from [32m'react'[37m
+        ╵                                                  [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/Settings.tsx:8:41:
+[37m      8 │ import { Settings as SettingsIcon } from [32m'lucide-react'[37m
+        ╵                                          [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/pages/N8nBuilder.tsx:6:45:
+[37m      6 │ import { useEffect, useMemo, useState } from [32m'react'[37m
+        ╵                                              [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ErrorBoundary.tsx:4:18:
+[37m      4 │ import React from [32m'react'[37m
+        ╵                   [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/Layout.tsx:5:36:
+[37m      5 │ import { useState, useEffect } from [32m'react'[37m
+        ╵                                     [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/Login.tsx:2:48:
+[37m      2 │ import { Shield, Eye, EyeOff, Lock, User } from [32m'lucide-react'[37m
+        ╵                                                 [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/pages/Settings.tsx:31:12:
+[37m      31 │             [32m[37m<SettingsIcon className={isDark ? 'text-blue-400' : 't...
+         ╵             [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/settings/AppearancePanel.tsx:9:26:
+[37m      9 │ import { Sun, Moon } from [32m'lucide-react'[37m
+        ╵                           [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/settings/AppearancePanel.tsx:29:6:
+[37m      29 │       [32m[37m<CardHeader>
+         ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/settings/BannedKeywordsPanel.tsx:8:53:
+[37m      8 │ import { useEffect, useMemo, useRef, useState } from [32m'react'[37m
+        ╵                                                      [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/settings/BannedKeywordsPanel.tsx:14:65:
+[37m      14 │ ..., Trash2, Upload, RefreshCcw, Save, Download } from [32m'lucide-react'[37m
+         ╵                                                        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/settings/BannedKeywordsPanel.tsx:126:6:
+[37m      126 │       [32m[37m<CardHeader>
+          ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/PostCreator.tsx:23:7:
+[37m      23 │ } from [32m'lucide-react'[37m
+         ╵        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react-router"[0m
+
+    src/pages/PostCreator.tsx:32:28:
+[37m      32 │ import { useNavigate } from [32m'react-router'[37m
+         ╵                             [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "react-router" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/pages/PostCreator.tsx:378:14:
+[37m      378 │               [32m[37m<SquarePen className={isDark ? 'text-blue-400' : 't...
+          ╵               [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/pages/Home.tsx:266:10:
+[37m      266 │           [32m[37m<TrendingUp className="w-3.5 h-3.5" />
+          ╵           [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/pages/Login.tsx:86:8:
+[37m      86 │         [32m[37m<div className="text-center mb-8">
+         ╵         [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/ErrorBoundary.tsx:5:30:
+[37m      5 │ import { AlertTriangle } from [32m'lucide-react'[37m
+        ╵                               [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ErrorBoundary.tsx:39:14:
+[37m      39 │               [32m[37m<AlertTriangle className="w-8 h-8 text-red-500" />
+         ╵               [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/N8nBuilder.tsx:13:102:
+[37m      13 │ ...es, Code, Shield, AlertTriangle, CheckCircle } from [32m'lucide-react'[37m
+         ╵                                                        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/settings/ApiConfigPanel.tsx:9:44:
+[37m      9 │ import { useEffect, useRef, useState } from [32m'react'[37m
+        ╵                                             [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/settings/ApiConfigPanel.tsx:16:53:
+[37m      16 │ import { Link2, Save, Wifi, Info, ShieldCheck } from [32m'lucide-react'[37m
+         ╵                                                      [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/settings/ApiConfigPanel.tsx:147:6:
+[37m      147 │       [32m[37m<CardHeader>
+          ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/pages/Stats.tsx:6:36:
+[37m      6 │ import { useState, useEffect } from [32m'react'[37m
+        ╵                                     [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/Stats.tsx:7:96:
+[37m      7 │ ...le, CheckCircle, Users, Clock, Shield, Target } from [32m'lucide-react'[37m
+        ╵                                                         [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/pages/Stats.tsx:68:10:
+[37m      68 │           [32m[37m<Button
+         ╵           [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react-router"[0m
+
+    src/components/Layout.tsx:6:49:
+[37m      6 │ import { Outlet, useNavigate, useLocation } from [32m'react-router'[37m
+        ╵                                                  [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "react-router" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/Layout.tsx:11:7:
+[37m      11 │ } from [32m'lucide-react'[37m
+         ╵        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/Layout.tsx:113:29:
+[37m      113 │       case 'success': return [32m[37m<CheckCircle className="w-5 h-5 text...
+          ╵                              [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/pages/Users.tsx:1:36:
+[37m      1 │ import { useState, useEffect } from [32m'react'[37m
+        ╵                                     [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/pages/Users.tsx:2:106:
+[37m      2 │ ...ld, Eye, EyeOff, Save, X, Lock, AlertTriangle } from [32m'lucide-react'[37m
+        ╵                                                         [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/button.tsx:1:23:
+[37m      1 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/card.tsx:1:23:
+[37m      1 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "@radix-ui/react-slot"[0m
+
+    src/components/ui/button.tsx:2:21:
+[37m      2 │ import { Slot } from [32m"@radix-ui/react-slot"[37m
+        ╵                      [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "@radix-ui/react-slot" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "class-variance-authority"[0m
+
+    src/components/ui/button.tsx:3:39:
+[37m      3 │ import { cva, type VariantProps } from [32m"class-variance-authority"[37m
+        ╵                                        [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "class-variance-authority" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/button.tsx:47:6:
+[37m      47 │       [32m[37m<Comp
+         ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/card.tsx:9:2:
+[37m      9 │   [32m[37m<div
+        ╵   [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/pages/Users.tsx:373:14:
+[37m      373 │         icon={[32m[37m<UsersIcon className="text-purple-400" />}
+          ╵               [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/input.tsx:1:23:
+[37m      1 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/input.tsx:8:6:
+[37m      8 │       [32m[37m<input
+        ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/separator.tsx:3:23:
+[37m      3 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "@radix-ui/react-separator"[0m
+
+    src/components/ui/separator.tsx:4:36:
+[37m      4 │ import * as SeparatorPrimitive from [32m"@radix-ui/react-separator"[37m
+        ╵                                     [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "@radix-ui/react-separator" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/separator.tsx:16:4:
+[37m      16 │     [32m[37m<SeparatorPrimitive.Root
+         ╵     [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/label.tsx:3:23:
+[37m      3 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "@radix-ui/react-label"[0m
+
+    src/components/ui/label.tsx:4:32:
+[37m      4 │ import * as LabelPrimitive from [32m"@radix-ui/react-label"[37m
+        ╵                                 [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "@radix-ui/react-label" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "class-variance-authority"[0m
+
+    src/components/ui/label.tsx:5:39:
+[37m      5 │ import { cva, type VariantProps } from [32m"class-variance-authority"[37m
+        ╵                                        [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "class-variance-authority" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/label.tsx:18:2:
+[37m      18 │   [32m[37m<LabelPrimitive.Root
+         ╵   [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/textarea.tsx:1:23:
+[37m      1 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/textarea.tsx:10:4:
+[37m      10 │     [32m[37m<textarea
+         ╵     [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "class-variance-authority"[0m
+
+    src/components/ui/badge.tsx:2:39:
+[37m      2 │ import { cva, type VariantProps } from [32m"class-variance-authority"[37m
+        ╵                                        [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "class-variance-authority" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/badge.tsx:32:4:
+[37m      32 │     [32m[37m<div className={cn(badgeVariants({ variant }), className)} {.....
+         ╵     [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/alert-dialog.tsx:3:23:
+[37m      3 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "@radix-ui/react-alert-dialog"[0m
+
+    src/components/ui/alert-dialog.tsx:4:38:
+[37m      4 │ import * as AlertDialogPrimitive from [32m"@radix-ui/react-alert-dialog"[37m
+        ╵                                       [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "@radix-ui/react-alert-dialog" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/alert-dialog.tsx:19:2:
+[37m      19 │   [32m[37m<AlertDialogPrimitive.Overlay
+         ╵   [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/postCreator/RiskMeter.tsx:40:8:
+[37m      40 │         [32m[37m<div className="text-sm font-semibold">Risk {risk.level}/5...
+         ╵         [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/postCreator/PageSelector.tsx:7:43:
+[37m      7 │ import React, { useEffect, useState } from [32m'react'[37m
+        ╵                                            [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/pages/N8nBuilder.tsx:286:16:
+[37m      286 │           icon={[32m[37m<Bot className={isDark ? 'text-blue-400' : 'text-...
+          ╵                 [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/common/TimeRangeSelector.tsx:31:4:
+[37m      31 │     [32m[37m<div
+         ╵     [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/postCreator/SchedulePicker.tsx:8:22:
+[37m      8 │ import { Clock } from [32m'lucide-react'[37m
+        ╵                       [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/postCreator/SchedulePicker.tsx:22:6:
+[37m      22 │       [32m[37m<Label htmlFor="schedule" className="flex items-center gap-2">
+         ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "axios"[0m
+
+    src/services/postService.ts:6:18:
+[37m      6 │ import axios from [32m'axios'[37m
+        ╵                   [32m~~~~~~~[0m
+
+  You can mark the path "axios" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/tabs.tsx:3:23:
+[37m      3 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "@radix-ui/react-tabs"[0m
+
+    src/components/ui/tabs.tsx:4:31:
+[37m      4 │ import * as TabsPrimitive from [32m"@radix-ui/react-tabs"[37m
+        ╵                                [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "@radix-ui/react-tabs" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/tabs.tsx:14:2:
+[37m      14 │   [32m[37m<TabsPrimitive.List
+         ╵   [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/hooks/useDebounce.ts:6:36:
+[37m      6 │ import { useEffect, useState } from [32m'react'[37m
+        ╵                                     [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/dashboard/RecentAlerts.tsx:5:64:
+[37m      5 │ ...ll, CheckCircle, XCircle, AlertTriangle, Info } from [32m'lucide-react'[37m
+        ╵                                                         [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/dashboard/RecentAlerts.tsx:24:27:
+[37m      24 │     case 'success': return [32m[37m<CheckCircle className="w-4 h-4 text-gr...
+         ╵                            [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/dashboard/KpiCard.tsx:28:6:
+[37m      28 │       [32m[37m<div className="shrink-0">
+         ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/dashboard/RiskTrendCard.tsx:32:8:
+[37m      32 │         [32m[37m<h3 className={`text-base font-semibold ${isDark ? 'text-w...
+         ╵         [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/charts/RiskTrendChart.tsx:4:24:
+[37m      4 │ import { useMemo } from [32m'react'[37m
+        ╵                         [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "recharts"[0m
+
+    src/components/charts/RiskTrendChart.tsx:13:7:
+[37m      13 │ } from [32m'recharts'[37m
+         ╵        [32m~~~~~~~~~~[0m
+
+  You can mark the path "recharts" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/charts/RiskTrendChart.tsx:86:10:
+[37m      86 │           [32m[37m<linearGradient id="totalGradient" x1="0" y1="0" x2="0" ...
+         ╵           [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/onboarding/OnboardingSection.tsx:9:45:
+[37m      9 │ import { useEffect, useMemo, useState } from [32m'react'[37m
+        ╵                                              [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/onboarding/OnboardingSection.tsx:28:7:
+[37m      28 │ } from [32m'lucide-react'[37m
+         ╵        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/dialog.tsx:3:23:
+[37m      3 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "@radix-ui/react-dialog"[0m
+
+    src/components/ui/dialog.tsx:4:33:
+[37m      4 │ import * as DialogPrimitive from [32m"@radix-ui/react-dialog"[37m
+        ╵                                  [32m~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "@radix-ui/react-dialog" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/hooks/useAnalytics.ts:17:58:
+[37m      17 │ import { useCallback, useEffect, useMemo, useState } from [32m'react'[37m
+         ╵                                                           [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/analyzer/FBPostAnalysisForm.tsx:7:34:
+[37m      7 │ import { useMemo, useState } from [32m'react'[37m
+        ╵                                   [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/analyzer/FBPostAnalysisForm.tsx:14:138:
+[37m      14 │ ...le, CheckCircle2, Loader2, Wifi, ShieldCheck } from [32m'lucide-react'[37m
+         ╵                                                        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/analyzer/FBPostAnalysisForm.tsx:272:6:
+[37m      272 │       [32m[37m<CardHeader className={frameless ? 'p-0 mb-2' : undefined}>
+          ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/common/PageHeader.tsx:32:12:
+[37m      32 │             [32m[37m<div
+         ╵             [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "clsx"[0m
+
+    src/lib/utils.ts:1:38:
+[37m      1 │ import { clsx, type ClassValue } from [32m"clsx"[37m
+        ╵                                       [32m~~~~~~[0m
+
+  You can mark the path "clsx" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "tailwind-merge"[0m
+
+    src/lib/utils.ts:2:24:
+[37m      2 │ import { twMerge } from [32m"tailwind-merge"[37m
+        ╵                         [32m~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "tailwind-merge" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/dashboard/RiskScoreCard.tsx:92:6:
+[37m      92 │       [32m[37m<div
+         ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/postCreator/PageSelector.tsx:12:57:
+[37m      12 │ ...t { Globe, Plus, Link2, Trash2, CheckCircle2 } from [32m'lucide-react'[37m
+         ╵                                                        [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/postCreator/PageSelector.tsx:82:6:
+[37m      82 │       [32m[37m<Label className="flex items-center gap-2"><Globe className=...
+         ╵       [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "jspdf"[0m
+
+    src/components/onboarding/OnboardingSection.tsx:31:18:
+[37m      31 │ import jsPDF from [32m'jspdf'[37m
+         ╵                   [32m~~~~~~~[0m
+
+  You can mark the path "jspdf" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "jspdf-autotable"[0m
+
+    src/components/onboarding/OnboardingSection.tsx:32:22:
+[37m      32 │ import autoTable from [32m'jspdf-autotable'[37m
+         ╵                       [32m~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "jspdf-autotable" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/onboarding/OnboardingSection.tsx:337:12:
+[37m      337 │             [32m[37m<ul className="flex flex-wrap gap-3 text-sm">
+          ╵             [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react"[0m
+
+    src/components/ui/accordion.tsx:3:23:
+[37m      3 │ import * as React from [32m"react"[37m
+        ╵                        [32m~~~~~~~[0m
+
+  You can mark the path "react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "@radix-ui/react-accordion"[0m
+
+    src/components/ui/accordion.tsx:4:36:
+[37m      4 │ import * as AccordionPrimitive from [32m"@radix-ui/react-accordion"[37m
+        ╵                                     [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "@radix-ui/react-accordion" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/ui/accordion.tsx:5:28:
+[37m      5 │ import { ChevronDown } from [32m"lucide-react"[37m
+        ╵                             [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/accordion.tsx:15:2:
+[37m      15 │   [32m[37m<AccordionPrimitive.Item
+         ╵   [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "lucide-react"[0m
+
+    src/components/ui/dialog.tsx:5:18:
+[37m      5 │ import { X } from [32m"lucide-react"[37m
+        ╵                   [32m~~~~~~~~~~~~~~[0m
+
+  You can mark the path "lucide-react" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "react/jsx-runtime"[0m
+
+    src/components/ui/dialog.tsx:21:2:
+[37m      21 │   [32m[37m<DialogPrimitive.Overlay
+         ╵   [32m^[0m
+
+  You can mark the path "react/jsx-runtime" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+

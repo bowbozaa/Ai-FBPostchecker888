@@ -1,0 +1,10 @@
+(2025-08-23T15:18:01.442Z) [info] [extension] Extension activation started: 1755962281410
+(2025-08-23T15:18:01.445Z) [info] [extension:packageManager] $$ ExternalPackageStore initialized with local data
+(2025-08-23T15:18:01.526Z) [info] [extension] KV storage migration: partitionMigration started
+(2025-08-23T15:18:01.593Z) [info] [extension] KV storage migration: partitionMigration completed
+(2025-08-23T15:18:01.596Z) [info] [extension] Extension activation completed: 1755962281596
+(2025-08-23T15:18:01.596Z) [info] [extension] Extension activation took 186ms
+(2025-08-23T15:18:01.597Z) [info] [extension:tabs:factory] creating a new request tab using the identity: {"tabIdentity":{"to":"/auth-tab"}}
+(2025-08-23T15:18:08.833Z) [info] [extension:sidebar:manager] resetting the login state to signin
+(2025-08-23T15:18:08.837Z) [info] [extension:tabs:factory:tab] dispose the tab
+(2025-08-23T15:18:08.837Z) [error] [extension:commands] Error in executing the command: {}

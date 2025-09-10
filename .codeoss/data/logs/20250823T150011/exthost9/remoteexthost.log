@@ -1,0 +1,5 @@
+2025-08-23 16:03:49.482 [info] Extension host with pid 35720 started
+2025-08-23 16:03:49.483 [info] Lock '/home/bankstartup2025/.codeoss/data/User/workspaceStorage/1926c3c5/vscode.lock': Lock acquired.
+2025-08-23 16:08:50.262 [info] Extension host terminating: renderer disconnected for too long (2)
+2025-08-23 16:08:50.263 [info] Lock '/home/bankstartup2025/.codeoss/data/User/workspaceStorage/1926c3c5/vscode.lock': Marking the lockfile as scheduled to be released in 6000 ms.
+2025-08-23 16:08:50.265 [info] Extension host with pid 35720 exiting with code 0

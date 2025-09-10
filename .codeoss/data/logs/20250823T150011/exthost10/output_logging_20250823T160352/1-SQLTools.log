@@ -1,0 +1,78 @@
+[1755965033426] INFO  (ext): SQLTools is starting
+[1755965033428] INFO  (ext): initializing language client...
+[1755965033437] INFO  (ext): Registering client for languages [{"scheme":"sqltools"},{"language":"sql","scheme":"untitled"},{"language":"sql","scheme":"file"},{"language":"sql","scheme":"sqltools"}]
+    ns: "lc"
+[1755965033450] INFO  (ext): loading plugins...
+[1755965033450] INFO  (ext): registering Formatter Plugin.
+    plugin: {
+      "name": "Formatter Plugin"
+    }
+[1755965033450] INFO  (ext): registering Connection Manager Plugin.
+    plugin: {
+      "name": "Connection Manager Plugin"
+    }
+[1755965033451] INFO  (ext): registering CodeLens Plugin.
+    plugin: {
+      "name": "CodeLens Plugin",
+      "registeredLanguages": []
+    }
+[1755965033453] INFO  (ext): registering Dependency Manager Plugin.
+    plugin: {
+      "name": "Dependency Manager Plugin",
+      "installingDrivers": []
+    }
+[1755965033455] INFO  (ext): Connection explorer changed. Will be updated.
+    ns: "conn-man:explorer"
+[1755965033456] INFO  (ext): registering History Manager Plugin.
+    plugin: {
+      "name": "History Manager Plugin"
+    }
+[1755965033457] INFO  (ext): registering Bookmarks Manager Plugin.
+    plugin: {
+      "name": "Bookmarks Manager Plugin"
+    }
+[1755965033459] INFO  (ext): registering Authentication Provider Plugin.
+    plugin: {
+      "name": "Authentication Provider Plugin",
+      "isRegistered": false
+    }
+[1755965033460] INFO  (ext): registering Object Drop-in Provider (plugin).
+    plugin: {
+      "type": "plugin",
+      "name": "Object Drop-in Provider",
+      "isRegistered": false
+    }
+[1755965033462] INFO  (ext): SQLTools activation completed. 35.800607 ms
+[1755965033463] INFO  (ext): Formatter Plugin registered!
+[1755965033463] INFO  (ext): CodeLens Plugin registered!
+[1755965033463] INFO  (ext): Dependency Manager Plugin registered!
+[1755965033463] INFO  (ext): Connection Manager Plugin registered!
+[1755965033463] INFO  (ext): History Manager Plugin registered!
+[1755965033464] INFO  (ext): Bookmarks Manager Plugin registered!
+[1755965033464] INFO  (ext): Authentication Provider Plugin registered!
+[1755965033464] INFO  (ext): Object Drop-in Provider (plugin) registered!
+[1755965033688] INFO  (ext): registering Google Cloud Spanner Driver Plugin (driver).
+    plugin: {
+      "extensionId": "google-cloud-spanner-ecosystem.google-cloud-spanner-driver",
+      "name": "Google Cloud Spanner Driver Plugin",
+      "type": "driver"
+    }
+[1755965033700] INFO  (ext): Connection explorer changed. Will be updated.
+    ns: "conn-man:explorer"
+[1755965033792] INFO  (ls): SQLTools Server started!
+===============================
+Using node runtime?: no
+ExecPath: /google/devshell/editor/code-oss-for-cloud-shell/node 
+===============================
+[1755965033964] INFO  (ext): LanguageClient ready
+    ns: "lc"
+[1755965033959] INFO  (ls): Initialized with node version:v20.19.0
+[1755965033968] INFO  (ls): REQUEST RECEIVED => ls/RegisterPlugin
+[1755965033968] INFO  (ls): request to register plugin: "/home/bankstartup2025/.codeoss/extensions/google-cloud-spanner-ecosystem.google-cloud-spanner-driver-0.4.1-universal/out/ls/plugin.js"
+[1755965034175] INFO  (ext): Connection explorer changed. Will be updated.
+    ns: "conn-man:explorer"
+[1755965037344] INFO  (ext): EXECUTING COMMAND => sqltools.refreshTree
+[1755965037344] INFO  (ext): Connection explorer changed. Will be updated.
+    ns: "conn-man:explorer"
+[1755965037346] INFO  (ext): Connection explorer changed. Will be updated.
+    ns: "conn-man:explorer"

@@ -1,0 +1,139 @@
+2025-09-06 05:59:20.737 [info] Extension host with pid 1360 started
+2025-09-06 05:59:20.849 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-09-06 05:59:20.850 [info] ExtensionService#_doActivateExtension google.geminicodeassist, startup: false, activationEvent: 'onView:cloudcode.gemini.chatView'
+2025-09-06 05:59:20.851 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-09-06 05:59:20.852 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-09-06 05:59:20.852 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-09-06 05:59:22.582 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-09-06 05:59:22.583 [info] ExtensionService#_doActivateExtension cweijan.vscode-ssh, startup: true, activationEvent: '*'
+2025-09-06 05:59:22.583 [info] ExtensionService#_doActivateExtension mtxr.sqltools, startup: true, activationEvent: '*', root cause: google-cloud-spanner-ecosystem.google-cloud-spanner-driver
+2025-09-06 05:59:22.583 [info] ExtensionService#_doActivateExtension GustavoASC.google-drive-vscode, startup: true, activationEvent: '*'
+2025-09-06 05:59:22.584 [info] ExtensionService#_doActivateExtension jajera.vsx-remote-ssh, startup: true, activationEvent: '*'
+2025-09-06 05:59:22.584 [info] ExtensionService#_doActivateExtension nocalhost.nocalhost, startup: true, activationEvent: '*'
+2025-09-06 05:59:23.136 [error] Activating extension GustavoASC.google-drive-vscode failed due to an error:
+2025-09-06 05:59:23.136 [error] Error: Cannot find module 'mime-types'
+Require stack:
+- /home/bankstartup2025/.codeoss/extensions/gustavoasc.google-drive-vscode-1.3.9-universal/out/drive/model/driveModel.js
+- /home/bankstartup2025/.codeoss/extensions/gustavoasc.google-drive-vscode-1.3.9-universal/out/extension.js
+- /google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js
+	at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+	at t._resolveFilename (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:180:22910)
+	at Module._load (node:internal/modules/cjs/loader:1043:27)
+	at e._load (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:225:1509)
+	at t._load (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:180:22628)
+	at r._load (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:172:22357)
+	at Module.require (node:internal/modules/cjs/loader:1298:19)
+	at require (node:internal/modules/helpers:182:18)
+	at Object.<anonymous> (/home/bankstartup2025/.codeoss/extensions/gustavoasc.google-drive-vscode-1.3.9-universal/out/drive/model/driveModel.js:5:14)
+	at Module._compile (node:internal/modules/cjs/loader:1529:14)
+	at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+	at Module.load (node:internal/modules/cjs/loader:1275:32)
+	at Module._load (node:internal/modules/cjs/loader:1096:12)
+	at e._load (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:225:1509)
+	at t._load (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:180:22628)
+	at r._load (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:172:22357)
+	at Module.require (node:internal/modules/cjs/loader:1298:19)
+	at require (node:internal/modules/helpers:182:18)
+	at Object.<anonymous> (/home/bankstartup2025/.codeoss/extensions/gustavoasc.google-drive-vscode-1.3.9-universal/out/extension.js:17:22)
+	at Module._compile (node:internal/modules/cjs/loader:1529:14)
+	at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+	at Module.load (node:internal/modules/cjs/loader:1275:32)
+	at Module._load (node:internal/modules/cjs/loader:1096:12)
+	at e._load (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:225:1509)
+	at t._load (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:180:22628)
+	at r._load (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:172:22357)
+	at Module.require (node:internal/modules/cjs/loader:1298:19)
+	at require (node:internal/modules/helpers:182:18)
+	at TJ.Cb (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:211:1253)
+2025-09-06 05:59:23.285 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-09-06 05:59:23.286 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-09-06 05:59:23.382 [info] ExtensionService#_doActivateExtension google-cloud-spanner-ecosystem.google-cloud-spanner-driver, startup: true, activationEvent: '*'
+2025-09-06 05:59:23.481 [info] ExtensionService#_doActivateExtension google.cloud-shell, startup: false, activationEvent: 'onCommand:cloudshell.isAuthorized'
+2025-09-06 05:59:23.692 [info] Eager extensions activated
+2025-09-06 05:59:23.692 [info] ExtensionService#_doActivateExtension EditorConfig.EditorConfig, startup: false, activationEvent: 'onStartupFinished'
+2025-09-06 05:59:23.692 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-09-06 05:59:23.693 [info] ExtensionService#_doActivateExtension google.gemini-cli-vscode-ide-companion, startup: false, activationEvent: 'onStartupFinished'
+2025-09-06 05:59:23.693 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-09-06 05:59:23.693 [info] ExtensionService#_doActivateExtension CloudStudio.cloud-debug, startup: false, activationEvent: 'onStartupFinished'
+2025-09-06 05:59:23.693 [info] ExtensionService#_doActivateExtension dbaeumer.vscode-eslint, startup: false, activationEvent: 'onStartupFinished'
+2025-09-06 05:59:23.693 [info] ExtensionService#_doActivateExtension eamodio.gitlens, startup: false, activationEvent: 'onStartupFinished'
+2025-09-06 05:59:23.694 [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode, startup: false, activationEvent: 'onStartupFinished'
+2025-09-06 05:59:23.694 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onStartupFinished', root cause: GitHub.vscode-pull-request-github
+2025-09-06 05:59:24.356 [error] Activating extension esbenp.prettier-vscode failed due to an error:
+2025-09-06 05:59:24.356 [error] Error: Cannot find module 'prettier'
+Require stack:
+- /home/bankstartup2025/.codeoss/extensions/esbenp.prettier-vscode-11.0.0-universal/dist/extension.js
+- /google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js
+	at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+	at t._resolveFilename (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:180:22910)
+	at Module._load (node:internal/modules/cjs/loader:1043:27)
+	at e._load (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:225:1509)
+	at t._load (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:180:22628)
+	at r._load (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:172:22357)
+	at Module.require (node:internal/modules/cjs/loader:1298:19)
+	at require (node:internal/modules/helpers:182:18)
+	at 3459 (/home/bankstartup2025/.codeoss/extensions/esbenp.prettier-vscode-11.0.0-universal/dist/extension.js:1:64455)
+	at r (/home/bankstartup2025/.codeoss/extensions/esbenp.prettier-vscode-11.0.0-universal/dist/extension.js:1:75637)
+	at 1683 (/home/bankstartup2025/.codeoss/extensions/esbenp.prettier-vscode-11.0.0-universal/dist/extension.js:1:3182)
+	at r (/home/bankstartup2025/.codeoss/extensions/esbenp.prettier-vscode-11.0.0-universal/dist/extension.js:1:75637)
+	at /home/bankstartup2025/.codeoss/extensions/esbenp.prettier-vscode-11.0.0-universal/dist/extension.js:1:75804
+	at /home/bankstartup2025/.codeoss/extensions/esbenp.prettier-vscode-11.0.0-universal/dist/extension.js:1:76810
+	at Object.<anonymous> (/home/bankstartup2025/.codeoss/extensions/esbenp.prettier-vscode-11.0.0-universal/dist/extension.js:1:76831)
+	at Module._compile (node:internal/modules/cjs/loader:1529:14)
+	at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+	at Module.load (node:internal/modules/cjs/loader:1275:32)
+	at Module._load (node:internal/modules/cjs/loader:1096:12)
+	at e._load (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:225:1509)
+	at t._load (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:180:22628)
+	at r._load (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:172:22357)
+	at Module.require (node:internal/modules/cjs/loader:1298:19)
+	at require (node:internal/modules/helpers:182:18)
+	at TJ.Cb (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:211:1253)
+	at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-09-06 05:59:24.391 [info] ExtensionService#_doActivateExtension googlecloudtools.cloudcode, startup: false, activationEvent: 'onLanguage:Log'
+2025-09-06 05:59:26.503 [info] ExtensionService#_doActivateExtension GitHub.vscode-pull-request-github, startup: false, activationEvent: 'onStartupFinished'
+2025-09-06 05:59:58.357 [warning] DiagnosticCollection with name 'eslint' does already exist.
+2025-09-06 06:00:21.689 [info] Extension host terminating: received terminate message from renderer
+2025-09-06 06:00:26.698 [error] An error occurred when disposing the subscriptions for extension 'eamodio.gitlens':
+2025-09-06 06:00:26.717 [error] TypeError: Cannot read properties of undefined (reading 'dispose')
+    at Object.dispose (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:145:120067)
+    at m0.<anonymous> (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:115:8921)
+    at m0.dispose (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:115:9017)
+    at Object.dispose (/home/bankstartup2025/.codeoss/extensions/eamodio.gitlens-2025.9.405-universal/dist/gitlens.js:111:29281)
+    at /home/bankstartup2025/.codeoss/extensions/eamodio.gitlens-2025.9.405-universal/dist/gitlens.js:390:17184
+    at Array.forEach (<anonymous>)
+    at Object.dispose (/home/bankstartup2025/.codeoss/extensions/eamodio.gitlens-2025.9.405-universal/dist/gitlens.js:390:17166)
+    at Er (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:25:746)
+    at file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:123:15046
+    at file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:25:1056
+    at Object.dispose (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+    at TJ.eb (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:123:11919)
+    at file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:123:9874
+    at Array.map (<anonymous>)
+    at TJ.$ (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:123:9862)
+    at TJ.terminate (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:123:10105)
+    at v2.terminate (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:124:1434)
+    at us (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:225:5702)
+    at ed.value (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:225:3862)
+    at P.B (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:27:2373)
+    at P.fire (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:27:2591)
+    at lo.fire (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:9458)
+    at J1.A (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:12574)
+    at ed.value (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:10994)
+    at P.B (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:27:2373)
+    at P.fire (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:27:2591)
+    at Qx.acceptChunk (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:7941)
+    at ed.value (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:7227)
+    at P.B (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:27:2373)
+    at P.fire (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:27:2591)
+    at zL.z (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:21744)
+    at zL.acceptFrame (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:21550)
+    at HL.n (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:20078)
+    at file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:17310
+    at Socket.t (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:15251)
+    at Socket.emit (node:events:524:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Socket.Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:191:23)
+2025-09-06 06:00:26.853 [info] Extension host with pid 1360 exiting with code 0

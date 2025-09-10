@@ -1,0 +1,16 @@
+2025-08-23 16:00:59.491 [info] GitLens (pre-release) v2025.8.2205 activating in Code OSS for Cloud Shell (1.100.3-cde) on the web; language='en', logLevel='warn', defaultDateLocale='null' (someValue.machineId|someValue.sessionId)
+To enable debug logging, set `"gitlens.outputLevel": "debug"` or run "GitLens: Enable Debug Logging" from the Command Palette
+
+2025-08-23 16:01:02.119 [info] [2025-08-23 16:00:59.595] Warning(/usr/bin/git -c core.quotepath=false -c color.ui=false rev-list --max-parents=0 HEAD --): fatal: bad revision 'HEAD'
+
+
+2025-08-23 16:01:05.075 [info] [2025-08-23 16:01:04.829] [GIT          ] [/home/bankstartup2025] git for-each-ref --format=%1E%(HEAD)%1D%(refname)%1D%(upstream)%1D%(upstream:track)%1D%(objectname)%1D%(committerdate:iso8601)%1D%(worktreepath)%1D refs/heads/ refs/remotes/ • cancelled [21ms]
+[2025-08-23 16:01:04.863] [GIT          ] [/home/bankstartup2025] git for-each-ref --format=%1E%(refname)%1D%(objectname)%1D%(*objectname)%1D%(creatordate:iso8601)%1D%(authordate:iso8601)%1D%(subject)%1D refs/tags/ • cancelled [31ms]
+[2025-08-23 16:01:04.885] Git.exec
+Canceled: Operation cancelled; command=/usr/bin/git -c core.quotepath=false -c color.ui=false for-each-ref --format=%1E%(refname)%1D%(objectname)%1D%(*objectname)%1D%(creatordate:iso8601)%1D%(authordate:iso8601)%1D%(subject)%1D refs/tags/
+[2025-08-23 16:01:04.910] Warning(/usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --abbrev-ref --symbolic-full-name @ @{u} --): fatal: bad revision '@'
+
+[2025-08-23 16:01:04.911] [GIT          ] [/home/bankstartup2025] git rev-parse --abbrev-ref --symbolic-full-name @ @{u} -- • bad revision '@' [17ms]
+[2025-08-23 16:01:04.946] Warning(/usr/bin/git -c core.quotepath=false -c color.ui=false -c log.showSignature=false log -n1 --format=%ct --): fatal: your current branch 'main' does not have any commits yet
+
+

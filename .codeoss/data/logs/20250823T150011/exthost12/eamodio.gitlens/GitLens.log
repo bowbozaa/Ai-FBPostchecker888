@@ -1,0 +1,33 @@
+2025-08-23 16:09:09.891 [info] GitLens (pre-release) v2025.8.2205 activating in Code OSS for Cloud Shell (1.100.3-cde) on the web; language='en', logLevel='warn', defaultDateLocale='null' (someValue.machineId|someValue.sessionId)
+To enable debug logging, set `"gitlens.outputLevel": "debug"` or run "GitLens: Enable Debug Logging" from the Command Palette
+
+2025-08-23 16:09:09.907 [info] [2025-08-23 16:09:09.508] [GIT   *2357ms] [/home/bankstartup2025] git rev-parse --git-dir --git-common-dir [*2357ms] (slow)
+
+2025-08-23 16:09:12.197 [info] [2025-08-23 16:09:12.197] Warning(/usr/bin/git -c core.quotepath=false -c color.ui=false rev-list --max-parents=0 HEAD --): fatal: bad revision 'HEAD'
+
+[2025-08-23 16:09:12.197] [GIT   *2283ms] [/home/bankstartup2025] git rev-list --max-parents=0 HEAD -- [*2283ms] (slow)
+
+2025-08-23 16:09:29.227 [info] [2025-08-23 16:09:28.726] Warning(/usr/bin/git -c core.quotepath=false -c color.ui=false -c log.showSignature=false log -z --format=%H -n1 HEAD --): fatal: bad revision 'HEAD'
+
+[2025-08-23 16:09:28.729] [GIT          ] [/home/bankstartup2025] git log -z --format=%H -n1 HEAD -- • bad revision 'HEAD' [173ms]
+[2025-08-23 16:09:28.734] Warning(/usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --abbrev-ref --symbolic-full-name @ @{u} --): fatal: bad revision '@'
+
+[2025-08-23 16:09:28.734] [GIT          ] [/home/bankstartup2025] git rev-parse --abbrev-ref --symbolic-full-name @ @{u} -- • bad revision '@' [56ms]
+[2025-08-23 16:09:28.786] Warning(/usr/bin/git -c core.quotepath=false -c color.ui=false -c log.showSignature=false log -n1 --format=%ct --): fatal: your current branch 'main' does not have any commits yet
+
+
+2025-08-23 16:09:29.760 [info] [2025-08-23 16:09:29.729] Warning(/usr/bin/git -c core.quotepath=false -c color.ui=false -c log.showSignature=false log -z --format=%H -n1 HEAD --): fatal: bad revision 'HEAD'
+
+[2025-08-23 16:09:29.730] [GIT          ] [/home/bankstartup2025] git log -z --format=%H -n1 HEAD -- • bad revision 'HEAD' [64ms]
+
+2025-08-23 16:09:48.660 [info] [2025-08-23 16:09:48.160] [GIT    *622ms] [/home/bankstartup2025] git status --porcelain=v2 --branch -u --find-renames -- [*622ms] (slow)
+
+2025-08-23 16:09:59.592 [info] [2025-08-23 16:09:59.091] [GIT    *618ms] [/home/bankstartup2025] git status --porcelain=v2 --branch -u --find-renames -- [*618ms] (slow)
+
+2025-08-23 16:10:16.331 [info] [2025-08-23 16:10:15.831] [GIT   *2503ms] [/home/bankstartup2025] git status --porcelain=v2 --branch -u --find-renames -- [*2503ms] (slow)
+
+2025-08-23 16:13:48.981 [info] [2025-08-23 16:13:48.189] [GIT   *2124ms] [/home/bankstartup2025] git check-ignore -z --stdin [*2124ms] (slow)
+
+2025-08-23 16:33:06.853 [info] [2025-08-23 16:33:06.353] getLocalWorkspaceData
+EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, open '/home/bankstartup2025/.gitkraken/workspaces/workspaces.json'
+

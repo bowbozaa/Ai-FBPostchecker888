@@ -1,0 +1,13 @@
+2025-08-24 12:24:02.659 [info] GitLens (pre-release) v2025.8.2205 activating in Code OSS for Cloud Shell (1.100.3-cde) on the web; language='en', logLevel='warn', defaultDateLocale='null' (someValue.machineId|someValue.sessionId)
+To enable debug logging, set `"gitlens.outputLevel": "debug"` or run "GitLens: Enable Debug Logging" from the Command Palette
+[2025-08-24 12:24:01.864] [GIT   *2408ms] [/home/bankstartup2025/.ssh] git rev-parse --show-toplevel [*2408ms] (slow)
+
+2025-08-24 12:24:02.900 [info] [2025-08-24 12:24:02.623] Warning(/usr/bin/git -c core.quotepath=false -c color.ui=false rev-list --max-parents=0 HEAD --): fatal: bad revision 'HEAD'
+
+
+2025-08-24 12:35:42.791 [info] [2025-08-24 12:35:42.290] Warning(/usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --abbrev-ref --symbolic-full-name @ @{u} --): fatal: bad revision '@'
+
+[2025-08-24 12:35:42.290] [GIT          ] [/home/bankstartup2025] git rev-parse --abbrev-ref --symbolic-full-name @ @{u} -- • bad revision '@' [8ms]
+[2025-08-24 12:35:42.313] Warning(/usr/bin/git -c core.quotepath=false -c color.ui=false -c log.showSignature=false log -n1 --format=%ct --): fatal: your current branch 'main' does not have any commits yet
+
+

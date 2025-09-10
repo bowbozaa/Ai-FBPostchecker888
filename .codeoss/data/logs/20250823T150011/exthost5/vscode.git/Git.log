@@ -1,0 +1,90 @@
+2025-08-23 15:19:37.314 [info] [main] Log level: Info
+2025-08-23 15:19:37.314 [info] [main] Validating found git in: "git"
+2025-08-23 15:19:37.315 [info] [main] Using git "2.43.0" from "git"
+2025-08-23 15:19:37.315 [info] [Model][doInitialScan] Initial repository scan started
+2025-08-23 15:19:37.315 [info] > git rev-parse --show-toplevel [118ms]
+2025-08-23 15:19:37.315 [info] > git rev-parse --git-dir --git-common-dir [76ms]
+2025-08-23 15:19:37.315 [info] [Model][openRepository] Opened repository (path): /home/bankstartup2025
+2025-08-23 15:19:37.315 [info] [Model][openRepository] Opened repository (real path): /home/bankstartup2025
+2025-08-23 15:19:37.315 [info] > git config --get commit.template [48ms]
+2025-08-23 15:19:37.346 [info] [Git][getRemotes] No remotes found in the git config file
+2025-08-23 15:19:37.409 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [38ms]
+2025-08-23 15:19:37.410 [warning] [Git][getBranch] No such branch: main
+2025-08-23 15:19:37.463 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [24ms]
+2025-08-23 15:19:37.569 [info] > git rev-parse --show-toplevel [44ms]
+2025-08-23 15:19:37.590 [info] > git rev-parse --show-toplevel [6ms]
+2025-08-23 15:19:37.618 [info] > git rev-parse --show-toplevel [6ms]
+2025-08-23 15:19:37.661 [info] > git rev-parse --show-toplevel [23ms]
+2025-08-23 15:19:37.682 [info] > git rev-parse --show-toplevel [5ms]
+2025-08-23 15:19:37.702 [info] > git rev-parse --show-toplevel [5ms]
+2025-08-23 15:19:37.724 [info] > git rev-parse --show-toplevel [10ms]
+2025-08-23 15:19:37.745 [info] > git rev-parse --show-toplevel [10ms]
+2025-08-23 15:19:37.765 [info] > git rev-parse --show-toplevel [1ms]
+2025-08-23 15:19:37.783 [info] > git rev-parse --show-toplevel [3ms]
+2025-08-23 15:19:46.308 [info] > git rev-parse --show-toplevel [8516ms]
+2025-08-23 15:19:46.345 [info] > git rev-parse --show-toplevel [13ms]
+2025-08-23 15:19:46.345 [info] [Model][doInitialScan] Initial repository scan completed - repositories (1), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2025-08-23 15:19:46.407 [info] > git status -z -uall [8984ms] (cancelled)
+2025-08-23 15:19:47.676 [info] > git check-ignore -v -z --stdin [1275ms]
+2025-08-23 15:19:50.168 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2140ms]
+2025-08-23 15:19:50.168 [warning] [Git][getBranch] No such branch: main
+2025-08-23 15:19:50.170 [error] [GitHistoryProvider][resolveHEADMergeBase] Failed to resolve merge base for main: Error: No such branch: main.
+2025-08-23 15:19:50.301 [info] > git config --get commit.template [176ms]
+2025-08-23 15:19:50.350 [info] [Git][getRemotes] No remotes found in the git config file
+2025-08-23 15:19:50.390 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [40ms]
+2025-08-23 15:19:50.390 [warning] [Git][getBranch] No such branch: main
+2025-08-23 15:19:50.437 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [18ms]
+2025-08-23 15:19:50.789 [info] > git status -z -uall [388ms] (cancelled)
+2025-08-23 15:19:50.821 [info] > git check-ignore -v -z --stdin [11ms]
+2025-08-23 15:19:56.443 [info] > git config --get --local branch.main.github-pr-owner-number [5ms]
+2025-08-23 15:19:56.443 [warning] [Git][config] git config failed: Failed to execute git
+2025-08-23 15:19:56.464 [info] > git config --get --local branch.main.remote [5ms]
+2025-08-23 15:19:56.464 [warning] [Git][config] git config failed: Failed to execute git
+2025-08-23 15:19:56.485 [info] > git config --get --local branch.main.merge [5ms]
+2025-08-23 15:19:56.485 [warning] [Git][config] git config failed: Failed to execute git
+2025-08-23 15:20:22.012 [info] > git show --textconv :.codeoss/data/logs/20250823T150011/exthost5/Postman.postman-for-vscode-prod.log [24ms]
+2025-08-23 15:20:22.030 [info] > git hash-object -t tree /dev/null [2ms]
+2025-08-23 15:20:22.030 [warning] [GitFileSystemProvider][readFile] File not found - git:/home/bankstartup2025/.codeoss/data/logs/20250823T150011/exthost5/Postman.postman-for-vscode-prod.log.git?%7B%22path%22%3A%22%2Fhome%2Fbankstartup2025%2F.codeoss%2Fdata%2Flogs%2F20250823T150011%2Fexthost5%2FPostman.postman-for-vscode-prod.log%22%2C%22ref%22%3A%22%22%7D
+2025-08-23 15:20:22.039 [info] > git ls-files --stage -- .codeoss/data/logs/20250823T150011/exthost5/Postman.postman-for-vscode-prod.log [33ms]
+2025-08-23 15:20:22.041 [warning] [GitFileSystemProvider][stat] File not found - git:/home/bankstartup2025/.codeoss/data/logs/20250823T150011/exthost5/Postman.postman-for-vscode-prod.log.git?%7B%22path%22%3A%22%2Fhome%2Fbankstartup2025%2F.codeoss%2Fdata%2Flogs%2F20250823T150011%2Fexthost5%2FPostman.postman-for-vscode-prod.log%22%2C%22ref%22%3A%22%22%7D
+2025-08-23 15:20:22.398 [info] > git check-ignore -v -z --stdin [16ms]
+2025-08-23 15:56:50.970 [info] > git check-ignore -v -z --stdin [21ms]
+2025-08-23 15:56:52.727 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z --shortstat --diff-merges=first-parent -n50 --skip=0 --topo-order --decorate=full --stdin [108ms]
+2025-08-23 15:56:52.727 [info] fatal: bad revision 'refs/heads/main'
+2025-08-23 15:56:52.738 [error] [GitHistoryProvider][provideHistoryItems] Failed to get history items with options '{"historyItemRefs":["refs/heads/main"],"limit":50,"skip":0}': Failed to execute git {
+  "exitCode": 128,
+  "gitCommand": "log",
+  "stdout": "",
+  "stderr": "fatal: bad revision 'refs/heads/main'\n"
+}
+2025-08-23 15:56:53.253 [info] > git check-ignore -v -z --stdin [17ms]
+2025-08-23 15:56:56.068 [info] > git check-ignore -v -z --stdin [14ms]
+2025-08-23 15:56:58.660 [info] > git -c user.useConfigOnly=true commit --quiet [94ms]
+2025-08-23 15:56:58.660 [info] Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: no email was given and auto-detection is disabled
+2025-08-23 15:56:58.671 [info] > git config --get-all user.name [2ms]
+2025-08-23 15:56:58.695 [info] [Git][getRemotes] No remotes found in the git config file
+2025-08-23 15:56:58.695 [info] > git config --get commit.template [12ms]
+2025-08-23 15:56:58.696 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2025-08-23 15:56:58.696 [warning] [Git][getBranch] No such branch: main
+2025-08-23 15:56:58.722 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [4ms]
+2025-08-23 15:57:02.240 [info] > git status -z -uall [3534ms] (cancelled)
+2025-08-23 15:58:08.841 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z --shortstat --diff-merges=first-parent -n50 --skip=0 --topo-order --decorate=full --stdin [2ms]
+2025-08-23 15:58:08.841 [info] fatal: bad revision 'refs/heads/main'
+2025-08-23 15:58:08.843 [error] [GitHistoryProvider][provideHistoryItems] Failed to get history items with options '{"historyItemRefs":["refs/heads/main"],"limit":50,"skip":0}': Failed to execute git {
+  "exitCode": 128,
+  "gitCommand": "log",
+  "stdout": "",
+  "stderr": "fatal: bad revision 'refs/heads/main'\n"
+}

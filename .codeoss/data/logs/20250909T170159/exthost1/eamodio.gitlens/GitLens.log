@@ -1,0 +1,3 @@
+2025-09-09 17:02:15.791 [info] GitLens (pre-release) v2025.9.405 activating in Code OSS for Cloud Shell (1.100.3-cde) on the web; language='en', logLevel='warn', defaultDateLocale='null' (someValue.machineId|someValue.sessionId)
+To enable debug logging, set `"gitlens.outputLevel": "debug"` or run "GitLens: Enable Debug Logging" from the Command Palette
+

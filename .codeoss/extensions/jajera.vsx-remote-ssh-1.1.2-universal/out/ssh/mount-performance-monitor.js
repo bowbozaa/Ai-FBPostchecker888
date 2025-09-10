@@ -1,0 +1,452 @@
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MountPerformanceMonitor = exports.NetworkQuality = exports.MountOperationType = void 0;
+/**
+ * Performance monitoring for mount operations
+ */
+const vscode = __importStar(require("vscode"));
+var MountOperationType;
+(function (MountOperationType) {
+    MountOperationType["MountRead"] = "mount_read";
+    MountOperationType["MountWrite"] = "mount_write";
+    MountOperationType["MountDelete"] = "mount_delete";
+    MountOperationType["MountCreate"] = "mount_create";
+    MountOperationType["MountRename"] = "mount_rename";
+    MountOperationType["MountList"] = "mount_list";
+    MountOperationType["MountStat"] = "mount_stat";
+})(MountOperationType || (exports.MountOperationType = MountOperationType = {}));
+var NetworkQuality;
+(function (NetworkQuality) {
+    NetworkQuality["Excellent"] = "excellent";
+    NetworkQuality["Good"] = "good";
+    NetworkQuality["Fair"] = "fair";
+    NetworkQuality["Poor"] = "poor";
+    NetworkQuality["Unavailable"] = "unavailable";
+    NetworkQuality["Offline"] = "offline";
+})(NetworkQuality || (exports.NetworkQuality = NetworkQuality = {}));
+class MountPerformanceMonitor {
+    constructor() {
+        this.metrics = [];
+        this.mountMetrics = new Map();
+        this.networkConditions = new Map();
+        this.operationIdCounter = 0;
+        this.isMonitoringEnabled = true;
+        this.statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 100);
+        this.statusBarItem.text = '$(graph) Mount Performance';
+        this.statusBarItem.tooltip = 'Click to view mount performance metrics';
+        this.statusBarItem.command = 'mount.showPerformanceMetrics';
+        this.statusBarItem.show();
+    }
+    static getInstance() {
+        if (!MountPerformanceMonitor.instance) {
+            MountPerformanceMonitor.instance = new MountPerformanceMonitor();
+        }
+        return MountPerformanceMonitor.instance;
+    }
+    recordMountOperation(operationType, duration, success, mountUri, remoteUri, mountId, dataSize, error, cached = false) {
+        if (!this.isMonitoringEnabled) {
+            return;
+        }
+        const metric = {
+            operationType,
+            duration,
+            success,
+            mountUri,
+            remoteUri,
+            mountId,
+            dataSize,
+            error,
+            cached,
+            timestamp: new Date()
+        };
+        this.metrics.push(metric);
+        // Store per-mount metrics
+        if (!this.mountMetrics.has(mountId)) {
+            this.mountMetrics.set(mountId, []);
+        }
+        this.mountMetrics.get(mountId).push(metric);
+        // Limit metrics per mount
+        const maxMetrics = 1000;
+        const mountMetrics = this.mountMetrics.get(mountId);
+        if (mountMetrics.length > maxMetrics) {
+            mountMetrics.splice(0, mountMetrics.length - maxMetrics);
+        }
+        this.updateStatusBar();
+    }
+    getUsagePattern(mountId) {
+        const mountMetrics = this.mountMetrics.get(mountId);
+        if (!mountMetrics || mountMetrics.length === 0) {
+            return undefined;
+        }
+        const operations = mountMetrics.filter(m => m.success);
+        const totalDuration = operations.reduce((sum, m) => sum + m.duration, 0);
+        const successRate = (operations.length / mountMetrics.length) * 100;
+        // Calculate operation frequency
+        const operationCounts = new Map();
+        operations.forEach(op => {
+            operationCounts.set(op.operationType, (operationCounts.get(op.operationType) || 0) + 1);
+        });
+        let mostCommonOperation = MountOperationType.MountRead;
+        let maxCount = 0;
+        for (const [opType, count] of operationCounts) {
+            if (count > maxCount) {
+                maxCount = count;
+                mostCommonOperation = opType;
+            }
+        }
+        // Calculate read/write ratio
+        const readOps = operations.filter(op => op.operationType === MountOperationType.MountRead).length;
+        const writeOps = operations.filter(op => op.operationType === MountOperationType.MountWrite).length;
+        const readWriteRatio = writeOps > 0 ? readOps / writeOps : readOps;
+        // Calculate average file size
+        const opsWithSize = operations.filter(op => op.dataSize);
+        const averageFileSize = opsWithSize.length > 0
+            ? opsWithSize.reduce((sum, op) => sum + (op.dataSize || 0), 0) / opsWithSize.length
+            : 0;
+        // Calculate frequent files - include all files, not just those with extensions
+        const fileCounts = new Map();
+        operations.forEach(op => {
+            const pathParts = op.mountUri.split('/');
+            const fileName = pathParts[pathParts.length - 1] || pathParts[pathParts.length - 2] || 'unknown';
+            if (fileName && fileName !== 'unknown') {
+                fileCounts.set(fileName, (fileCounts.get(fileName) || 0) + 1);
+            }
+        });
+        const frequentFiles = Array.from(fileCounts.entries())
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, 10)
+            .map(([file]) => file);
+        // Calculate hourly activity
+        const hourlyActivity = {};
+        operations.forEach(op => {
+            const hour = op.timestamp.getHours();
+            hourlyActivity[hour] = (hourlyActivity[hour] || 0) + 1;
+        });
+        return {
+            mountId,
+            operationCount: operations.length,
+            totalDuration,
+            averageDuration: operations.length > 0 ? totalDuration / operations.length : 0,
+            successRate,
+            mostCommonOperation,
+            networkQuality: NetworkQuality.Good, // Default value
+            lastActivity: operations.length > 0 ? operations[operations.length - 1].timestamp : new Date(),
+            frequentFiles,
+            readWriteRatio,
+            averageFileSize,
+            hourlyActivity
+        };
+    }
+    getAllUsagePatterns() {
+        const patterns = [];
+        for (const mountId of this.mountMetrics.keys()) {
+            const pattern = this.getUsagePattern(mountId);
+            if (pattern) {
+                patterns.push(pattern);
+            }
+        }
+        return patterns;
+    }
+    clearMetrics() {
+        this.metrics = [];
+        this.mountMetrics.clear();
+        this.networkConditions.clear();
+    }
+    recordNetworkCondition(mountId, latency, bandwidth, packetLoss) {
+        if (!this.isMonitoringEnabled) {
+            return;
+        }
+        const condition = { latency, bandwidth, packetLoss, timestamp: new Date() };
+        if (!this.networkConditions.has(mountId)) {
+            this.networkConditions.set(mountId, []);
+        }
+        this.networkConditions.get(mountId).push(condition);
+        // Limit network conditions history
+        const maxConditions = 100;
+        const conditions = this.networkConditions.get(mountId);
+        if (conditions.length > maxConditions) {
+            conditions.splice(0, conditions.length - maxConditions);
+        }
+    }
+    getNetworkStatistics(mountId) {
+        const conditions = this.networkConditions.get(mountId);
+        if (!conditions || conditions.length === 0) {
+            return undefined;
+        }
+        const currentCondition = conditions[conditions.length - 1];
+        // Calculate averages
+        const totalLatency = conditions.reduce((sum, c) => sum + c.latency, 0);
+        const totalBandwidth = conditions.reduce((sum, c) => sum + c.bandwidth, 0);
+        const totalPacketLoss = conditions.reduce((sum, c) => sum + c.packetLoss, 0);
+        const averageLatency = totalLatency / conditions.length;
+        const averageBandwidth = totalBandwidth / conditions.length;
+        const averagePacketLoss = totalPacketLoss / conditions.length;
+        // Classify network quality
+        let quality = NetworkQuality.Good;
+        if (currentCondition.latency <= 50 && currentCondition.bandwidth >= 10000000 && currentCondition.packetLoss <= 0.1) {
+            quality = NetworkQuality.Excellent;
+        }
+        else if (currentCondition.latency <= 100 && currentCondition.bandwidth >= 5000000 && currentCondition.packetLoss <= 1) {
+            quality = NetworkQuality.Good;
+        }
+        else if (currentCondition.latency <= 200 && currentCondition.bandwidth >= 1000000 && currentCondition.packetLoss <= 5) {
+            quality = NetworkQuality.Fair;
+        }
+        else if (currentCondition.bandwidth === 0 || currentCondition.packetLoss >= 100) {
+            quality = NetworkQuality.Offline;
+        }
+        else {
+            quality = NetworkQuality.Poor;
+        }
+        // Calculate trend
+        let trend = 'stable';
+        if (conditions.length >= 3) {
+            const recent = conditions.slice(-3);
+            const firstLatency = recent[0].latency;
+            const lastLatency = recent[recent.length - 1].latency;
+            if (lastLatency < firstLatency * 0.8) {
+                trend = 'improving';
+            }
+            else if (lastLatency > firstLatency * 1.2) {
+                trend = 'degrading';
+            }
+        }
+        return {
+            currentCondition: {
+                latency: currentCondition.latency,
+                bandwidth: currentCondition.bandwidth,
+                packetLoss: currentCondition.packetLoss,
+                quality
+            },
+            averageLatency,
+            averageBandwidth,
+            averagePacketLoss,
+            connectionStability: 0.95, // Default value
+            trend
+        };
+    }
+    getAdaptiveCacheSettings(mountId) {
+        return {
+            enabled: true,
+            ttl: 300000, // 5 minutes
+            maxSize: 50 * 1024 * 1024, // 50MB
+            compressionEnabled: false,
+            prefetchEnabled: false,
+            mountId,
+            cacheSizeLimit: 50 * 1024 * 1024, // 50MB
+            cacheTtl: 300000 // 5 minutes
+        };
+    }
+    generateOptimizationRecommendations(mountId) {
+        const recommendations = [];
+        const pattern = this.getUsagePattern(mountId);
+        const stats = this.getNetworkStatistics(mountId);
+        if (pattern) {
+            // Recommend prefetching for frequent directory access
+            if (pattern.mostCommonOperation === MountOperationType.MountList) {
+                recommendations.push({
+                    type: 'prefetch',
+                    priority: 'medium',
+                    description: 'Enable prefetching for frequently accessed directories',
+                    impact: 'Reduces latency for directory operations',
+                    implementation: 'Enable prefetch in mount settings',
+                    recommendedValue: true
+                });
+            }
+            // Recommend cache TTL increase for poor network
+            if (stats && stats.currentCondition.quality === NetworkQuality.Poor) {
+                recommendations.push({
+                    type: 'cache_ttl',
+                    priority: 'high',
+                    description: 'Increase cache TTL due to poor network conditions',
+                    impact: 'Reduces network requests and improves performance',
+                    implementation: 'Increase cache TTL to 10 minutes',
+                    recommendedValue: 600000, // 10 minutes
+                    currentValue: 300000 // 5 minutes
+                });
+            }
+            // Recommend cache size increase for high activity with low cache hit rate
+            if (pattern.operationCount > 100) {
+                const currentSettings = this.getAdaptiveCacheSettings(mountId);
+                recommendations.push({
+                    type: 'cache_size',
+                    priority: 'medium',
+                    description: 'Increase cache size due to high activity',
+                    impact: 'Improves cache hit rate and reduces network requests',
+                    implementation: 'Increase cache size to 100MB',
+                    recommendedValue: 100 * 1024 * 1024, // 100MB
+                    currentValue: currentSettings.cacheSizeLimit
+                });
+            }
+        }
+        return recommendations;
+    }
+    startMountOperation(operationType, mountId, mountUri, remoteUri, dataSize) {
+        if (!this.isMonitoringEnabled) {
+            return '';
+        }
+        this.operationIdCounter++;
+        const operationId = `op_${Date.now()}_${this.operationIdCounter}`;
+        // Store operation start time for duration calculation
+        this.operationStartTimes = this.operationStartTimes || new Map();
+        this.operationStartTimes.set(operationId, Date.now());
+        return operationId;
+    }
+    endMountOperation(operationId, success, duration, dataSize) {
+        if (!this.isMonitoringEnabled || !operationId) {
+            return;
+        }
+        // Record the operation when it ends
+        const startTime = this.operationStartTimes?.get(operationId);
+        if (startTime) {
+            // Find the mountId from the operationId (this is a simplified approach)
+            // In a real implementation, you'd store more context with the operation
+            const mountId = 'benchmark-mount'; // Default for test
+            this.recordMountOperation(MountOperationType.MountRead, // Default operation type
+            duration, success, `mount://${mountId}/file.txt`, // Default URI
+            `ssh://user@host/file.txt`, // Default remote URI
+            mountId, dataSize);
+        }
+        // Remove start time
+        this.operationStartTimes?.delete(operationId);
+    }
+    showPerformanceMetrics() {
+        if (this.webviewPanel) {
+            this.webviewPanel.reveal();
+            return;
+        }
+        this.webviewPanel = vscode.window.createWebviewPanel('mountPerformance', 'Mount Performance Metrics', vscode.ViewColumn.One, {
+            enableScripts: true,
+            retainContextWhenHidden: true
+        });
+        this.webviewPanel.webview.html = this.getWebviewContent();
+        this.webviewPanel.onDidDispose(() => {
+            this.webviewPanel = undefined;
+        });
+    }
+    updateStatusBar() {
+        const totalOperations = this.metrics.length;
+        const successfulOperations = this.metrics.filter(m => m.success).length;
+        const successRate = totalOperations > 0 ? (successfulOperations / totalOperations) * 100 : 0;
+        this.statusBarItem.text = `$(graph) ${successRate.toFixed(1)}% Success`;
+        this.statusBarItem.tooltip = `${totalOperations} operations, ${successRate.toFixed(1)}% success rate`;
+    }
+    getWebviewContent() {
+        const patterns = this.getAllUsagePatterns();
+        const totalOperations = this.metrics.length;
+        const successfulOperations = this.metrics.filter(m => m.success).length;
+        const successRate = totalOperations > 0 ? (successfulOperations / totalOperations) * 100 : 0;
+        return `
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="UTF-8">
+          <title>Mount Performance Metrics</title>
+          <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            .metric { margin: 10px 0; padding: 10px; border: 1px solid #ccc; }
+            .success { color: green; }
+            .error { color: red; }
+          </style>
+        </head>
+        <body>
+          <h1>Mount Performance Metrics</h1>
+          <div class="metric">
+            <h2>Overall Statistics</h2>
+            <p>Total Operations: ${totalOperations}</p>
+            <p>Success Rate: <span class="${successRate >= 90 ? 'success' : 'error'}">${successRate.toFixed(1)}%</span></p>
+          </div>
+          <div class="metric">
+            <h2>Mount Patterns</h2>
+            ${patterns.map(pattern => `
+              <div style="margin: 10px 0; padding: 10px; border: 1px solid #eee;">
+                <h3>Mount: ${pattern.mountId}</h3>
+                <p>Operations: ${pattern.operationCount}</p>
+                <p>Success Rate: ${pattern.successRate.toFixed(1)}%</p>
+                <p>Average Duration: ${pattern.averageDuration.toFixed(2)}ms</p>
+                <p>Most Common Operation: ${pattern.mostCommonOperation}</p>
+              </div>
+            `).join('')}
+          </div>
+        </body>
+      </html>
+    `;
+    }
+    /**
+     * Optimize mount performance based on usage patterns and network conditions
+     * @param mountId Optional mount ID to optimize, or undefined to optimize all mounts
+     * @returns Promise that resolves when optimization is complete
+     */
+    async optimizeMountPerformance(mountId) {
+        // Check if monitoring is enabled
+        if (!this.isMonitoringEnabled) {
+            vscode.window.showInformationMessage('Performance monitoring is disabled. Enable monitoring to optimize mount performance.');
+            return;
+        }
+        // Get mounts to optimize
+        const mountIds = mountId ? [mountId] : Array.from(this.mountMetrics.keys());
+        if (mountIds.length === 0) {
+            vscode.window.showInformationMessage('No mounts to optimize.');
+            return;
+        }
+        for (const id of mountIds) {
+            // Get recommendations for this mount
+            const recommendations = this.generateOptimizationRecommendations(id);
+            // Apply high priority recommendations
+            const highPriorityRecs = recommendations.filter(r => r.priority === 'high' || r.priority === 'critical');
+            if (highPriorityRecs.length > 0) {
+                // Apply recommendations
+                // In a real implementation, this would update the mount settings
+                console.log(`Applying ${highPriorityRecs.length} high priority recommendations for mount ${id}`);
+                // For now, just log the recommendations
+                highPriorityRecs.forEach(rec => {
+                    console.log(`- ${rec.description}: ${rec.currentValue} -> ${rec.recommendedValue}`);
+                });
+            }
+            // Apply medium priority recommendations if network quality is poor
+            const stats = this.getNetworkStatistics(id);
+            if (stats && (stats.currentCondition.quality === NetworkQuality.Poor || stats.currentCondition.quality === NetworkQuality.Fair)) {
+                const mediumPriorityRecs = recommendations.filter(r => r.priority === 'medium');
+                if (mediumPriorityRecs.length > 0) {
+                    console.log(`Applying ${mediumPriorityRecs.length} medium priority recommendations for mount ${id} due to ${stats.currentCondition.quality} network quality`);
+                    mediumPriorityRecs.forEach(rec => {
+                        console.log(`- ${rec.description}: ${rec.currentValue} -> ${rec.recommendedValue}`);
+                    });
+                }
+            }
+        }
+        // Show success message
+        vscode.window.showInformationMessage(`Mount performance optimization complete for ${mountIds.length} mount(s)`);
+    }
+    dispose() {
+        this.statusBarItem.dispose();
+        if (this.webviewPanel) {
+            this.webviewPanel.dispose();
+        }
+    }
+}
+exports.MountPerformanceMonitor = MountPerformanceMonitor;
+//# sourceMappingURL=mount-performance-monitor.js.map

@@ -1,0 +1,47 @@
+2025-08-23 16:35:07.224 [info] [main] Log level: Info
+2025-08-23 16:35:07.224 [info] [main] Validating found git in: "git"
+2025-08-23 16:35:07.224 [info] [main] Using git "2.43.0" from "git"
+2025-08-23 16:35:07.224 [info] [Model][doInitialScan] Initial repository scan started
+2025-08-23 16:35:07.224 [info] > git rev-parse --show-toplevel [143ms]
+2025-08-23 16:35:07.224 [info] > git rev-parse --git-dir --git-common-dir [96ms]
+2025-08-23 16:35:07.224 [info] [Model][openRepository] Opened repository (path): /home/bankstartup2025
+2025-08-23 16:35:07.224 [info] [Model][openRepository] Opened repository (real path): /home/bankstartup2025
+2025-08-23 16:35:07.224 [info] > git config --get commit.template [30ms]
+2025-08-23 16:35:07.272 [info] [Git][getRemotes] No remotes found in the git config file
+2025-08-23 16:35:07.288 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [22ms]
+2025-08-23 16:35:07.292 [warning] [Git][getBranch] No such branch: main
+2025-08-23 16:35:07.463 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [92ms]
+2025-08-23 16:35:07.749 [info] > git rev-parse --show-toplevel [41ms]
+2025-08-23 16:35:07.835 [info] > git rev-parse --show-toplevel [33ms]
+2025-08-23 16:35:07.945 [info] > git rev-parse --show-toplevel [52ms]
+2025-08-23 16:35:14.879 [info] > git rev-parse --show-toplevel [6887ms]
+2025-08-23 16:35:14.896 [info] > git rev-parse --show-toplevel [8ms]
+2025-08-23 16:35:14.921 [info] > git rev-parse --show-toplevel [19ms]
+2025-08-23 16:35:14.971 [info] > git status -z -uall [7651ms] (cancelled)
+2025-08-23 16:35:14.974 [info] > git rev-parse --show-toplevel [19ms]
+2025-08-23 16:35:15.443 [info] > git check-ignore -v -z --stdin [473ms]
+2025-08-23 16:35:15.695 [info] > git rev-parse --show-toplevel [713ms]
+2025-08-23 16:35:17.710 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2021ms]
+2025-08-23 16:35:17.710 [warning] [Git][getBranch] No such branch: main
+2025-08-23 16:35:17.712 [error] [GitHistoryProvider][resolveHEADMergeBase] Failed to resolve merge base for main: Error: No such branch: main.
+2025-08-23 16:35:17.797 [info] > git rev-parse --show-toplevel [97ms]
+2025-08-23 16:35:17.798 [info] > git config --get commit.template [104ms]
+2025-08-23 16:35:21.814 [info] [Git][getRemotes] No remotes found in the git config file
+2025-08-23 16:35:21.861 [info] > git rev-parse --show-toplevel [3892ms]
+2025-08-23 16:35:21.940 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [126ms]
+2025-08-23 16:35:21.941 [warning] [Git][getBranch] No such branch: main
+2025-08-23 16:35:22.223 [info] > git rev-parse --show-toplevel [299ms]
+2025-08-23 16:35:22.320 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [341ms]
+2025-08-23 16:35:22.358 [info] > git rev-parse --show-toplevel [27ms]
+2025-08-23 16:35:22.381 [info] > git rev-parse --show-toplevel [5ms]
+2025-08-23 16:35:22.382 [info] [Model][doInitialScan] Initial repository scan completed - repositories (1), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2025-08-23 16:35:24.776 [info] > git status -z -uall [2817ms] (cancelled)
+2025-08-23 16:35:26.716 [info] > git config --get --local branch.main.github-pr-owner-number [3ms]
+2025-08-23 16:35:26.716 [warning] [Git][config] git config failed: Failed to execute git
+2025-08-23 16:35:26.737 [info] > git config --get --local branch.main.remote [4ms]
+2025-08-23 16:35:26.737 [warning] [Git][config] git config failed: Failed to execute git
+2025-08-23 16:35:26.757 [info] > git config --get --local branch.main.merge [5ms]
+2025-08-23 16:35:26.757 [warning] [Git][config] git config failed: Failed to execute git
+2025-08-23 16:35:53.140 [info] > git check-ignore -v -z --stdin [23ms]
+2025-08-23 16:35:55.341 [info] > git check-ignore -v -z --stdin [10ms]
+2025-08-23 16:35:58.175 [info] > git check-ignore -v -z --stdin [37ms]

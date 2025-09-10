@@ -1,0 +1,2 @@
+[Error - 12:40:42 PM] Gemini Code Assist client: couldn't create connection to server.
+Launching server using command /home/bankstartup2025/.cache/cloud-code/cloudcode_cli/cloudcode_cli/56fce63/cloudcode_cli failed. Error: spawn /home/bankstartup2025/.cache/cloud-code/cloudcode_cli/cloudcode_cli/56fce63/cloudcode_cli EACCES

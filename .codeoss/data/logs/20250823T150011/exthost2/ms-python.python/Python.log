@@ -1,0 +1,31 @@
+2025-08-23 15:06:20.962 [warning] Dir "/home/bankstartup2025/.pixi/envs" is not watchable (directory does not exist)
+2025-08-23 15:06:20.962 [info] Starting Environment refresh
+2025-08-23 15:06:20.962 [info] Searching for interpreters in posix paths locator
+2025-08-23 15:06:20.962 [info] Searching for pyenv environments
+2025-08-23 15:06:20.962 [info] Searching for conda environments
+2025-08-23 15:06:20.963 [info] Searching for global virtual environments
+2025-08-23 15:06:20.963 [info] Searching for custom virtual environments
+2025-08-23 15:06:20.963 [info] pyenv is not installed
+2025-08-23 15:06:20.963 [info] Finished searching for pyenv environments: 28 milliseconds
+2025-08-23 15:06:20.963 [info] Finished searching for custom virtual envs: 27 milliseconds
+2025-08-23 15:06:20.963 [info] > conda info --json
+2025-08-23 15:06:20.963 [info] > hatch env show --json
+2025-08-23 15:06:20.963 [info] cwd: .
+2025-08-23 15:06:20.963 [info] Python interpreter path: /bin/python
+2025-08-23 15:06:20.963 [info] Finished searching for global virtual envs: 80 milliseconds
+2025-08-23 15:06:23.208 [info] Found: /bin/python --> /bin/python3.12
+2025-08-23 15:06:23.282 [info] > pyenv which python
+2025-08-23 15:06:23.282 [info] cwd: .
+2025-08-23 15:06:23.331 [info] Found: /bin/python3 --> /bin/python3.12
+2025-08-23 15:06:23.357 [info] Found: /bin/python3.12 --> /bin/python3.12
+2025-08-23 15:06:23.520 [info] > /bin/python -I /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/get_output_via_markers.py /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/interpreterInfo.py
+2025-08-23 15:06:23.523 [info] Found: /usr/bin/python --> /usr/bin/python3.12
+2025-08-23 15:06:23.527 [info] Found: /usr/bin/python3 --> /usr/bin/python3.12
+2025-08-23 15:06:23.528 [info] Found: /usr/bin/python3.12 --> /usr/bin/python3.12
+2025-08-23 15:06:23.560 [info] Finished searching for interpreters in posix paths locator: 2703 milliseconds
+2025-08-23 15:06:23.605 [info] > /usr/bin/python -I /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/get_output_via_markers.py /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/interpreterInfo.py
+2025-08-23 15:06:25.585 [info] Environments refresh paths discovered (event): 4729 milliseconds
+2025-08-23 15:06:25.585 [info] Environments refresh finished (event): 4729 milliseconds
+2025-08-23 15:06:25.585 [info] Environments refresh paths discovered: 4729 milliseconds
+2025-08-23 15:06:25.595 [info] Environment refresh took 4740 milliseconds
+2025-08-23 15:06:26.581 [info] Starting Jedi language server for bankstartup2025.

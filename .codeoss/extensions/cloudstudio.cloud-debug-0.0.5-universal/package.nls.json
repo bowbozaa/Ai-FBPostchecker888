@@ -1,0 +1,8 @@
+{
+  "command.startDevMode": "start develop",
+  "command.endDevMode": "end develop",
+  "command.startDuplicateDev": "start Duplicate",
+  "command.viewManifest": "View Manifest",
+  "command.refreshTree": "Refresh",
+  "command.refreshing": "Refreshing"
+}

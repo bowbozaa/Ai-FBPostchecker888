@@ -1,0 +1,397 @@
+2025-08-24 12:40:21.025 [info] Extension host with pid 75267 started
+2025-08-24 12:40:21.026 [info] Lock '/home/bankstartup2025/.codeoss/data/User/workspaceStorage/a2638b4/vscode.lock': Lock acquired.
+2025-08-24 12:40:21.195 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-08-24 12:40:21.324 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-08-24 12:40:21.325 [info] ExtensionService#_doActivateExtension cweijan.vscode-ssh, startup: true, activationEvent: '*'
+2025-08-24 12:40:21.326 [info] ExtensionService#_doActivateExtension mtxr.sqltools, startup: true, activationEvent: '*', root cause: google-cloud-spanner-ecosystem.google-cloud-spanner-driver
+2025-08-24 12:40:21.326 [info] ExtensionService#_doActivateExtension GustavoASC.google-drive-vscode, startup: true, activationEvent: '*'
+2025-08-24 12:40:21.327 [info] ExtensionService#_doActivateExtension jajera.vsx-remote-ssh, startup: true, activationEvent: '*'
+2025-08-24 12:40:21.327 [info] ExtensionService#_doActivateExtension nocalhost.nocalhost, startup: true, activationEvent: '*'
+2025-08-24 12:40:22.753 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-08-24 12:40:22.754 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-08-24 12:40:22.908 [info] ExtensionService#_doActivateExtension google-cloud-spanner-ecosystem.google-cloud-spanner-driver, startup: true, activationEvent: '*'
+2025-08-24 12:40:22.919 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-08-24 12:40:22.920 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-08-24 12:40:22.920 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-08-24 12:40:23.309 [error] Error: spawn /google/devshell/editor/code-oss-for-cloud-shell/node_modules/@vscode/ripgrep/bin/rg EACCES
+    at ius (https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:839:4250)
+    at https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:11604
+    at async https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:9857
+2025-08-24 12:40:23.309 [error] Error: spawn /google/devshell/editor/code-oss-for-cloud-shell/node_modules/@vscode/ripgrep/bin/rg EACCES
+    at ius (https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:839:4250)
+    at https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:11604
+    at async https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:9857
+2025-08-24 12:40:23.309 [error] Error: spawn /google/devshell/editor/code-oss-for-cloud-shell/node_modules/@vscode/ripgrep/bin/rg EACCES
+    at ius (https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:839:4250)
+    at https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:11604
+    at async https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:9857
+2025-08-24 12:40:23.309 [error] Error: spawn /google/devshell/editor/code-oss-for-cloud-shell/node_modules/@vscode/ripgrep/bin/rg EACCES
+    at ius (https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:839:4250)
+    at https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:11604
+    at async https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:9857
+2025-08-24 12:40:23.309 [error] Error: spawn /google/devshell/editor/code-oss-for-cloud-shell/node_modules/@vscode/ripgrep/bin/rg EACCES
+    at ius (https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:839:4250)
+    at https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:11604
+    at async https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:9857
+2025-08-24 12:40:23.420 [error] Activating extension vscode.json-language-features failed due to an error:
+2025-08-24 12:40:23.420 [error] Error: Pending response rejected since connection got disposed
+	at Object.dispose (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:262906)
+	at Object.dispose (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:329315)
+	at R.handleConnectionClosed (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:329722)
+	at R.handleConnectionClosed (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:533784)
+	at /google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:329464
+	at s.invoke (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:268143)
+	at a.fire (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:268961)
+	at ne (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:251129)
+	at s.invoke (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:268143)
+	at a.fire (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:268961)
+	at m.fireClose (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:277891)
+	at ChildProcess.<anonymous> (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:294437)
+	at ChildProcess.emit (node:events:536:35)
+	at maybeClose (node:internal/child_process:1104:16)
+	at Socket.<anonymous> (node:internal/child_process:456:11)
+	at Socket.emit (node:events:524:28)
+	at Pipe.<anonymous> (node:net:343:12)
+2025-08-24 12:40:23.487 [info] ExtensionService#_doActivateExtension google.geminicodeassist, startup: false, activationEvent: 'onLanguage:Log', root cause: googlecloudtools.cloudcode
+2025-08-24 12:40:25.812 [error] Error: Pending response rejected since connection got disposed
+	at Object.dispose (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:262906)
+	at Object.dispose (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:329315)
+	at R.handleConnectionClosed (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:329722)
+	at R.handleConnectionClosed (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:533784)
+	at /google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:329464
+	at s.invoke (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:268143)
+	at a.fire (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:268961)
+	at ne (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:251129)
+	at s.invoke (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:268143)
+	at a.fire (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:268961)
+	at m.fireClose (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:277891)
+	at ChildProcess.<anonymous> (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:294437)
+	at ChildProcess.emit (node:events:536:35)
+	at maybeClose (node:internal/child_process:1104:16)
+	at Socket.<anonymous> (node:internal/child_process:456:11)
+	at Socket.emit (node:events:524:28)
+	at Pipe.<anonymous> (node:net:343:12)
+2025-08-24 12:40:25.813 [error] Error: Client is not running and can't be stopped. It's current state is: starting
+	at R.shutdown (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:324427)
+	at R.shutdown (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:533377)
+	at R.stop (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:323999)
+	at R.doInitialize (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:323818)
+	at async R.start (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:320382)
+	at async C (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:6238)
+	at async t.startClient (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:247)
+	at async t.activate (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:21956)
+	at async Nb.n (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:119:13382)
+	at async Nb.m (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:119:13345)
+	at async Nb.l (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:119:12801)
+2025-08-24 12:40:25.813 [error] Error: Client is not running and can't be stopped. It's current state is: startFailed
+	at R.shutdown (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:324427)
+	at R.shutdown (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:533377)
+	at R.stop (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:323999)
+	at R.doInitialize (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:323818)
+	at async R.start (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:320382)
+2025-08-24 12:40:25.814 [error] Error: Client is not running and can't be stopped. It's current state is: startFailed
+	at R.shutdown (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:324427)
+	at R.shutdown (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:533377)
+	at R.stop (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:323999)
+	at R.doInitialize (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:323818)
+	at async R.start (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:320382)
+2025-08-24 12:40:25.814 [error] Error: Client is not running and can't be stopped. It's current state is: startFailed
+	at R.shutdown (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:324427)
+	at R.shutdown (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:533377)
+	at R.stop (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:323999)
+	at R.doInitialize (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:323818)
+	at async R.start (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:320382)
+2025-08-24 12:40:25.814 [error] Error: Client is not running and can't be stopped. It's current state is: startFailed
+	at R.shutdown (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:324427)
+	at R.shutdown (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:533377)
+	at R.stop (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:323999)
+	at R.doInitialize (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:323818)
+	at async R.start (/google/devshell/editor/code-oss-for-cloud-shell/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:320382)
+2025-08-24 12:40:25.993 [info] ExtensionService#_doActivateExtension google.cloud-shell, startup: false, activationEvent: 'onCommand:cloudshell.isAuthorized'
+2025-08-24 12:40:26.128 [info] Eager extensions activated
+2025-08-24 12:40:26.129 [info] ExtensionService#_doActivateExtension EditorConfig.EditorConfig, startup: false, activationEvent: 'onStartupFinished'
+2025-08-24 12:40:26.129 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-08-24 12:40:26.130 [info] ExtensionService#_doActivateExtension google.gemini-cli-vscode-ide-companion, startup: false, activationEvent: 'onStartupFinished'
+2025-08-24 12:40:26.130 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-08-24 12:40:26.131 [info] ExtensionService#_doActivateExtension CloudStudio.cloud-debug, startup: false, activationEvent: 'onStartupFinished'
+2025-08-24 12:40:26.131 [info] ExtensionService#_doActivateExtension dbaeumer.vscode-eslint, startup: false, activationEvent: 'onStartupFinished'
+2025-08-24 12:40:26.131 [info] ExtensionService#_doActivateExtension eamodio.gitlens, startup: false, activationEvent: 'onStartupFinished'
+2025-08-24 12:40:26.132 [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode, startup: false, activationEvent: 'onStartupFinished'
+2025-08-24 12:40:26.132 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onStartupFinished', root cause: GitHub.vscode-pull-request-github
+2025-08-24 12:40:27.475 [info] ExtensionService#_doActivateExtension GitHub.vscode-pull-request-github, startup: false, activationEvent: 'onStartupFinished'
+2025-08-24 12:40:27.980 [warning] DiagnosticCollection with name 'eslint' does already exist.
+2025-08-24 12:40:29.607 [error] Error: spawn /google/devshell/editor/code-oss-for-cloud-shell/node_modules/@vscode/ripgrep/bin/rg EACCES
+    at ius (https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:839:4250)
+    at https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:11604
+    at async https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:9857
+2025-08-24 12:40:29.913 [info] ExtensionService#_doActivateExtension googlecloudtools.cloudcode, startup: false, activationEvent: 'onLanguage:Log'
+2025-08-24 12:40:41.592 [error] Error: Pending response rejected since connection got disposed
+    at Object.dispose (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11487408)
+    at Object.dispose (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11542390)
+    at S.handleConnectionClosed (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11542796)
+    at S.handleConnectionClosed (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11704237)
+    at /google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11542539
+    at n.invoke (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11489137)
+    at i.fire (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11489902)
+    at te (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11475531)
+    at n.invoke (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11489137)
+    at i.fire (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11489902)
+    at u.fireClose (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11497770)
+    at ChildProcess.<anonymous> (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11510142)
+    at ChildProcess.emit (node:events:536:35)
+    at maybeClose (node:internal/child_process:1104:16)
+    at Socket.<anonymous> (node:internal/child_process:456:11)
+    at Socket.emit (node:events:524:28)
+    at Pipe.<anonymous> (node:net:343:12)
+2025-08-24 12:40:41.621 [error] Error: Client is not running and can't be stopped. It's current state is: starting
+    at S.shutdown (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11537712)
+    at S.stop (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11537293)
+    at S.stop (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11703836)
+    at S.doInitialize (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11537116)
+    at S.start (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11533682)
+    at d.start (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11131032)
+    at _e (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:10453502)
+    at t.activate (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:10445843)
+    at Nb.n (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:119:13382)
+    at Nb.m (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:119:13345)
+    at Nb.l (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:119:12801)
+2025-08-24 12:40:41.621 [error] Error: Client is not running and can't be stopped. It's current state is: startFailed
+    at S.shutdown (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11537712)
+    at S.stop (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11537293)
+    at S.stop (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11703836)
+    at S.doInitialize (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11537116)
+    at S.start (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11533682)
+2025-08-24 12:40:41.622 [error] Error: Client is not running and can't be stopped. It's current state is: startFailed
+    at S.shutdown (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11537712)
+    at S.stop (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11537293)
+    at S.stop (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11703836)
+    at S.doInitialize (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11537116)
+    at S.start (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11533682)
+2025-08-24 12:40:41.622 [error] Error: Client is not running and can't be stopped. It's current state is: startFailed
+    at S.shutdown (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11537712)
+    at S.stop (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11537293)
+    at S.stop (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11703836)
+    at S.doInitialize (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11537116)
+    at S.start (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11533682)
+2025-08-24 12:40:41.622 [error] Error: Client is not running and can't be stopped. It's current state is: startFailed
+    at S.shutdown (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11537712)
+    at S.stop (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11537293)
+    at S.stop (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11703836)
+    at S.doInitialize (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11537116)
+    at S.start (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:11533682)
+2025-08-24 12:40:48.480 [info] ExtensionService#_doActivateExtension golang.go, startup: false, activationEvent: 'onTaskType:go'
+2025-08-24 12:40:48.480 [info] ExtensionService#_doActivateExtension vscode.grunt, startup: false, activationEvent: 'onTaskType:grunt'
+2025-08-24 12:40:48.480 [info] ExtensionService#_doActivateExtension vscode.gulp, startup: false, activationEvent: 'onTaskType:gulp'
+2025-08-24 12:40:48.481 [info] ExtensionService#_doActivateExtension vscode.jake, startup: false, activationEvent: 'onTaskType:jake'
+2025-08-24 12:40:48.481 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onTaskType:npm'
+2025-08-24 12:40:48.481 [info] ExtensionService#_doActivateExtension vscjava.vscode-java-dependency, startup: false, activationEvent: 'onTaskType:java (buildArtifact)'
+2025-08-24 12:40:48.481 [info] ExtensionService#_doActivateExtension ms-azuretools.vscode-containers, startup: false, activationEvent: 'onTaskType:docker-build'
+2025-08-24 12:40:48.482 [info] ExtensionService#_doActivateExtension rust-lang.rust-analyzer, startup: false, activationEvent: 'onTaskType:cargo'
+2025-08-24 12:40:49.880 [error] Activating extension golang.go failed due to an error:
+2025-08-24 12:40:49.880 [error] undefined
+2025-08-24 12:40:49.886 [info] ExtensionService#_doActivateExtension redhat.java, startup: false, activationEvent: 'api', root cause: vscjava.vscode-java-dependency
+2025-08-24 12:40:50.525 [error] Activating extension rust-lang.rust-analyzer failed due to an error:
+2025-08-24 12:40:50.525 [error] Launching server using command /home/bankstartup2025/.codeoss/extensions/rust-lang.rust-analyzer-0.4.2589-linux-x64/server/rust-analyzer failed. Error: spawn /home/bankstartup2025/.codeoss/extensions/rust-lang.rust-analyzer-0.4.2589-linux-x64/server/rust-analyzer EACCES
+2025-08-24 12:40:50.609 [error] Activating extension vscode.npm failed due to an error:
+2025-08-24 12:40:50.609 [error] Error: spawn /google/devshell/editor/code-oss-for-cloud-shell/node_modules/@vscode/ripgrep/bin/rg EACCES
+    at ius (https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:839:4250)
+    at https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:11604
+    at async https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:9857
+2025-08-24 12:40:50.888 [error] Activating extension redhat.java failed due to an error:
+2025-08-24 12:40:50.889 [error] Error: spawn /google/devshell/editor/code-oss-for-cloud-shell/node_modules/@vscode/ripgrep/bin/rg EACCES
+    at ius (https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:839:4250)
+    at https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:11604
+    at async https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:9857
+2025-08-24 12:40:51.222 [error] Error: Pending response rejected since connection got disposed
+    at Object.dispose (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:2733307)
+    at Object.dispose (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1648047)
+    at LanguageClient.handleConnectionClosed (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1648454)
+    at LanguageClient.handleConnectionClosed (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:6524)
+    at /home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1648196
+    at CallbackList.invoke (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:2623044)
+    at Emitter.fire (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:2623832)
+    at closeHandler (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:2720176)
+    at CallbackList.invoke (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:2623044)
+    at Emitter.fire (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:2623832)
+    at IPCMessageReader.fireClose (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:761272)
+    at ChildProcess.<anonymous> (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:4486333)
+    at ChildProcess.emit (node:events:536:35)
+    at maybeClose (node:internal/child_process:1104:16)
+    at Socket.<anonymous> (node:internal/child_process:456:11)
+    at Socket.emit (node:events:524:28)
+    at Pipe.<anonymous> (node:net:343:12)
+2025-08-24 12:40:51.223 [error] Error: Client is not running and can't be stopped. It's current state is: starting
+    at LanguageClient.shutdown (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1643282)
+    at LanguageClient.stop (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1642859)
+    at LanguageClient.stop (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:6123)
+    at LanguageClient.doInitialize (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1642682)
+    at LanguageClient.start (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1639246)
+    at /home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:5809490
+2025-08-24 12:40:51.225 [error] Error: Pending response rejected since connection got disposed
+    at Object.dispose (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:2733307)
+    at Object.dispose (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1648047)
+    at LanguageClient.handleConnectionClosed (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1648454)
+    at LanguageClient.handleConnectionClosed (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:6524)
+    at /home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1648196
+    at CallbackList.invoke (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:2623044)
+    at Emitter.fire (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:2623832)
+    at closeHandler (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:2720176)
+    at CallbackList.invoke (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:2623044)
+    at Emitter.fire (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:2623832)
+    at IPCMessageReader.fireClose (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:761272)
+    at ChildProcess.<anonymous> (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:4486333)
+    at ChildProcess.emit (node:events:536:35)
+    at maybeClose (node:internal/child_process:1104:16)
+    at Socket.<anonymous> (node:internal/child_process:456:11)
+    at Socket.emit (node:events:524:28)
+    at Pipe.<anonymous> (node:net:343:12)
+2025-08-24 12:40:51.226 [error] Error: Client is not running and can't be stopped. It's current state is: starting
+    at LanguageClient.shutdown (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1643282)
+    at LanguageClient.stop (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1642859)
+    at LanguageClient.stop (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:6123)
+    at LanguageClient.doInitialize (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1642682)
+    at LanguageClient.start (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1639246)
+    at /home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:5808221
+2025-08-24 12:40:51.255 [error] Error: Client is not running and can't be stopped. It's current state is: startFailed
+    at LanguageClient.shutdown (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1643282)
+    at LanguageClient.stop (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1642859)
+    at LanguageClient.stop (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:6123)
+    at LanguageClient.doInitialize (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1642682)
+    at LanguageClient.start (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1639246)
+2025-08-24 12:40:51.258 [error] Error: Client is not running and can't be stopped. It's current state is: startFailed
+    at LanguageClient.shutdown (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1643282)
+    at LanguageClient.stop (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1642859)
+    at LanguageClient.stop (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:6123)
+    at LanguageClient.doInitialize (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1642682)
+    at LanguageClient.start (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1639246)
+2025-08-24 12:40:51.280 [error] Error: Client is not running and can't be stopped. It's current state is: startFailed
+    at LanguageClient.shutdown (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1643282)
+    at LanguageClient.stop (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1642859)
+    at LanguageClient.stop (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:6123)
+    at LanguageClient.doInitialize (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1642682)
+    at LanguageClient.start (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1639246)
+2025-08-24 12:40:51.282 [error] Error: Client is not running and can't be stopped. It's current state is: startFailed
+    at LanguageClient.shutdown (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1643282)
+    at LanguageClient.stop (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1642859)
+    at LanguageClient.stop (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:6123)
+    at LanguageClient.doInitialize (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1642682)
+    at LanguageClient.start (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1639246)
+2025-08-24 12:40:51.308 [error] Error: Client is not running and can't be stopped. It's current state is: startFailed
+    at LanguageClient.shutdown (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1643282)
+    at LanguageClient.stop (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1642859)
+    at LanguageClient.stop (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:6123)
+    at LanguageClient.doInitialize (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1642682)
+    at LanguageClient.start (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1639246)
+2025-08-24 12:40:51.311 [error] Error: Client is not running and can't be stopped. It's current state is: startFailed
+    at LanguageClient.shutdown (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1643282)
+    at LanguageClient.stop (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1642859)
+    at LanguageClient.stop (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:6123)
+    at LanguageClient.doInitialize (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1642682)
+    at LanguageClient.start (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1639246)
+2025-08-24 12:40:51.344 [error] Error: Client is not running and can't be stopped. It's current state is: startFailed
+    at LanguageClient.shutdown (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1643282)
+    at LanguageClient.stop (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1642859)
+    at LanguageClient.stop (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:6123)
+    at LanguageClient.doInitialize (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1642682)
+    at LanguageClient.start (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1639246)
+2025-08-24 12:40:51.347 [error] Error: Client is not running and can't be stopped. It's current state is: startFailed
+    at LanguageClient.shutdown (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1643282)
+    at LanguageClient.stop (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1642859)
+    at LanguageClient.stop (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:6123)
+    at LanguageClient.doInitialize (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1642682)
+    at LanguageClient.start (/home/bankstartup2025/.codeoss/extensions/ms-azuretools.vscode-containers-2.1.0-universal/dist/extension.bundle.js:2:1639246)
+2025-08-24 12:40:51.541 [error] Error: spawn /google/devshell/editor/code-oss-for-cloud-shell/node_modules/@vscode/ripgrep/bin/rg EACCES
+    at ius (https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:839:4250)
+    at https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:11604
+    at async https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:9857
+2025-08-24 12:40:51.889 [error] Error: spawn /google/devshell/editor/code-oss-for-cloud-shell/node_modules/@vscode/ripgrep/bin/rg EACCES
+    at ius (https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:839:4250)
+    at https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:11604
+    at async https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:9857
+2025-08-24 12:40:51.973 [error] Error: spawn /google/devshell/editor/code-oss-for-cloud-shell/node_modules/@vscode/ripgrep/bin/rg EACCES
+    at ius (https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:839:4250)
+    at https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:11604
+    at async https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:9857
+2025-08-24 12:40:51.973 [error] Error: spawn /google/devshell/editor/code-oss-for-cloud-shell/node_modules/@vscode/ripgrep/bin/rg EACCES
+    at ius (https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:839:4250)
+    at https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:11604
+    at async https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:9857
+2025-08-24 12:40:59.425 [error] Error: spawn /google/devshell/editor/code-oss-for-cloud-shell/node_modules/@vscode/ripgrep/bin/rg EACCES
+    at ius (https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:839:4250)
+    at https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:11604
+    at async https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:9857
+2025-08-24 12:40:59.876 [error] Error: spawn /google/devshell/editor/code-oss-for-cloud-shell/node_modules/@vscode/ripgrep/bin/rg EACCES
+    at ius (https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:839:4250)
+    at https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:11604
+    at async https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:9857
+2025-08-24 12:40:59.877 [error] Error: spawn /google/devshell/editor/code-oss-for-cloud-shell/node_modules/@vscode/ripgrep/bin/rg EACCES
+    at ius (https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:839:4250)
+    at https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:11604
+    at async https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:9857
+2025-08-24 12:42:05.132 [error] Error: spawn /google/devshell/editor/code-oss-for-cloud-shell/node_modules/@vscode/ripgrep/bin/rg EACCES
+    at ius (https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:839:4250)
+    at https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:11604
+    at async https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:9857
+2025-08-24 12:42:34.118 [error] Error: spawn /google/devshell/editor/code-oss-for-cloud-shell/node_modules/@vscode/ripgrep/bin/rg EACCES
+    at ius (https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:839:4250)
+    at https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:11604
+    at async https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:9857
+2025-08-24 12:42:43.706 [error] Error: Client is not running
+    at ja.sendNotification (/home/bankstartup2025/.codeoss/extensions/rust-lang.rust-analyzer-0.4.2589-linux-x64/out/main.js:39:114765)
+    at /home/bankstartup2025/.codeoss/extensions/rust-lang.rust-analyzer-0.4.2589-linux-x64/out/main.js:386:1723
+    at ed.value (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:170:29185)
+    at P.B (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:27:2373)
+    at P.C (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:27:2443)
+    at P.fire (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:27:2660)
+    at XB.$acceptConfigurationChanged (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:119:3150)
+    at file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:119:2700
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-08-24 12:42:47.904 [error] Error: spawn /google/devshell/editor/code-oss-for-cloud-shell/node_modules/@vscode/ripgrep/bin/rg EACCES
+    at ius (https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:839:4250)
+    at https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:11604
+    at async https://970-cs-61836141145-default.cs-asia-southeast1-palm.cloudshell.dev/cde-bab2371203ab2b584fbcb18199bd62f4957eab63/static/out/vs/code/browser/workbench/workbench.js:3281:9857
+2025-08-24 12:45:31.943 [info] Extension host terminating: received terminate message from renderer
+2025-08-24 12:45:31.945 [info] Lock '/home/bankstartup2025/.codeoss/data/User/workspaceStorage/a2638b4/vscode.lock': Marking the lockfile as scheduled to be released in 6000 ms.
+2025-08-24 12:45:32.006 [error] An error occurred when disposing the subscriptions for extension 'eamodio.gitlens':
+2025-08-24 12:45:32.029 [error] TypeError: Cannot read properties of undefined (reading 'dispose')
+    at Object.dispose (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:145:120067)
+    at m0.<anonymous> (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:115:8921)
+    at m0.dispose (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:115:9017)
+    at Object.dispose (/home/bankstartup2025/.codeoss/extensions/eamodio.gitlens-2025.8.2205-universal/dist/gitlens.js:105:29281)
+    at /home/bankstartup2025/.codeoss/extensions/eamodio.gitlens-2025.8.2205-universal/dist/gitlens.js:384:17184
+    at Array.forEach (<anonymous>)
+    at Object.dispose (/home/bankstartup2025/.codeoss/extensions/eamodio.gitlens-2025.8.2205-universal/dist/gitlens.js:384:17166)
+    at Er (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:25:746)
+    at file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:123:15046
+    at file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:25:1056
+    at Object.dispose (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+    at TJ.eb (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:123:11919)
+    at file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:123:9874
+    at Array.map (<anonymous>)
+    at TJ.$ (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:123:9862)
+    at TJ.terminate (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:123:10105)
+    at v2.terminate (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:124:1434)
+    at us (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:225:5702)
+    at ed.value (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:225:3862)
+    at P.B (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:27:2373)
+    at P.fire (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:27:2591)
+    at lo.fire (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:9458)
+    at J1.A (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:12574)
+    at ed.value (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:10994)
+    at P.B (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:27:2373)
+    at P.fire (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:27:2591)
+    at Qx.acceptChunk (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:7941)
+    at ed.value (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:7227)
+    at P.B (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:27:2373)
+    at P.fire (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:27:2591)
+    at zL.z (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:21744)
+    at zL.acceptFrame (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:21550)
+    at HL.n (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:20078)
+    at file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:17310
+    at Socket.t (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:29:15251)
+    at Socket.emit (node:events:524:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Socket.Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:191:23)
+2025-08-24 12:45:32.234 [info] Extension host with pid 75267 exiting with code 0

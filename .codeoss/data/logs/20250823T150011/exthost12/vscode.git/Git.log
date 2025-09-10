@@ -1,0 +1,136 @@
+2025-08-23 16:09:01.618 [info] [main] Log level: Info
+2025-08-23 16:09:01.618 [info] [main] Validating found git in: "git"
+2025-08-23 16:09:01.618 [info] [main] Using git "2.43.0" from "git"
+2025-08-23 16:09:01.618 [info] [Model][doInitialScan] Initial repository scan started
+2025-08-23 16:09:01.618 [info] > git rev-parse --show-toplevel [16ms]
+2025-08-23 16:09:01.618 [info] > git rev-parse --git-dir --git-common-dir [20ms]
+2025-08-23 16:09:01.618 [info] [Model][openRepository] Opened repository (path): /home/bankstartup2025
+2025-08-23 16:09:01.618 [info] [Model][openRepository] Opened repository (real path): /home/bankstartup2025
+2025-08-23 16:09:01.618 [info] > git config --get commit.template [47ms]
+2025-08-23 16:09:01.618 [info] [Git][getRemotes] No remotes found in the git config file
+2025-08-23 16:09:01.618 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [11ms]
+2025-08-23 16:09:01.618 [warning] [Git][getBranch] No such branch: main
+2025-08-23 16:09:01.619 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [60ms]
+2025-08-23 16:09:01.635 [info] > git rev-parse --show-toplevel [3ms]
+2025-08-23 16:09:01.651 [info] > git rev-parse --show-toplevel [3ms]
+2025-08-23 16:09:01.662 [info] > git rev-parse --show-toplevel [1ms]
+2025-08-23 16:09:01.685 [info] > git rev-parse --show-toplevel [13ms]
+2025-08-23 16:09:01.696 [info] > git rev-parse --show-toplevel [1ms]
+2025-08-23 16:09:01.716 [info] > git rev-parse --show-toplevel [8ms]
+2025-08-23 16:09:01.726 [info] > git rev-parse --show-toplevel [2ms]
+2025-08-23 16:09:01.740 [info] > git rev-parse --show-toplevel [4ms]
+2025-08-23 16:09:01.757 [info] > git rev-parse --show-toplevel [3ms]
+2025-08-23 16:09:01.766 [info] > git rev-parse --show-toplevel [1ms]
+2025-08-23 16:09:04.564 [info] > git rev-parse --show-toplevel [12ms]
+2025-08-23 16:09:04.588 [info] > git rev-parse --show-toplevel [15ms]
+2025-08-23 16:09:04.589 [info] [Model][doInitialScan] Initial repository scan completed - repositories (1), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2025-08-23 16:09:04.603 [info] > git status -z -uall [3054ms] (cancelled)
+2025-08-23 16:09:04.610 [info] > git check-ignore -v -z --stdin [9ms]
+2025-08-23 16:09:06.938 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2156ms]
+2025-08-23 16:09:06.939 [warning] [Git][getBranch] No such branch: main
+2025-08-23 16:09:06.939 [error] [GitHistoryProvider][resolveHEADMergeBase] Failed to resolve merge base for main: Error: No such branch: main.
+2025-08-23 16:09:06.990 [info] > git config --get commit.template [431ms]
+2025-08-23 16:09:07.003 [info] [Git][getRemotes] No remotes found in the git config file
+2025-08-23 16:09:09.380 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2377ms]
+2025-08-23 16:09:09.380 [warning] [Git][getBranch] No such branch: main
+2025-08-23 16:09:09.507 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [105ms]
+2025-08-23 16:09:09.906 [info] > git status -z -uall [517ms] (cancelled)
+2025-08-23 16:09:09.928 [info] > git check-ignore -v -z --stdin [25ms]
+2025-08-23 16:09:13.850 [info] > git config --get --local branch.main.github-pr-owner-number [3ms]
+2025-08-23 16:09:13.850 [warning] [Git][config] git config failed: Failed to execute git
+2025-08-23 16:09:13.868 [info] > git config --get --local branch.main.remote [3ms]
+2025-08-23 16:09:13.869 [warning] [Git][config] git config failed: Failed to execute git
+2025-08-23 16:09:13.888 [info] > git config --get --local branch.main.merge [4ms]
+2025-08-23 16:09:13.888 [warning] [Git][config] git config failed: Failed to execute git
+2025-08-23 16:10:12.749 [info] > git -c user.useConfigOnly=true commit --quiet [131ms]
+2025-08-23 16:10:12.749 [info] Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: no email was given and auto-detection is disabled
+2025-08-23 16:10:12.768 [info] > git config --get-all user.name [2ms]
+2025-08-23 16:10:12.801 [info] [Git][getRemotes] No remotes found in the git config file
+2025-08-23 16:10:12.802 [info] > git config --get commit.template [17ms]
+2025-08-23 16:10:12.803 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2025-08-23 16:10:12.803 [warning] [Git][getBranch] No such branch: main
+2025-08-23 16:10:12.846 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [5ms]
+2025-08-23 16:10:13.325 [info] > git status -z -uall [508ms] (cancelled)
+2025-08-23 16:10:13.325 [info] > git check-ignore -v -z --stdin [174ms]
+2025-08-23 16:10:16.675 [info] > git -c user.useConfigOnly=true commit --quiet [52ms]
+2025-08-23 16:10:16.675 [info] Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: no email was given and auto-detection is disabled
+2025-08-23 16:10:16.689 [info] > git config --get-all user.name [3ms]
+2025-08-23 16:10:16.712 [info] > git config --get commit.template [10ms]
+2025-08-23 16:10:16.725 [info] [Git][getRemotes] No remotes found in the git config file
+2025-08-23 16:10:16.726 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+2025-08-23 16:10:16.727 [warning] [Git][getBranch] No such branch: main
+2025-08-23 16:10:16.766 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2025-08-23 16:10:18.951 [info] > git status -z -uall [2213ms] (cancelled)
+2025-08-23 16:10:40.188 [info] > git -c user.useConfigOnly=true commit --quiet [55ms]
+2025-08-23 16:10:40.189 [info] Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: no email was given and auto-detection is disabled
+2025-08-23 16:10:40.203 [info] > git config --get-all user.name [2ms]
+2025-08-23 16:10:40.228 [info] [Git][getRemotes] No remotes found in the git config file
+2025-08-23 16:10:40.229 [info] > git config --get commit.template [13ms]
+2025-08-23 16:10:40.230 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+2025-08-23 16:10:40.230 [warning] [Git][getBranch] No such branch: main
+2025-08-23 16:10:40.272 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [14ms]
+2025-08-23 16:10:42.795 [info] > git status -z -uall [2553ms] (cancelled)
+2025-08-23 16:13:45.654 [info] > git -c user.useConfigOnly=true commit --quiet [70ms]
+2025-08-23 16:13:45.654 [info] Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: no email was given and auto-detection is disabled
+2025-08-23 16:13:45.669 [info] > git config --get-all user.name [2ms]
+2025-08-23 16:13:45.685 [info] [Git][getRemotes] No remotes found in the git config file
+2025-08-23 16:13:45.699 [info] > git config --get commit.template [15ms]
+2025-08-23 16:13:45.700 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2025-08-23 16:13:45.700 [warning] [Git][getBranch] No such branch: main
+2025-08-23 16:13:45.736 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]
+2025-08-23 16:13:48.117 [info] > git status -z -uall [2404ms] (cancelled)
+2025-08-23 16:14:09.297 [info] > git check-ignore -v -z --stdin [41ms]
+2025-08-23 16:15:15.420 [info] > git show --textconv :.mcdc/mcdc-sources.json [21ms]
+2025-08-23 16:15:15.459 [info] > git hash-object -t tree /dev/null [19ms]
+2025-08-23 16:15:15.459 [warning] [GitFileSystemProvider][readFile] File not found - git:/home/bankstartup2025/.mcdc/mcdc-sources.json.git?%7B%22path%22%3A%22%2Fhome%2Fbankstartup2025%2F.mcdc%2Fmcdc-sources.json%22%2C%22ref%22%3A%22%22%7D
+2025-08-23 16:15:15.471 [info] > git ls-files --stage -- .mcdc/mcdc-sources.json [52ms]
+2025-08-23 16:15:15.472 [warning] [GitFileSystemProvider][stat] File not found - git:/home/bankstartup2025/.mcdc/mcdc-sources.json.git?%7B%22path%22%3A%22%2Fhome%2Fbankstartup2025%2F.mcdc%2Fmcdc-sources.json%22%2C%22ref%22%3A%22%22%7D
+2025-08-23 16:15:15.706 [info] > git check-ignore -v -z --stdin [9ms]

@@ -1,0 +1,13 @@
+2025-08-24 11:51:38.478 [info] GitLens (pre-release) v2025.8.2205 activating in Code OSS for Cloud Shell (1.100.3-cde) on the web; language='en', logLevel='warn', defaultDateLocale='null' (someValue.machineId|someValue.sessionId)
+To enable debug logging, set `"gitlens.outputLevel": "debug"` or run "GitLens: Enable Debug Logging" from the Command Palette
+
+2025-08-24 11:56:33.255 [info] [2025-08-24 11:56:32.755] getLocalWorkspaceData
+EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, open '/home/bankstartup2025/.gitkraken/workspaces/workspaces.json'
+
+2025-08-24 11:58:05.931 [info] [2025-08-24 11:58:05.431] AuthenticationConnection.getTokenFromCodeAndState
+Error: Getting token failed: (400) Bad Request
+[2025-08-24 11:58:05.432] AuthenticationConnection.getTokenFromCodeAndState
+Error: Getting token failed: (400) Bad Request
+[2025-08-24 11:58:05.432] AuthenticationConnection.getTokenFromCodeAndState
+Error: Getting token failed: (400) Bad Request
+

@@ -1,0 +1,17 @@
+2025-08-23 16:03:36.185 [info] Extension host with pid 35545 started
+2025-08-23 16:03:36.187 [info] Lock '/home/bankstartup2025/.codeoss/data/User/workspaceStorage/1926c3c5/vscode.lock': Lock acquired.
+2025-08-23 16:03:36.333 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-08-23 16:03:36.514 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-08-23 16:03:36.526 [info] ExtensionService#_doActivateExtension vscode.npm, startup: true, activationEvent: 'workspaceContains:package.json'
+2025-08-23 16:03:36.606 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-08-23 16:03:36.607 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-08-23 16:03:36.877 [info] Eager extensions activated
+2025-08-23 16:03:36.878 [info] ExtensionService#_doActivateExtension EditorConfig.EditorConfig, startup: false, activationEvent: 'onStartupFinished'
+2025-08-23 16:03:36.878 [info] ExtensionService#_doActivateExtension google.cloud-shell, startup: false, activationEvent: 'onStartupFinished'
+2025-08-23 16:03:36.879 [info] ExtensionService#_doActivateExtension google.geminicodeassist, startup: false, activationEvent: 'onStartupFinished', root cause: googlecloudtools.cloudcode
+2025-08-23 16:03:36.879 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-08-23 16:03:36.880 [info] ExtensionService#_doActivateExtension google.gemini-cli-vscode-ide-companion, startup: false, activationEvent: 'onStartupFinished'
+2025-08-23 16:03:36.881 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-08-23 16:03:38.924 [info] Extension host terminating: received terminate message from renderer
+2025-08-23 16:03:38.927 [info] Lock '/home/bankstartup2025/.codeoss/data/User/workspaceStorage/1926c3c5/vscode.lock': Marking the lockfile as scheduled to be released in 6000 ms.
+2025-08-23 16:03:38.947 [info] Extension host with pid 35545 exiting with code 0

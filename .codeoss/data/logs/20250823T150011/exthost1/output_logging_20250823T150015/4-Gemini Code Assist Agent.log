@@ -1,0 +1,39 @@
+Starting background process...[INFO] 2025-08-23 15:00:27.338 PM -- Using InMemoryTaskStore
+[INFO] 2025-08-23 15:00:27.348 PM -- [CoreAgent] Agent Server started on http://localhost:46863
+[INFO] 2025-08-23 15:00:27.349 PM -- [CoreAgent] Agent Card: http://localhost:46863/.well-known/agent.json
+[INFO] 2025-08-23 15:00:27.349 PM -- [CoreAgent] Press Ctrl+C to stop the server
+[INFO] 2025-08-23 15:02:48.491 PM -- [CoderAgentExecutor] Executing for taskId: a5d32886-8c55-4834-b6d8-95f9c4379c0c, contextId: 2cdd378f-ed68-4514-bd3b-ced31ba8aa4c
+[INFO] 2025-08-23 15:02:48.492 PM -- [CoderAgentExecutor] userMessage: {"role":"user","parts":[{"kind":"text","text":"Build an application to do [goal] with a UI that lets the user do [task] in the [environment].\n"}],"metadata":{"coderAgent":{"kind":"agent-settings","workspacePath":"/home/bankstartup2025"}},"messageId":"3ba10b64-16f0-4b9c-84c5-6509cacf1005","kind":"","contextId":"2cdd378f-ed68-4514-bd3b-ced31ba8aa4c"}
+[INFO] 2025-08-23 15:02:48.493 PM -- [CoderAgentExecutor] Socket close handler set up for task a5d32886-8c55-4834-b6d8-95f9c4379c0c.
+[INFO] 2025-08-23 15:02:48.493 PM -- [CoderAgentExecutor] Creating new task a5d32886-8c55-4834-b6d8-95f9c4379c0c.
+[INFO] 2025-08-23 15:02:48.494 PM -- [CoderAgentExecutor] Overriding workspace path to: /home/bankstartup2025
+[ERROR] 2025-08-23 15:02:48.622 PM -- [Config] Unable to set GeneratorConfig. Please provide a GEMINI_API_KEY or set USE_CCPA.
+Agent execution failed for stream message 3ba10b64-16f0-4b9c-84c5-6509cacf1005: TypeError: Cannot read properties of undefined (reading 'authType')
+    at createContentGenerator (file:///google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/agent/agent.mjs:200791:15)
+    at GeminiClient.initialize (file:///google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/agent/agent.mjs:229039:35)
+    at CoderAgentExecutor.createTask (file:///google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/agent/agent.mjs:255872:36)
+    at async CoderAgentExecutor.execute (file:///google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/agent/agent.mjs:256039:17)
+[INFO] 2025-08-23 15:02:48.626 PM -- [EventBus event]: 
+{
+  "kind": "status-update",
+  "taskId": "08390f00-c10f-4df9-b4ab-3e3159ef8823",
+  "contextId": "2cdd378f-ed68-4514-bd3b-ced31ba8aa4c",
+  "status": {
+    "state": "failed",
+    "message": {
+      "kind": "message",
+      "role": "agent",
+      "messageId": "8e470f51-f416-4f1a-9eb6-b61162a423d1",
+      "parts": [
+        {
+          "kind": "text",
+          "text": "Agent execution error: Cannot read properties of undefined (reading 'authType')"
+        }
+      ],
+      "contextId": "2cdd378f-ed68-4514-bd3b-ced31ba8aa4c"
+    },
+    "timestamp": "2025-08-23T15:02:48.626Z"
+  },
+  "final": true
+}
+ResultManager: Received status update for unknown task 08390f00-c10f-4df9-b4ab-3e3159ef8823

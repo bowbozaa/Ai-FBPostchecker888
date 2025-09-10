@@ -1,0 +1,100 @@
+{
+  "numStartups": 1,
+  "installMethod": "unknown",
+  "autoUpdates": true,
+  "theme": "dark-daltonized",
+  "tipsHistory": {
+    "new-user-warmup": 1,
+    "memory-command": 1,
+    "theme-command": 1,
+    "status-line": 1,
+    "prompt-queue": 1,
+    "enter-to-steer-in-relatime": 1
+  },
+  "cachedStatsigGates": {
+    "tengu_disable_bypass_permissions_mode": false
+  },
+  "firstStartTime": "2025-08-27T23:51:20.641Z",
+  "userID": "9754526b046dfb6ca7c4f92bc057f8978867ce219229e2c325d0db91b3e06b8f",
+  "projects": {
+    "/home/bankstartup2025": {
+      "allowedTools": [],
+      "history": [
+        {
+          "display": "[Pasted text #1 +35 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "# สร้างโฟลเดอร์เก็บข้อมูลถาวร (ถ้ายังไม่มี)\nmkdir -p ~/n8n_data\n\n# เขียนไฟล์ service ใหม่ทั้งหมด\nsudo tee /etc/systemd/system/n8n.service >/dev/null <<'UNIT'\n[Unit]\nDescription=n8n (global)\nAfter=network.target\n\n[Service]\nType=simple\nExecStart=/usr/bin/n8n\nRestart=always\nEnvironment=TZ=Asia/Bangkok\nEnvironment=N8N_USER_FOLDER=/home/ubuntu/n8n_data\nEnvironment=N8N_HOST=n8n.bankautomation.com\nEnvironment=N8N_PORT=5678\nEnvironment=N8N_PROTOCOL=https\nEnvironment=WEBHOOK_URL=https://n8n.bankautomation.com/\nEnvironment=N8N_BASIC_AUTH_ACTIVE=true\nEnvironment=N8N_BASIC_AUTH_USER=banknakorn\nEnvironment=N8N_BASIC_AUTH_PASSWORD='@Banknakorn00+'\n\n[Install]\nWantedBy=multi-user.target\nUNIT\n\n# โหลดค่าใหม่ของ systemd\nsudo systemctl daemon-reload\n\n# เปิดใช้งานและเริ่มรันทันที\nsudo systemctl enable --now n8n\n\n# ดูสถานะ\nsudo systemctl status n8n --no-pager -l\n"
+            }
+          }
+        },
+        {
+          "display": "[Pasted text #2 +48 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "# หา path ของ n8n ที่ติดตั้ง (จำไว้ใช้ใน ExecStart)\nwhich n8n\n\n# ตั้งค่าตัวแปรใช้งาน\nexport N8N_BIN=\"$(which n8n)\"                    # เช่น /usr/bin/n8n หรือ /usr/local/bin/n8n\nexport YOUR_DOMAIN=\"n8n.bankautomation.com\"          # ← ใส่โดเมนจริงของคุณ \nexport ADMIN_USER=\"banknakorn\"                         # ← ชื่อผู้ใช้หน้า Basic Auth \nexport ADMIN_PASS=\"@Banknakorn00+\"            # ← รหัสผ่านหน้า Basic Auth \n\n# โฟลเดอร์เก็บข้อมูลถาวรของ n8n\nmkdir -p ~/n8n_data\n\n# สร้าง service file\nsudo tee /etc/systemd/system/n8n.service >/dev/null <<UNIT\n[Unit]\nDescription=n8n (global)\nAfter=network.target\n\n[Service]\nType=simple\nExecStart=${N8N_BIN}\nRestart=always\nEnvironment=TZ=Asia/Bangkok\nEnvironment=N8N_USER_FOLDER=/home/$USER/n8n_data\n# ตั้งค่าให้เข้าผ่านโดเมน + เปิด Basic Auth\nEnvironment=N8N_HOST=${YOUR_DOMAIN}\nEnvironment=N8N_PORT=5678\nEnvironment=N8N_PROTOCOL=https\nEnvironment=WEBHOOK_URL=https://${YOUR_DOMAIN}/\nEnvironment=N8N_BASIC_AUTH_ACTIVE=true\nEnvironment=N8N_BASIC_AUTH_USER=${ADMIN_USER}\nEnvironment=N8N_BASIC_AUTH_PASSWORD=${ADMIN_PASS}\n\n[Install]\nWantedBy=multi-user.target\nUNIT\n\n# เปิดใช้งาน service\nsudo systemctl daemon-reload\nsudo systemctl enable --now n8n\nsudo systemctl status n8n --no-pager -l\n"
+            },
+            "2": {
+              "id": 2,
+              "type": "text",
+              "content": "# === ตั้งค่าตัวแปรหลัก ===\nexport N8N_BIN=\"$(which n8n)\"                 # path ของ n8n (ปกติ /usr/bin/n8n)\nexport YOUR_DOMAIN=\"n8n.bankautomation.com\"   # โดเมนของคุณ\nexport ADMIN_USER=\"banknakorn\"                # ชื่อผู้ใช้\nexport ADMIN_PASS=\"@Banknakorn00+\"            # รหัสผ่าน\n\n# === โฟลเดอร์เก็บข้อมูลถาวร ===\nmkdir -p ~/n8n_data\n\n# === สร้างไฟล์ service สำหรับ n8n ===\nsudo tee /etc/systemd/system/n8n.service >/dev/null <<UNIT\n[Unit]\nDescription=n8n (global)\nAfter=network.target\n\n[Service]\nType=simple\nExecStart=${N8N_BIN}\nRestart=always\nEnvironment=TZ=Asia/Bangkok\nEnvironment=N8N_USER_FOLDER=/home/$USER/n8n_data\nEnvironment=N8N_HOST=${YOUR_DOMAIN}\nEnvironment=N8N_PORT=5678\nEnvironment=N8N_PROTOCOL=https\nEnvironment=WEBHOOK_URL=https://${YOUR_DOMAIN}/\nEnvironment=N8N_BASIC_AUTH_ACTIVE=true\nEnvironment=N8N_BASIC_AUTH_USER=${ADMIN_USER}\nEnvironment=N8N_BASIC_AUTH_PASSWORD='${ADMIN_PASS}'\n\n[Install]\nWantedBy=multi-user.target\nUNIT\n\n# === โหลด service และเปิดใช้งาน ===\nsudo systemctl daemon-reload\nsudo systemctl enable --now n8n\nsudo systemctl status n8n --no-pager -l\n\n# === สร้าง/แก้ Caddyfile ให้ reverse proxy ไปยัง n8n ===\nsudo tee /etc/caddy/Caddyfile >/dev/null <<CADDY\n${YOUR_DOMAIN} {\n    reverse_proxy 127.0.0.1:5678\n}\nCADDY\n\n# === โหลดค่าใหม่ของ Caddy ===\nsudo systemctl reload caddy\nsudo systemctl status caddy --no-pager -l\n"
+            }
+          }
+        },
+        {
+          "display": "# 1) อัปเดตระบบ\nsudo apt update && sudo apt -y upgrade\n\n# 2) ติดตั้ง ufw (ไฟร์วอลล์)\nsudo apt -y install ufw\nsudo ufw allow OpenSSH\nsudo ufw allow 80,443/tcp\nsudo ufw allow 5678/tcp\nsudo ufw --force enable\n\n# 3) ติดตั้ง Caddy (reverse proxy + SSL ฟรี)\nsudo apt -y install caddy\n\n# 4) ติดตั้ง n8n (ถ้ายังไม่ได้)\nsudo npm install -g n8n\n",
+          "pastedContents": {}
+        },
+        {
+          "display": "npm install -g n8n\n",
+          "pastedContents": {}
+        },
+        {
+          "display": "python3 --version       # เช็ค Python\npip3 --version          # เช็ค pip\nnode -v                 # เช็ค Node.js\nnpm -v                  # เช็ค npm\ndocker -v               # เช็ค Docker\ngit --version           # เช็ค Git\nclaude --version        # เช็ค Claude CLI\n",
+          "pastedContents": {}
+        },
+        {
+          "display": "lsb_release -a\n# หรือ\ncat /etc/os-release\n",
+          "pastedContents": {}
+        },
+        {
+          "display": "mkdir myapp\ncd myapp\nclaude code\n",
+          "pastedContents": {}
+        }
+      ],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 1,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false
+    }
+  },
+  "oauthAccount": {
+    "accountUuid": "e68d4f19-135d-46a7-aaec-db5ebb8a0e1d",
+    "emailAddress": "bankstartup2025@sabibra.com",
+    "organizationUuid": "da00c732-a2d6-4ed6-9010-dad00775c6db",
+    "organizationRole": "admin",
+    "workspaceRole": null,
+    "organizationName": "bankstartup2025@sabibra.com's Organization"
+  },
+  "claudeCodeFirstTokenDate": "2025-08-27T23:53:00.624635Z",
+  "hasCompletedOnboarding": true,
+  "lastOnboardingVersion": "1.0.93",
+  "hasOpusPlanDefault": false,
+  "subscriptionNoticeCount": 0,
+  "hasAvailableSubscription": false,
+  "fallbackAvailableWarningThreshold": 0.5,
+  "s1mAccessCache": {
+    "da00c732-a2d6-4ed6-9010-dad00775c6db": {
+      "hasAccess": false,
+      "timestamp": 1757496112248
+    }
+  }
+}

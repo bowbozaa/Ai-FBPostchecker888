@@ -1,0 +1,67 @@
+{
+	"name": "google-cloud-spanner-driver",
+	"displayName": "Google Cloud Spanner Driver",
+	"description": "Google Cloud Spanner Driver for SQLTools",
+	"version": "0.4.1",
+	"engines": {
+		"vscode": "^1.42.0"
+	},
+	"publisher": "google-cloud-spanner-ecosystem",
+	"icon": "icons/default.png",
+	"license": "Apache",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/cloudspannerecosystem/sqltools-cloud-spanner-driver.git"
+	},
+	"bugs": {
+		"url": "https://github.com/cloudspannerecosystem/sqltools-cloud-spanner-driver/issues"
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./"
+	},
+	"keywords": [
+		"spanner",
+		"cloud spanner",
+		"cloud-spanner",
+		"google spanner",
+		"google-spanner",
+		"google cloud spanner",
+		"google-cloud-spanner",
+		"google-cloud-spanner-driver",
+		"sqltools-driver"
+	],
+	"categories": [
+		"Programming Languages",
+		"Snippets",
+		"Formatters",
+		"Other"
+	],
+	"extensionDependencies": [
+		"mtxr.sqltools"
+	],
+	"activationEvents": [
+		"*",
+		"onLanguage:sql",
+		"onCommand:sqltools.*"
+	],
+	"main": "./out/extension.js",
+	"dependencies": {
+		"@sqltools/base-driver": "latest",
+		"@sqltools/types": "latest",
+		"@google-cloud/spanner": "latest",
+		"uuid": "^7.0.2"
+	},
+	"devDependencies": {
+		"@babel/preset-env": "^7.5.5",
+		"@types/node": "^14.0.9",
+		"@types/vscode": "^1.42.0",
+		"typescript": "^3.7.3"
+	},
+	"__metadata": {
+		"installedTimestamp": 1755961759063,
+		"targetPlatform": "universal",
+		"size": 26340428
+	}
+}

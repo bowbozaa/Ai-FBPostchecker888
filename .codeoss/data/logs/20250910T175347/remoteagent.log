@@ -1,0 +1,57 @@
+2025-09-10 17:53:47.957 [info] 
+
+
+
+
+2025-09-10 17:53:47.972 [info] Extension host agent started.
+2025-09-10 17:53:48.342 [info] Marked extension as removed rust-lang.rust-analyzer-0.4.2605-linux-x64
+2025-09-10 17:53:48.382 [info] Deleted marked for removal extension from disk rust-lang.rust-analyzer /home/bankstartup2025/.codeoss/extensions/rust-lang.rust-analyzer-0.4.2605-linux-x64
+2025-09-10 17:53:51.041 [info] [127.0.0.1][a7993807][ManagementConnection] New connection established.
+2025-09-10 17:53:51.206 [info] [127.0.0.1][cd5f21a6][ExtensionHostConnection] New connection established.
+2025-09-10 17:53:51.373 [info] ComputeTargetPlatform: linux-x64
+2025-09-10 17:53:52.018 [info] [127.0.0.1][cd5f21a6][ExtensionHostConnection] <2318> Launched Extension Host Process.
+2025-09-10 17:53:55.538 [info] ComputeTargetPlatform: linux-x64
+2025-09-10 17:54:06.696 [error] #5: https://open-vsx.org/vscode/gallery/vscode/esbenp/prettier-vscode/latest - error GET connect ECONNREFUSED 127.0.0.1:80
+2025-09-10 17:54:06.699 [error] #3: https://open-vsx.org/vscode/gallery/vscode/dbaeumer/vscode-eslint/latest - error GET connect ECONNREFUSED 127.0.0.1:80
+2025-09-10 17:54:06.705 [error] #7: https://open-vsx.org/vscode/gallery/vscode/humao/rest-client/latest - error GET connect ECONNREFUSED 127.0.0.1:80
+2025-09-10 17:54:06.729 [error] #6: https://open-vsx.org/vscode/gallery/vscode/google-cloud-spanner-ecosystem/google-cloud-spanner-driver/latest - error GET connect ECONNREFUSED 127.0.0.1:80
+2025-09-10 17:54:06.898 [error] #4: https://open-vsx.org/vscode/gallery/vscode/eamodio/gitlens/latest - error GET connect ECONNREFUSED 127.0.0.1:80
+2025-09-10 17:54:06.904 [error] #16: https://open-vsx.org/vscode/gallery/vscode/rust-lang/rust-analyzer/latest - error GET connect ECONNREFUSED 127.0.0.1:80
+2025-09-10 17:54:06.905 [error] #11: https://open-vsx.org/vscode/gallery/vscode/ms-toolsai/jupyter/latest - error GET connect ECONNREFUSED 127.0.0.1:80
+2025-09-10 17:54:06.911 [error] #9: https://open-vsx.org/vscode/gallery/vscode/ms-azuretools/vscode-docker/latest - error GET connect ECONNREFUSED 127.0.0.1:80
+2025-09-10 17:54:06.913 [error] #17: https://open-vsx.org/vscode/gallery/vscode/sickode/sk-git/latest - error GET connect ECONNREFUSED 127.0.0.1:80
+2025-09-10 17:54:06.915 [error] #15: https://open-vsx.org/vscode/gallery/vscode/nocalhost/nocalhost/latest - error GET connect ECONNREFUSED 127.0.0.1:80
+2025-09-10 17:54:06.916 [error] #13: https://open-vsx.org/vscode/gallery/vscode/ms-toolsai/jupyter-renderers/latest - error GET connect ECONNREFUSED 127.0.0.1:80
+2025-09-10 17:54:06.917 [error] #19: https://open-vsx.org/vscode/gallery/vscode/cloudstudio/coding/latest - error GET connect ECONNREFUSED 127.0.0.1:80
+2025-09-10 17:54:06.919 [error] #14: https://open-vsx.org/vscode/gallery/vscode/ms-toolsai/vscode-jupyter-slideshow/latest - error GET connect ECONNREFUSED 127.0.0.1:80
+2025-09-10 17:54:06.925 [error] #12: https://open-vsx.org/vscode/gallery/vscode/ms-toolsai/jupyter-keymap/latest - error GET connect ECONNREFUSED 127.0.0.1:80
+2025-09-10 17:54:06.925 [error] #10: https://open-vsx.org/vscode/gallery/vscode/ms-python/debugpy/latest - error GET connect ECONNREFUSED 127.0.0.1:80
+2025-09-10 17:54:06.929 [error] #18: https://open-vsx.org/vscode/gallery/vscode/yy0931/save-as-root/latest - error GET connect ECONNREFUSED 127.0.0.1:80
+2025-09-10 17:54:06.934 [error] #8: https://open-vsx.org/vscode/gallery/vscode/jajera/vsx-remote-ssh/latest - error GET connect ECONNREFUSED 127.0.0.1:80
+2025-09-10 17:54:35.610 [info] Getting Manifest... eamodio.gitlens
+2025-09-10 17:54:38.092 [info] Installing extension: eamodio.gitlens {"installPreReleaseVersion":true,"productVersion":{"version":"1.100.3-cde","date":"2025-09-03T18:36:34.911Z"},"pinned":false,"operation":3,"isApplicationScoped":false,"profileLocation":{"$mid":1,"fsPath":"/home/bankstartup2025/.codeoss/extensions/extensions.json","external":"file:///home/bankstartup2025/.codeoss/extensions/extensions.json","path":"/home/bankstartup2025/.codeoss/extensions/extensions.json","scheme":"file"}}
+2025-09-10 17:54:43.037 [info] Extracted extension to file:///home/bankstartup2025/.codeoss/extensions/eamodio.gitlens-2025.9.1005-universal: eamodio.gitlens
+2025-09-10 17:54:43.119 [info] Renamed to /home/bankstartup2025/.codeoss/extensions/eamodio.gitlens-2025.9.1005-universal
+2025-09-10 17:54:43.253 [info] Marked extension as removed eamodio.gitlens-2025.9.405-universal
+2025-09-10 17:54:43.256 [info] Extension installed successfully: eamodio.gitlens file:///home/bankstartup2025/.codeoss/extensions/extensions.json
+2025-09-10 19:39:34.912 [info] [127.0.0.1][cd5f21a6][ExtensionHostConnection] <2318><stderr> [*** LOG ERROR #0001 ***] [2025-09-10 19:39:34] [93534edd-2fa5-4759-9363-2fe67e9580aa] Failed flush to file /home/bankstartup2025/.codeoss/data/logs/20250910T175347/exthost1/output_logging_20250910T175353/10-Gemini Code Assist.log: No space left on device
+
+2025-09-10 19:39:36.419 [info] [127.0.0.1][cd5f21a6][ExtensionHostConnection] <2318><stderr> [*** LOG ERROR #0004 ***] [2025-09-10 19:39:36] [93534edd-2fa5-4759-9363-2fe67e9580aa] Failed flush to file /home/bankstartup2025/.codeoss/data/logs/20250910T175347/exthost1/output_logging_20250910T175353/10-Gemini Code Assist.log: No space left on device
+
+2025-09-10 19:39:38.421 [info] [127.0.0.1][cd5f21a6][ExtensionHostConnection] <2318><stderr> [*** LOG ERROR #0010 ***] [2025-09-10 19:39:38] [93534edd-2fa5-4759-9363-2fe67e9580aa] Failed flush to file /home/bankstartup2025/.codeoss/data/logs/20250910T175347/exthost1/output_logging_20250910T175353/10-Gemini Code Assist.log: No space left on device
+
+2025-09-10 19:39:39.467 [info] [127.0.0.1][cd5f21a6][ExtensionHostConnection] <2318><stderr> [*** LOG ERROR #0014 ***] [2025-09-10 19:39:39] [93534edd-2fa5-4759-9363-2fe67e9580aa] Failed flush to file /home/bankstartup2025/.codeoss/data/logs/20250910T175347/exthost1/output_logging_20250910T175353/10-Gemini Code Assist.log: No space left on device
+
+2025-09-10 19:39:41.422 [info] [127.0.0.1][cd5f21a6][ExtensionHostConnection] <2318><stderr> [*** LOG ERROR #0020 ***] [2025-09-10 19:39:41] [93534edd-2fa5-4759-9363-2fe67e9580aa] Failed flush to file /home/bankstartup2025/.codeoss/data/logs/20250910T175347/exthost1/output_logging_20250910T175353/10-Gemini Code Assist.log: No space left on device
+
+2025-09-10 19:39:43.418 [info] [127.0.0.1][cd5f21a6][ExtensionHostConnection] <2318><stderr> [*** LOG ERROR #0026 ***] [2025-09-10 19:39:43] [93534edd-2fa5-4759-9363-2fe67e9580aa] Failed flush to file /home/bankstartup2025/.codeoss/data/logs/20250910T175347/exthost1/output_logging_20250910T175353/10-Gemini Code Assist.log: No space left on device
+
+2025-09-10 19:39:45.422 [info] [127.0.0.1][cd5f21a6][ExtensionHostConnection] <2318><stderr> [*** LOG ERROR #0032 ***] [2025-09-10 19:39:45] [93534edd-2fa5-4759-9363-2fe67e9580aa] Failed flush to file /home/bankstartup2025/.codeoss/data/logs/20250910T175347/exthost1/output_logging_20250910T175353/10-Gemini Code Assist.log: No space left on device
+
+2025-09-10 19:39:47.421 [info] [127.0.0.1][cd5f21a6][ExtensionHostConnection] <2318><stderr> [*** LOG ERROR #0038 ***] [2025-09-10 19:39:47] [93534edd-2fa5-4759-9363-2fe67e9580aa] Failed flush to file /home/bankstartup2025/.codeoss/data/logs/20250910T175347/exthost1/output_logging_20250910T175353/10-Gemini Code Assist.log: No space left on device
+
+2025-09-10 19:39:48.425 [info] [127.0.0.1][cd5f21a6][ExtensionHostConnection] <2318><stderr> [*** LOG ERROR #0042 ***] [2025-09-10 19:39:48] [93534edd-2fa5-4759-9363-2fe67e9580aa] Failed flush to file /home/bankstartup2025/.codeoss/data/logs/20250910T175347/exthost1/output_logging_20250910T175353/10-Gemini Code Assist.log: No space left on device
+
+2025-09-10 19:39:49.426 [info] [127.0.0.1][cd5f21a6][ExtensionHostConnection] <2318><stderr> [*** LOG ERROR #0046 ***] [2025-09-10 19:39:49] [93534edd-2fa5-4759-9363-2fe67e9580aa] Failed flush to file /home/bankstartup2025/.codeoss/data/logs/20250910T175347/exthost1/output_logging_20250910T175353/10-Gemini Code Assist.log: No space left on device
+
+2025-09-10 19:39:51.423 [info] [127.0.0.1][cd5f21a6][ExtensionHostConnection] <2318><stderr> [***2025-09-10 19:56:25.805 [warning] [File Watcher (node.js)] Watcher shutdown because watched path got deleted

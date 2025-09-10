@@ -1,0 +1,8 @@
+2025-08-24 12:40:28.001 [info] [2025-08-24 12:40:27.777] [          5ms] [/tmp/apt-dpkg-install-VEUvgG] git rev-parse --show-toplevel • FAILED
+2025-08-24 12:40:28.001 [info] 
+Error: spawn /usr/bin/git EACCES
+
+2025-08-24 12:40:28.789 [info] [2025-08-24 12:40:28.789] [          5ms] [/tmp/apt-dpkg-install-VEUvgG] git rev-parse --show-toplevel • FAILED
+2025-08-24 12:40:28.789 [info] 
+Error: spawn /usr/bin/git EACCES
+

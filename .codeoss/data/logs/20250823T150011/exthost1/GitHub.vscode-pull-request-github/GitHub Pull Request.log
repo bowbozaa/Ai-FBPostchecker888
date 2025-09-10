@@ -1,0 +1,14 @@
+2025-08-23 15:03:51.930 [warning] /home/bankstartup2025/.ssh/config: ENOENT: no such file or directory, open '/home/bankstartup2025/.ssh/config'
+2025-08-23 15:03:51.930 [info] [Activation] Extension version: 0.112.0
+2025-08-23 15:03:52.726 [info] [Activation] Looking for git repository
+2025-08-23 15:03:52.726 [info] [Activation] Found 0 repositories during activation
+2025-08-23 15:03:52.726 [info] [Activation] Git repository found, initializing review manager and pr tree view.
+2025-08-23 15:03:52.730 [info] [GitAPI] Registering git provider
+2025-08-23 15:03:52.730 [info] [Review+0] Validate state in progress
+2025-08-23 15:03:52.730 [info] [Review+0] Validating state...
+2025-08-23 15:03:52.730 [warning] No remotes found. The following remotes are missing: origin, upstream
+2025-08-23 15:03:52.730 [info] [FolderRepositoryManager+0] No GitHub remotes found for folder /home/bankstartup2025
+2025-08-23 15:03:52.731 [info] [FolderRepositoryManager+0] Trying to use globalState for assignableUsers.
+2025-08-23 15:03:52.749 [info] [Review+0] No matching pull request metadata found locally for current branch main
+2025-08-23 15:03:52.762 [info] [Review+0] No matching pull request metadata found on GitHub for current branch main
+2025-08-23 15:03:52.824 [info] [FolderRepositoryManager+0] GlobalState does not exist for assignableUsers.

@@ -1,0 +1,2 @@
+{"__type":"$$EventMessageAudit","id":"33395870-6097-4c0f-89e6-1b7c59957a4d","ts":"2025-08-26T11:06:42.058+00:00","eventName":"n8n.audit.user.api.created","message":"n8n.audit.user.api.created","payload":{"userId":"fb57412f-0f5d-4d3d-b44f-e47eca75fafc","_email":"bankufa888office@gmail.com","_firstName":"Bankzaover","_lastName":"jarvis","globalRole":"global:owner"}}
+{"__type":"$$EventMessageConfirm","confirm":"33395870-6097-4c0f-89e6-1b7c59957a4d","ts":"2025-08-26T11:06:42.058+00:00","source":{"id":"0","name":"eventBus"}}

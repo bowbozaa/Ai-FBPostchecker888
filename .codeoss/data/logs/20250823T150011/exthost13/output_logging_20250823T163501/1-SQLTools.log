@@ -1,0 +1,92 @@
+[1755966904664] INFO  (ext): SQLTools is starting
+[1755966904669] INFO  (ext): initializing language client...
+[1755966904703] INFO  (ext): Registering client for languages [{"scheme":"sqltools"},{"language":"sql","scheme":"untitled"},{"language":"sql","scheme":"file"},{"language":"sql","scheme":"sqltools"}]
+    ns: "lc"
+[1755966904737] INFO  (ext): loading plugins...
+[1755966904738] INFO  (ext): registering Formatter Plugin.
+    plugin: {
+      "name": "Formatter Plugin"
+    }
+[1755966904740] INFO  (ext): registering Connection Manager Plugin.
+    plugin: {
+      "name": "Connection Manager Plugin"
+    }
+[1755966904741] INFO  (ext): registering CodeLens Plugin.
+    plugin: {
+      "name": "CodeLens Plugin",
+      "registeredLanguages": []
+    }
+[1755966904753] INFO  (ext): registering Dependency Manager Plugin.
+    plugin: {
+      "name": "Dependency Manager Plugin",
+      "installingDrivers": []
+    }
+[1755966904760] INFO  (ext): Connection explorer changed. Will be updated.
+    ns: "conn-man:explorer"
+[1755966904762] INFO  (ext): registering History Manager Plugin.
+    plugin: {
+      "name": "History Manager Plugin"
+    }
+[1755966904764] INFO  (ext): registering Bookmarks Manager Plugin.
+    plugin: {
+      "name": "Bookmarks Manager Plugin"
+    }
+[1755966904769] INFO  (ext): registering Authentication Provider Plugin.
+    plugin: {
+      "name": "Authentication Provider Plugin",
+      "isRegistered": false
+    }
+[1755966904771] INFO  (ext): registering Object Drop-in Provider (plugin).
+    plugin: {
+      "type": "plugin",
+      "name": "Object Drop-in Provider",
+      "isRegistered": false
+    }
+[1755966904775] INFO  (ext): SQLTools activation completed. 109.052145 ms
+[1755966904839] INFO  (ext): Formatter Plugin registered!
+[1755966904840] INFO  (ext): CodeLens Plugin registered!
+[1755966904841] INFO  (ext): Dependency Manager Plugin registered!
+[1755966904841] INFO  (ext): Connection Manager Plugin registered!
+[1755966904841] INFO  (ext): History Manager Plugin registered!
+[1755966904841] INFO  (ext): Bookmarks Manager Plugin registered!
+[1755966904842] INFO  (ext): Authentication Provider Plugin registered!
+[1755966904842] INFO  (ext): Object Drop-in Provider (plugin) registered!
+[1755966906177] INFO  (ext): EXECUTING COMMAND => sqltools.refreshTree
+[1755966906184] INFO  (ext): Connection explorer changed. Will be updated.
+    ns: "conn-man:explorer"
+[1755966906293] INFO  (ext): registering Google Cloud Spanner Driver Plugin (driver).
+    plugin: {
+      "extensionId": "google-cloud-spanner-ecosystem.google-cloud-spanner-driver",
+      "name": "Google Cloud Spanner Driver Plugin",
+      "type": "driver"
+    }
+[1755966906275] INFO  (ls): SQLTools Server started!
+===============================
+Using node runtime?: no
+ExecPath: /google/devshell/editor/code-oss-for-cloud-shell/node 
+===============================
+[1755966906420] INFO  (ext): LanguageClient ready
+    ns: "lc"
+[1755966906414] INFO  (ls): Initialized with node version:v20.19.0
+[1755966906432] INFO  (ls): REQUEST RECEIVED => ls/RegisterPlugin
+[1755966906433] INFO  (ls): request to register plugin: "/home/bankstartup2025/.codeoss/extensions/google-cloud-spanner-ecosystem.google-cloud-spanner-driver-0.4.1-universal/out/ls/plugin.js"
+[1755966906635] INFO  (ext): Connection explorer changed. Will be updated.
+    ns: "conn-man:explorer"
+[1755966906769] INFO  (ext): Connection explorer changed. Will be updated.
+    ns: "conn-man:explorer"
+[1755966907385] INFO  (ext): EXECUTING COMMAND => sqltools.refreshTree
+[1755966907386] INFO  (ext): Connection explorer changed. Will be updated.
+    ns: "conn-man:explorer"
+[1755966907416] INFO  (ext): Connection explorer changed. Will be updated.
+    ns: "conn-man:explorer"
+[1755966909084] INFO  (ls): Driver google cloud spanner driver registered!
+    place: "driver-map"
+    ns: "ls-context"
+[1755966914878] INFO  (ext): Google Cloud Spanner Driver Plugin (driver) registered!
+[1755966917783] INFO  (ext): EXECUTING COMMAND => sqltools.refreshTree
+[1755966917783] INFO  (ext): Connection explorer changed. Will be updated.
+    ns: "conn-man:explorer"
+[1755966922262] INFO  (ext): Connection explorer changed. Will be updated.
+    ns: "conn-man:explorer"
+[1755966927436] INFO  (ext): Connection explorer changed. Will be updated.
+    ns: "conn-man:explorer"

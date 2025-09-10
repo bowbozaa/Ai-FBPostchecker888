@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 2
+    },
+    "auditLog": "/home/bankstartup2025/.codeoss/data/User/workspaceStorage/a2638b4/redhat.java/.c3fead5d2fc37cefcfe3a652ed84a9fd082af870-audit.json",
+    "files": [
+        {
+            "date": 1756039250408,
+            "name": "/home/bankstartup2025/.codeoss/data/User/workspaceStorage/a2638b4/redhat.java/client.log.2025-08-24",
+            "hash": "29549c41d3c2e84687631f3f5b1386446237a8f29c8a16b419324a7eb7fc84d9"
+        }
+    ],
+    "hashType": "sha256"
+}

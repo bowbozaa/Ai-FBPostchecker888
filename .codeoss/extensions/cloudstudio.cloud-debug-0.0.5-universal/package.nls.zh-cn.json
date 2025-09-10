@@ -1,0 +1,8 @@
+{
+  "command.startDevMode": "进入开发模式",
+  "command.endDevMode": "退出开发模式",
+  "command.startDuplicateDev": "进入复制开发模式",
+  "command.viewManifest": "查看 Manifest",
+  "command.refreshTree": "刷新",
+  "command.refreshing": "刷新中"
+}

@@ -1,0 +1,2 @@
+2025-08-24 12:40:50.284 [info] Failed to run '/usr/local/go/bin/go env' (cwd: /tmp/apt-dpkg-install-VEUvgG): Error: spawn /usr/local/go/bin/go EACCES
+
