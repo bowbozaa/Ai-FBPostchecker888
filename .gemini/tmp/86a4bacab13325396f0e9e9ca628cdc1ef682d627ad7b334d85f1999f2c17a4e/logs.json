@@ -859,5 +859,68 @@
     "type": "user",
     "message": "จัดไป",
     "timestamp": "2025-09-10T19:56:12.996Z"
+  },
+  {
+    "sessionId": "de7f29e3-f543-4d26-a830-574ddd5cf72d",
+    "messageId": 87,
+    "type": "user",
+    "message": "เริ่ม",
+    "timestamp": "2025-09-10T19:57:56.309Z"
+  },
+  {
+    "sessionId": "de7f29e3-f543-4d26-a830-574ddd5cf72d",
+    "messageId": 88,
+    "type": "user",
+    "message": "ใน Vercel ฉันเคยสร้างไว้เยอะมาก ฉันอยากลบทั้งหมด แล้วเริ่มใหม่ เลยได้ไหม?",
+    "timestamp": "2025-09-10T20:02:05.895Z"
+  },
+  {
+    "sessionId": "de7f29e3-f543-4d26-a830-574ddd5cf72d",
+    "messageId": 89,
+    "type": "user",
+    "message": "ยืนยัน",
+    "timestamp": "2025-09-10T20:02:40.720Z"
+  },
+  {
+    "sessionId": "de7f29e3-f543-4d26-a830-574ddd5cf72d",
+    "messageId": 90,
+    "type": "user",
+    "message": "ยืนยัน",
+    "timestamp": "2025-09-10T20:03:21.873Z"
+  },
+  {
+    "sessionId": "de7f29e3-f543-4d26-a830-574ddd5cf72d",
+    "messageId": 91,
+    "type": "user",
+    "message": "เริ่มเลย",
+    "timestamp": "2025-09-10T20:03:57.549Z"
+  },
+  {
+    "sessionId": "de7f29e3-f543-4d26-a830-574ddd5cf72d",
+    "messageId": 92,
+    "type": "user",
+    "message": "Vercel Team หีวขอนี้ ฉันต้องเลือกอะไร",
+    "timestamp": "2025-09-10T20:07:24.219Z"
+  },
+  {
+    "sessionId": "de7f29e3-f543-4d26-a830-574ddd5cf72d",
+    "messageId": 93,
+    "type": "user",
+    "message": "ฉันสามารถส่งรูปให้เทอดูได้ไหมนะ ว่าฉันอยู่หน้าไหน",
+    "timestamp": "2025-09-10T20:08:26.245Z"
+  },
+  {
+    "sessionId": "de7f29e3-f543-4d26-a830-574ddd5cf72d",
+    "messageId": 94,
+    "type": "user",
+    "message": "เห็นภาพไหม",
+    "timestamp": "2025-09-10T20:09:27.647Z"
+  },
+  {
+    "sessionId": "de7f29e3-f543-4d26-a830-574ddd5cf72d",
+    "messageId": 95,
+    "type": "user",
+    "message": "[03:12:15.239] Running build in Washington, D.C., USA (East) – iad1\n[03:12:15.239] Build machine configuration: 2 cores, 8 GB\n[03:12:15.263] Cloning github.com/bowbozaa/Ai-FBPostchecker888 (Branch: main, Commit: d54ea46)\n[03:12:15.406] Previous build caches not available\n[03:12:15.530] Cloning completed: 266.000ms\n[03:12:15.860] Running \"vercel build\"\n[03:12:16.250] Vercel CLI 47.1.1\n[03:12:16.428] Error: The pattern \"api/cron/daily-report.js\" defined in `functions` doesn't match any Serverless Functions inside the `api` directory.\n[03:12:16.429] Learn More: https://vercel.link/unmatched-function-pattern",
+    "timestamp": "2025-09-10T20:12:40.372Z"
   }
 ]
