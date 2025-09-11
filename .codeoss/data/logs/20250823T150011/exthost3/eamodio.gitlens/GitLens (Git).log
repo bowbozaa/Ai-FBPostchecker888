@@ -1,8 +1,0 @@
-2025-08-23 15:19:16.054 [info] [2025-08-23 15:19:15.980] [         20ms] [/home/bankstartup2025] git rev-parse --abbrev-ref --symbolic-full-name @ @{u} -- • FAILED
-2025-08-23 15:19:16.054 [info] 
-Canceled: Operation cancelled; command=/usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --abbrev-ref --symbolic-full-name @ @{u} --
-
-2025-08-23 15:19:16.063 [info] [2025-08-23 15:19:16.063] [         27ms] [/home/bankstartup2025] git rev-parse --abbrev-ref --symbolic-full-name @ @{u} -- • FAILED
-2025-08-23 15:19:16.064 [info] 
-Error: fatal: bad revision '@'
-

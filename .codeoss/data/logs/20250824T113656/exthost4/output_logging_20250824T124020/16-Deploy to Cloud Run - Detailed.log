@@ -1,2 +1,0 @@
-Retrieving builders.
-Automatic image build detection failed. Error: spawn /usr/bin/skaffold ENOENT. Consider adding a Dockerfile to the workspace and try again. See https://skaffold.dev/docs/pipeline-stages/builders/ for more information.

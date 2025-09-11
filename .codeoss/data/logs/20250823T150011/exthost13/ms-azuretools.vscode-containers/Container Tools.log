@@ -1,4 +1,0 @@
-2025-08-23 16:35:29.580 [error] Current context is now "default"
-
-2025-08-23 16:35:29.649 [error] Warning: DOCKER_HOST environment variable overrides the active context. To use a context, either set the global --context flag, or unset DOCKER_HOST environment variable.
-

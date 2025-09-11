@@ -1,4 +1,0 @@
-2025-08-24 12:35:42.301 [info] [2025-08-24 12:35:42.291] [          8ms] [/home/bankstartup2025] git rev-parse --abbrev-ref --symbolic-full-name @ @{u} -- • FAILED
-2025-08-24 12:35:42.301 [info] 
-Error: fatal: bad revision '@'
-

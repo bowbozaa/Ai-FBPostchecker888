@@ -1,2 +1,0 @@
-[Error - 12:40:50 PM] Rust Analyzer Language Server client: couldn't create connection to server.
-Launching server using command /home/bankstartup2025/.codeoss/extensions/rust-lang.rust-analyzer-0.4.2589-linux-x64/server/rust-analyzer failed. Error: spawn /home/bankstartup2025/.codeoss/extensions/rust-lang.rust-analyzer-0.4.2589-linux-x64/server/rust-analyzer EACCES

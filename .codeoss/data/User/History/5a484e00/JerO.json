@@ -1,8 +1,0 @@
-[
-  {
-    "title": "MyVPS",
-    "host": "34.123.45.67",
-    "user": "root",
-    "identityFile": "C:/Users/YourPC/.ssh/id_rsa"
-  }
-]
