@@ -35,7 +35,8 @@ export interface PostItem {
   updatedAt: string
   scheduleAt?: string
   publishedAt?: string
-  results?: PublishResult[]
+  results?: PublishResult[],
+  feedback?: 'ok' | 'flagged'
 }
 
 /** storage keys */
@@ -185,6 +186,17 @@ export const postService = {
   /** ลบโพสต์ */
   deletePost(id: string) {
     writePosts(readPosts().filter(p => p.id !== id))
+  },
+
+  /** เพิ่ม/อัปเดต feedback ให้โพสต์ */
+  addFeedback(postId: string, feedback: 'ok' | 'flagged') {
+    const list = readPosts()
+    const item = list.find(p => p.id === postId)
+    if (item) {
+      item.feedback = feedback
+      item.updatedAt = new Date().toISOString()
+      writePosts(list)
+    }
   },
 
   /** โพสต์ทันที ไปยังหลายเพจ */

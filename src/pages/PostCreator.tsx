@@ -19,8 +19,10 @@ import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
 import { 
   AlertTriangle, Wand2, RefreshCw, Send, Save, Calendar, 
-  Image as ImageIcon, SquarePen, Trash2, Pencil, Link2, ShieldCheck, Settings as SettingsIcon, Wifi
+  Image as ImageIcon, SquarePen, Trash2, Pencil, Link2, ShieldCheck, 
+  Settings as SettingsIcon, Wifi, MessageSquarePlus, ThumbsUp, Flag
 } from 'lucide-react'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog'
 import RiskMeter from '@/components/postCreator/RiskMeter'
 import PageSelector from '@/components/postCreator/PageSelector'
@@ -577,7 +579,12 @@ export default function PostCreatorPage() {
                               {new Date(p.updatedAt).toLocaleString('th-TH')}
                             </span>
                           </div>
-                          <div className={`mt-1 text-sm ${isDark ? 'text-white' : 'text-gray-900'} line-clamp-2`}>{p.content}</div>
+                          {/* MODIFIED: Add feedback icon and flex container */}
+                          <div className="flex items-center gap-2 mt-1">
+                            {p.feedback === 'ok' && <ThumbsUp className="w-4 h-4 text-emerald-500 shrink-0" title="Marked as OK" />}
+                            {p.feedback === 'flagged' && <Flag className="w-4 h-4 text-red-500 shrink-0" title="Marked as Flagged by FB" />}
+                            <div className={`text-sm ${isDark ? 'text-white' : 'text-gray-900'} line-clamp-2`}>{p.content}</div>
+                          </div>
                           <div className={`mt-1 text-xs ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                             Risk {p.risk.level}/5 ({p.risk.category}) • เพจ {p.pages.length} เพจ
                             {p.scheduleAt ? ` • เวลาโพสต์: ${new Date(p.scheduleAt).toLocaleString('th-TH')}` : ''}
@@ -589,13 +596,35 @@ export default function PostCreatorPage() {
                           )}
                         </div>
                         <div className="flex items-center gap-2 shrink-0">
+                          {/* NEW: Feedback Dropdown */}
+                          {p.status === 'posted' && (
+                            <DropdownMenu>
+                              <DropdownMenuTrigger asChild>
+                                <Button variant="outline" size="icon" className="bg-transparent" title="รายงานผลลัพธ์">
+                                  <MessageSquarePlus className="w-4 h-4" />
+                                </Button>
+                              </DropdownMenuTrigger>
+                              <DropdownMenuContent>
+                                <DropdownMenuItem onClick={() => handleSetFeedback(p.id, 'ok')}>
+                                  <ThumbsUp className="w-4 h-4 mr-2 text-emerald-500" />
+                                  <span>Mark as OK</span>
+                                </DropdownMenuItem>
+                                <DropdownMenuItem onClick={() => handleSetFeedback(p.id, 'flagged')}>
+                                  <Flag className="w-4 h-4 mr-2 text-red-500" />
+                                  <span>Mark as Flagged by FB</span>
+                                </DropdownMenuItem>
+                              </DropdownMenuContent>
+                            </DropdownMenu>
+                          )}
+
                           {p.status !== 'posted' && (
-                            <Button variant="outline" className="bg-transparent" onClick={() => loadToEditor(p.id)} title="แก้ไข">
+                            <Button variant="outline" size="icon" className="bg-transparent" onClick={() => loadToEditor(p.id)} title="แก้ไข">
                               <Pencil className="w-4 h-4" />
                             </Button>
                           )}
                           {p.status !== 'posted' && (
                             <Button
+                              size="icon"
                               onClick={async () => {
                                 await postService.postNow(p.id)
                                 refreshPosts()
@@ -605,10 +634,22 @@ export default function PostCreatorPage() {
                               <Send className="w-4 h-4" />
                             </Button>
                           )}
-                          <Button variant="outline" className="bg-transparent" onClick={() => deletePost(p.id)} title="ลบ">
+                          <Button variant="outline" size="icon" className="bg-transparent" onClick={() => deletePost(p.id)} title="ลบ">
                             <Trash2 className="w-4 h-4" />
                           </Button>
                         </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </div>
+  )
+}
                       </div>
                     </div>
                   ))}
