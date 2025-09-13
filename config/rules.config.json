@@ -6,6 +6,6 @@
     { "id": "rule-002", "keyword": "คาสิโน", "category": "การพนัน", "risk_score": 5, "is_regex": false },
     { "id": "rule-003", "keyword": "เครดิตฟรี", "category": "โปรโมชั่นแฝง", "risk_score": 4, "is_regex": false },
     { "id": "rule-004", "keyword": "รวยเร็ว", "category": "ชวนเชื่อเกินจริง", "risk_score": 4, "is_regex": false },
-    { "id": "rule-005", "keyword": "line id: @", "category": "ดึงดูด LINE", "risk_score": 3, "is_regex": true }
+    { "id": "rule-005", "keyword": "\b(line|ไลน์)\s*(id)?\s*[:=]?\s*@\w+", "category": "Contact Info", "risk_score": 3, "is_regex": true, "enabled": true }
   ]
 }
