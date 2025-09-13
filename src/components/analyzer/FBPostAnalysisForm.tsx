@@ -1,7 +1,6 @@
 /**
  * FBPostAnalysisForm - ฟอร์มสำหรับกรอกและวิเคราะห์โพสต์จาก Facebook
- * รองรับ: Content, Keywords, Link, Image URL, Video URL และส่งไป n8n
- * ปรับเพิ่ม: แสดงสถานะคอนฟิก (Webhook/Auth) + ปุ่ม "ทดสอบการเชื่อมต่อ" (ใช้ apiService.testConnection)
+ * - อัปเกรดให้ใช้ `analyzeRisk` จาก `utils/risk` เพื่อการวิเคราะห์ที่สอดคล้องกันทั้งระบบ
  */
 
 import { useMemo, useState } from 'react'
@@ -14,6 +13,7 @@ import { Separator } from '@/components/ui/separator'
 import { Play, SendHorizonal, RefreshCw, Image as ImageIcon, Link2, Video, AlertTriangle, CheckCircle2, Loader2, Wifi, ShieldCheck } from 'lucide-react'
 import { triggerWebhook, testConnection } from '@/services/apiService'
 import { systemConfig } from '@/utils/configHelper'
+import { analyzeRisk } from '@/utils/risk' // <-- 1. Import engine วิเคราะห์ตัวใหม่
 
 /**
  * โครงสร้าง Notifications API ที่ใช้ (ย่อ)
@@ -28,11 +28,7 @@ interface NotificationsApi {
  * Props ของฟอร์ม
  */
 interface FBPostAnalysisFormProps {
-  /** ใช้งานฟังก์ชันแจ้งเตือน (ถ้ามี) */
   notifications?: NotificationsApi
-  /** โหมดกระชับ (ยังไม่ใช้) */
-  compact?: boolean
-  /** แสดงแบบไม่มีกล่องการ์ด (ใช้เมื่อใส่ในแท็บ) */
   frameless?: boolean
 }
 
@@ -50,55 +46,7 @@ function isValidUrl(url: string): boolean {
 }
 
 /**
- * แยกคีย์เวิร์ดจากข้อความ โดยใช้ , หรือ เว้นวรรค เป็นตัวแบ่ง และลบค่าซ้ำ
- */
-function parseKeywords(text: string): string[] {
-  if (!text.trim()) return []
-  const raw = text
-    .split(/[\s,]+/g)
-    .map(s => s.trim())
-    .filter(Boolean)
-  return Array.from(new Set(raw))
-}
-
-/**
- * วิเคราะห์เบื้องต้นแบบออฟไลน์ด้วยชุดคำต้องห้ามพื้นฐาน
- */
-function localAnalyze(content: string, keywords: string[]) {
-  const forbidden = [
-    'แทงบอล','คาสิโน','บาคาร่า','สล็อต','หวย','เดิมพัน',
-    'ได้เงินจริง','เครดิตฟรี','รวยเร็ว','การันตี','ได้ชัวร์',
-    'โปรแรง','ค่าน้ำดีที่สุด','แทงบอลออนไลน์','เว็บตรง'
-  ]
-  const text = `${content} ${keywords.join(' ')}`.toLowerCase()
-  const found = forbidden.filter(k => text.includes(k.toLowerCase()))
-
-  // กำหนดความเสี่ยงอย่างคร่าวๆตามจำนวนคำที่เจอ
-  let risk = 1
-  if (found.length >= 5) risk = 5
-  else if (found.length >= 3) risk = 4
-  else if (found.length >= 2) risk = 3
-  else if (found.length >= 1) risk = 2
-
-  const category = found.includes('แทงบอล') || found.includes('แทงบอลออนไลน์')
-    ? 'การพนัน'
-    : found.includes('เครดิตฟรี') || found.includes('โปรแรง')
-      ? 'โปรโมชั่นแรง'
-      : found.length > 0
-        ? 'สุ่มเสี่ยง'
-        : 'ทั่วไป'
-
-  return {
-    riskLevel: risk,
-    category,
-    keywordsDetected: found
-  }
-}
-
-/**
  * ดึง webhook/headers ที่ใช้งานล่าสุด
- * - พยายามอ่านจาก LocalStorage ของหน้า Settings (fbpostshield_config)
- * - ถ้าไม่มี ใช้ค่า default จาก systemConfig
  */
 function getCurrentWebhook(): { url: string; headers?: Record<string, string>; host: string; hasAuth: boolean } {
   try {
@@ -111,9 +59,7 @@ function getCurrentWebhook(): { url: string; headers?: Record<string, string>; h
       try { host = new URL(url).hostname } catch { host = url || '-' }
       return { url, headers, host, hasAuth: !!headers?.Authorization }
     }
-  } catch {
-    // ignore
-  }
+  } catch {}
   const url = systemConfig.n8n.webhookUrl
   let host = ''
   try { host = new URL(url).hostname } catch { host = url || '-' }
@@ -135,17 +81,14 @@ export default function FBPostAnalysisForm({ notifications, frameless }: FBPostA
   const [lastBody, setLastBody] = useState<string | null>(null)
   const [errorText, setErrorText] = useState<string | null>(null)
 
-  // สถานะทดสอบการเชื่อมต่อ
   const [testing, setTesting] = useState(false)
   const [testOk, setTestOk] = useState<boolean | null>(null)
   const [testText, setTestText] = useState<string>('')
 
-  /** คำเตือนการกรอก URL */
   const linkInvalid = !!link && !isValidUrl(link)
   const imgInvalid = !!imageUrl && !isValidUrl(imageUrl)
   const vidInvalid = !!videoUrl && !isValidUrl(videoUrl)
 
-  /** พรีวิวคลิปเฉพาะ YouTube (กรณีเป็นลิงก์ YouTube) */
   const youtubeEmbed = useMemo(() => {
     if (!videoUrl) return null
     try {
@@ -164,14 +107,12 @@ export default function FBPostAnalysisForm({ notifications, frameless }: FBPostA
     }
   }, [videoUrl])
 
-  /** วิเคราะห์เบื้องต้นภายในหน้า */
+  // --- 2. อัปเกรดการวิเคราะห์เบื้องต้นให้ใช้ engine ตัวใหม่ ---
   const localResult = useMemo(() => {
-    return localAnalyze(content, parseKeywords(keywordsText))
+    const combinedText = `${content} ${keywordsText}`
+    return analyzeRisk(combinedText)
   }, [content, keywordsText])
 
-  /**
-   * ส่งข้อมูลไปยัง n8n โดยใช้ triggerWebhook
-   */
   const handleSend = async () => {
     setIsSubmitting(true)
     setErrorText(null)
@@ -186,10 +127,9 @@ export default function FBPostAnalysisForm({ notifications, frameless }: FBPostA
         throw new Error('ตรวจพบลิงก์ไม่ถูกต้อง กรุณาตรวจสอบ Link/Image/Video URL')
       }
 
-      const parsedKeywords = parseKeywords(keywordsText)
       const payload = {
         post_content: content.trim(),
-        keywords: parsedKeywords,
+        keywords: keywordsText.split(/[\s,]+/).filter(Boolean),
         link: link.trim() || undefined,
         image_url: imageUrl.trim() || undefined,
         video_url: videoUrl.trim() || undefined,
@@ -218,9 +158,6 @@ export default function FBPostAnalysisForm({ notifications, frameless }: FBPostA
     }
   }
 
-  /**
-   * รีเซ็ตค่าในฟอร์ม
-   */
   const handleReset = () => {
     setContent('')
     setKeywordsText('')
@@ -235,9 +172,6 @@ export default function FBPostAnalysisForm({ notifications, frameless }: FBPostA
     setTesting(false)
   }
 
-  /**
-   * ทดสอบการเชื่อมต่อ (ใช้ apiService.testConnection)
-   */
   const handleQuickTest = async () => {
     const { url, headers, host } = getCurrentWebhook()
     if (!url.trim()) {
@@ -260,7 +194,6 @@ export default function FBPostAnalysisForm({ notifications, frameless }: FBPostA
     }
   }
 
-  // ปรับสไตล์การ์ดเมื่อต้องการแสดงแบบ frameless
   const cardClass = frameless
     ? 'border-0 shadow-none bg-transparent p-0'
     : 'border border-gray-200 dark:border-gray-800 bg-white dark:bg-slate-900/60 backdrop-blur'
@@ -276,7 +209,6 @@ export default function FBPostAnalysisForm({ notifications, frameless }: FBPostA
         {!frameless && <CardDescription>กรอกข้อมูลโพสต์เพื่อวิเคราะห์/ส่งต่อไป n8n</CardDescription>}
       </CardHeader>
       <CardContent className={frameless ? 'p-0 grid gap-3' : 'grid gap-4'}>
-        {/* สถานะคอนฟิกอย่างย่อ + ปุ่มทดสอบ */}
         <div className="flex flex-wrap items-center justify-between gap-2">
           <div className="flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-2 text-xs px-2.5 py-1 rounded-xl bg-blue-50 text-blue-700 border border-blue-200 dark:bg-blue-500/10 dark:text-blue-300 dark:border-blue-500/20">
@@ -312,7 +244,6 @@ export default function FBPostAnalysisForm({ notifications, frameless }: FBPostA
           <div className="text-xs text-gray-600 dark:text-gray-300">{testText}</div>
         )}
 
-        {/* Content */}
         <div className="grid gap-2">
           <Label htmlFor="fb-content">Content</Label>
           <Textarea
@@ -324,7 +255,6 @@ export default function FBPostAnalysisForm({ notifications, frameless }: FBPostA
           />
         </div>
 
-        {/* Keywords */}
         <div className="grid gap-2">
           <Label htmlFor="fb-keywords">Keywords (คั่นด้วย , หรือเว้นวรรค)</Label>
           <Input
@@ -335,7 +265,6 @@ export default function FBPostAnalysisForm({ notifications, frameless }: FBPostA
           />
         </div>
 
-        {/* Link */}
         <div className="grid gap-2">
           <Label htmlFor="fb-link" className="flex items-center gap-2">
             <Link2 className="w-4 h-4" /> Link (โพสต์/เพจ/เว็บ)
@@ -353,7 +282,6 @@ export default function FBPostAnalysisForm({ notifications, frameless }: FBPostA
           )}
         </div>
 
-        {/* Image URL + Preview */}
         <div className="grid gap-2">
           <Label htmlFor="fb-image" className="flex items-center gap-2">
             <ImageIcon className="w-4 h-4" /> Image URL
@@ -374,7 +302,6 @@ export default function FBPostAnalysisForm({ notifications, frameless }: FBPostA
           {imgInvalid && <div className="text-xs text-red-600 dark:text-red-400">รูปแบบ URL ไม่ถูกต้อง</div>}
         </div>
 
-        {/* Video URL + Preview (YouTube embed only) */}
         <div className="grid gap-2">
           <Label htmlFor="fb-video" className="flex items-center gap-2">
             <Video className="w-4 h-4" /> Video URL
@@ -404,40 +331,35 @@ export default function FBPostAnalysisForm({ notifications, frameless }: FBPostA
 
         {!frameless && <Separator />}
 
-        {/* Local quick analysis */}
+        {/* --- 3. อัปเดตส่วนแสดงผลให้ตรงกับโครงสร้าง RiskResult ใหม่ --- */}
         <div className="rounded-xl border border-gray-200 dark:border-gray-800 p-3 bg-gray-50 dark:bg-slate-900/40">
           <div className="flex items-center justify-between gap-3">
             <div className="text-sm text-gray-700 dark:text-gray-200 font-medium">
               วิเคราะห์เบื้องต้น (ออฟไลน์)
             </div>
             <div className="text-xs">
-              <span className={`px-2 py-1 rounded-full border ${
-                localResult.riskLevel >= 4
+              <span className={`px-2 py-1 rounded-full border ${ 
+                localResult.level >= 4
                   ? 'bg-red-100 border-red-200 text-red-700 dark:bg-red-500/10 dark:border-red-500/20 dark:text-red-300'
-                  : localResult.riskLevel === 3
+                  : localResult.level === 3
                     ? 'bg-amber-100 border-amber-200 text-amber-700 dark:bg-amber-500/10 dark:border-amber-500/20 dark:text-amber-300'
                     : 'bg-emerald-100 border-emerald-200 text-emerald-700 dark:bg-emerald-500/10 dark:border-emerald-500/20 dark:text-emerald-300'
               }`}>
-                Risk {localResult.riskLevel}/5 • {localResult.category}
+                Risk {localResult.level}/5 • {localResult.category}
               </span>
             </div>
           </div>
           <div className="text-xs mt-2 text-gray-700 dark:text-gray-300">
-            คำต้องห้ามที่ตรวจพบ: {localResult.keywordsDetected.length > 0 ? localResult.keywordsDetected.join(', ') : '-'}
+            กฎที่ตรงกัน: {localResult.keywordsDetected.length > 0 ? localResult.keywordsDetected.join(', ') : '-'}
           </div>
         </div>
 
-        {/* Actions */}
         <div className="flex flex-wrap items-center gap-3">
           <Button
             variant="outline"
             className="bg-transparent"
             onClick={() => {
-              if (localResult.riskLevel >= 4) {
-                notifications?.addInfoNotification?.('ผลวิเคราะห์เบื้องต้น', `มีความเสี่ยงระดับ ${localResult.riskLevel}/5 (${localResult.category})`)
-              } else {
-                notifications?.addInfoNotification?.('ผลวิเคราะห์เบื้องต้น', `ความเสี่ยงระดับ ${localResult.riskLevel}/5 (${localResult.category})`)
-              }
+              notifications?.addInfoNotification?.('ผลวิเคราะห์เบื้องต้น', `ความเสี่ยงระดับ ${localResult.level}/5 (${localResult.category})`)
             }}
           >
             <Play className="w-4 h-4 mr-2" />
@@ -455,7 +377,6 @@ export default function FBPostAnalysisForm({ notifications, frameless }: FBPostA
           </Button>
         </div>
 
-        {/* Result */}
         {(lastHttpStatus !== null || errorText) && (
           <div className="rounded-xl border border-gray-200 dark:border-gray-800 p-3 bg-gray-50 dark:bg-slate-900/40">
             <div className="flex items-center justify-between">
