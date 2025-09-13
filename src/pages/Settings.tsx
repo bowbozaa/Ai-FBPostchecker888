@@ -7,7 +7,7 @@
 
 import { Settings as SettingsIcon } from 'lucide-react'
 import { useTheme } from '@/hooks/useTheme'
-import BannedKeywordsPanel from '@/components/settings/BannedKeywordsPanel'
+import PolicyRulesPanel from '@/components/settings/PolicyRulesPanel'
 import ApiConfigPanel from '@/components/settings/ApiConfigPanel'
 import AppearancePanel from '@/components/settings/AppearancePanel'
 
@@ -41,7 +41,7 @@ export default function SettingsPage() {
         {/* Panels */}
         <div className="grid grid-cols-1 gap-6">
           <ApiConfigPanel isDark={isDark} />
-          <BannedKeywordsPanel isDark={isDark} />
+          <PolicyRulesPanel isDark={isDark} />
           <AppearancePanel isDark={isDark} />
         </div>
       </div>

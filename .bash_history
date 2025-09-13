@@ -157,3 +157,4 @@ df -h
 gemini; exit
 lsof -i :8000
 netstat -tulnp | grep 8000
+gcloud config set project line-webhook-n8n-bigquery

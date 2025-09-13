@@ -1,111 +1,159 @@
 /** 
- * risk.ts - ยูทิลสำหรับวิเคราะห์ความเสี่ยงข้อความ และรีไรท์แบบ local
- * - เพิ่มระบบ "คำต้องห้าม" แบบไดนามิก (อ่าน/เขียนจาก localStorage)
+ * risk.ts - ยูทิลสำหรับวิเคราะห์ความเสี่ยง และจัดการกฎ Policy
+ * - รองรับโครงสร้าง Rule แบบใหม่ (keyword, category, score, regex)
+ * - มี Logic ในการ Migrate ข้อมูลจาก "คำต้องห้าม" แบบเก่าเป็น "กฎ" แบบใหม่โดยอัตโนมัติ
  */
+import defaultRuleFile from '@/config/rules.config.json'
 
- /** ผลลัพธ์ความเสี่ยง */
-export interface RiskResult {
-  /** ระดับ 1-5 */
-  level: number
-  /** หมวดหมู่ */
+// --- โครงสร้างข้อมูลและค่าคงที่ ---
+
+/** โครงสร้างของกฎแต่ละข้อ */
+export interface PolicyRule {
+  id: string
+  keyword: string
   category: string
-  /** คำที่ตรวจพบ */
-  keywordsDetected: string[]
+  risk_score: number
+  is_regex: boolean
+  enabled: boolean
 }
 
-/** คีย์เก็บใน localStorage */
-const LS_FORBIDDEN = 'fbps_forbidden_keywords'
+/** ผลลัพธ์การวิเคราะห์ความเสี่ยง */
+export interface RiskResult {
+  level: number
+  category: string
+  keywordsDetected: string[]
+  matchedRules: PolicyRule[]
+}
 
-/** ชุดคำต้องห้ามพื้นฐาน (ค่าเริ่มต้น) */
-export const DEFAULT_FORBIDDEN: string[] = [
-  'แทงบอล','คาสิโน','บาคาร่า','สล็อต','หวย','เดิมพัน',
-  'ได้เงินจริง','เครดิตฟรี','รวยเร็ว','การันตี','ได้ชัวร์',
-  'โปรแรง','ค่าน้ำดีที่สุด','แทงบอลออนไลน์','เว็บตรง'
-]
+/** คีย์สำหรับเก็บข้อมูลใน localStorage */
+const LS_POLICY_RULES = 'fbps_policy_rules'
+const LS_FORBIDDEN_OLD = 'fbps_forbidden_keywords' // คีย์เก่าสำหรับ Migrate
+
+/** 
+ * กฎตั้งต้น: อ่านจากไฟล์ JSON ที่เราสร้างไว้
+ * - ที่ต้องทำแบบนี้เพราะ import assertion (`with { type: 'json' }`) ยังมีปัญหาในบาง bundler
+ */
+const DEFAULT_RULES: PolicyRule[] = defaultRuleFile.rules as PolicyRule[]
+
+// --- ฟังก์ชันหลักสำหรับจัดการกฎ ---
 
 /**
- * อ่านรายการคำต้องห้ามจาก localStorage
+ * โหลดกฎทั้งหมด
+ * - ตรวจสอบ localStorage สำหรับกฎที่ผู้ใช้ตั้งค่าเอง
+ * - หากไม่เจอ จะพยายาม Migrate จากข้อมูล "คำต้องห้าม" แบบเก่า
+ * - หากไม่มีข้อมูลเก่า จะใช้ค่าตั้งต้นจาก `rules.config.json`
+ */
+export function getPolicyRules(): PolicyRule[] {
+  // 1. พยายามโหลดกฎจากโครงสร้างใหม่
+  try {
+    const raw = localStorage.getItem(LS_POLICY_RULES)
+    if (raw) {
+      const data = JSON.parse(raw)
+      if (Array.isArray(data) && data.length > 0) {
+        return data
+      }
+    }
+  } catch {}
+
+  // 2. หากไม่มี ให้ลอง Migrate จากโครงสร้างเก่า (string[])
+  try {
+    const oldRaw = localStorage.getItem(LS_FORBIDDEN_OLD)
+    if (oldRaw) {
+      const oldKeywords = JSON.parse(oldRaw)
+      if (Array.isArray(oldKeywords)) {
+        const migratedRules: PolicyRule[] = oldKeywords.map((kw, i) => ({
+          id: `migrated-${Date.now()}-${i}`,
+          keyword: kw,
+          category: 'Migrated', // กำหนด Category เริ่มต้น
+          risk_score: 3, // กำหนด risk score เริ่มต้น
+          is_regex: false,
+          enabled: true,
+        }))
+        // บันทึกกฎที่ Migrate แล้วในรูปแบบใหม่ และลบของเก่าทิ้ง
+        setPolicyRules(migratedRules)
+        localStorage.removeItem(LS_FORBIDDEN_OLD)
+        return migratedRules
+      }
+    }
+  } catch {}
+
+  // 3. หากไม่มีข้อมูลใดๆ เลย ให้ใช้ค่าตั้งต้น
+  return [...DEFAULT_RULES]
+}
+
+/**
+ * บันทึกกฎทั้งหมดลง localStorage
+ */
+export function setPolicyRules(rules: PolicyRule[]): void {
+  localStorage.setItem(LS_POLICY_RULES, JSON.stringify(rules))
+}
+
+/**
+ * รีเซ็ตกฎทั้งหมดกลับไปเป็นค่าตั้งต้นจากไฟล์ `rules.config.json`
+ */
+export function resetPolicyRules(): void {
+  setPolicyRules([...DEFAULT_RULES])
+}
+
+
+// --- ฟังก์ชันสำหรับความเข้ากันได้กับโค้ดเก่า (Backward Compatibility) ---
+
+/**
+ * [Compatibility] อ่าน "คำต้องห้าม" จากกฎทั้งหมด (เพื่อให้ส่วนอื่นของแอปยังทำงานได้)
  */
 export function getForbiddenKeywords(): string[] {
-  try {
-    const raw = localStorage.getItem(LS_FORBIDDEN)
-    if (!raw) return [...DEFAULT_FORBIDDEN]
-    const arr = JSON.parse(raw)
-    if (!Array.isArray(arr)) return [...DEFAULT_FORBIDDEN]
-    // ทำความสะอาดข้อมูล: trim และกรองค่าว่าง, unique
-    const cleaned = Array.from(
-      new Set(
-        arr
-          .map((s) => (typeof s === 'string' ? s.trim() : ''))
-          .filter((s) => s.length > 0)
-      )
-    )
-    return cleaned.length > 0 ? cleaned : [...DEFAULT_FORBIDDEN]
-  } catch {
-    return [...DEFAULT_FORBIDDEN]
-  }
+  const rules = getPolicyRules()
+  return rules.map(r => r.keyword)
 }
 
-/**
- * บันทึกรายการคำต้องห้ามลง localStorage
- */
-export function setForbiddenKeywords(list: string[]): void {
-  const cleaned = Array.from(
-    new Set(
-      (list || [])
-        .map((s) => (typeof s === 'string' ? s.trim() : ''))
-        .filter((s) => s.length > 0)
-    )
-  )
-  localStorage.setItem(LS_FORBIDDEN, JSON.stringify(cleaned))
-}
+
+// --- ฟังก์ชันวิเคราะห์ความเสี่ยงที่อัปเกรดแล้ว ---
 
 /**
- * เพิ่มคำต้องห้าม 1 คำ
- */
-export function addForbiddenKeyword(word: string): void {
-  const w = (word || '').trim()
-  if (!w) return
-  const cur = getForbiddenKeywords()
-  if (!cur.includes(w)) {
-    cur.push(w)
-    setForbiddenKeywords(cur)
-  }
-}
-
-/**
- * รีเซ็ตคำต้องห้ามกลับค่าเริ่มต้น
- */
-export function resetForbiddenKeywords(): void {
-  localStorage.setItem(LS_FORBIDDEN, JSON.stringify(DEFAULT_FORBIDDEN))
-}
-
-/**
- * วิเคราะห์ความเสี่ยงแบบออฟไลน์จากข้อความ
- * - ใช้ "คำต้องห้าม" จาก localStorage แบบล่าสุดทุกครั้ง
+ * วิเคราะห์ความเสี่ยงจากข้อความโดยใช้กฎทั้งหมด
+ * - คำนวณความเสี่ยงจาก "คะแนนสูงสุด" ของกฎที่ตรวจพบ
  */
 export function analyzeRisk(text: string): RiskResult {
   const content = (text || '').toLowerCase()
-  const forbidden = getForbiddenKeywords()
-  const found = forbidden.filter(k => content.includes(k.toLowerCase()))
+  const rules = getPolicyRules().filter(r => r.enabled)
+  
+  const matchedRules: PolicyRule[] = []
 
-  let level = 1
-  if (found.length >= 5) level = 5
-  else if (found.length >= 3) level = 4
-  else if (found.length >= 2) level = 3
-  else if (found.length >= 1) level = 2
+  for (const rule of rules) {
+    try {
+      if (rule.is_regex) {
+        const regex = new RegExp(rule.keyword, 'gi')
+        if (regex.test(content)) {
+          matchedRules.push(rule)
+        }
+      } else {
+        if (content.includes(rule.keyword.toLowerCase())) {
+          matchedRules.push(rule)
+        }
+      }
+    } catch (e) {
+      // ป้องกัน Regex ที่ไม่ถูกต้อง
+      console.error(`Invalid regex in rule ${rule.id}:`, rule.keyword)
+    }
+  }
 
-  const category =
-    found.some((f) => ['แทงบอล','แทงบอลออนไลน์'].includes(f)) ? 'การพนัน' :
-    found.some((f) => ['เครดิตฟรี','โปรแรง'].includes(f)) ? 'โปรโมชั่นแรง' :
-    found.length > 0 ? 'สุ่มเสี่ยง' : 'ทั่วไป'
+  if (matchedRules.length === 0) {
+    return { level: 1, category: 'ปลอดภัย', keywordsDetected: [], matchedRules: [] }
+  }
 
-  return { level, category, keywordsDetected: found }
+  // หาตัวที่มี risk_score สูงที่สุด
+  const topRule = matchedRules.reduce((max, rule) => rule.risk_score > max.risk_score ? rule : max, matchedRules[0])
+
+  return {
+    level: topRule.risk_score,
+    category: topRule.category,
+    keywordsDetected: matchedRules.map(r => r.keyword), // แสดง keyword ทั้งหมดที่เจอ
+    matchedRules: matchedRules,
+  }
 }
 
 /**
- * รีไรท์แบบ local เพื่อลดความเสี่ยง: แทนคำเสี่ยงด้วยถ้อยคำกลาง
- * - หมายเหตุ: รองรับเฉพาะคำทั่วไปใน map; หากมีคำเฉพาะที่ผู้ใช้เพิ่ม จะไม่ถูกแทนโดยอัตโนมัติ
+ * [Compatibility] ฟังก์ชันเดิม ยังคงไว้เผื่อส่วนอื่นเรียกใช้
  */
 export function safeRewriteLocal(text: string): string {
   const map: Record<string, string> = {
