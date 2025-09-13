@@ -4,7 +4,7 @@
  */
 
 import { useState, useEffect } from 'react'
-import { BarChart3, TrendingUp, AlertTriangle, CheckCircle, Users, Clock, Shield, Target } from 'lucide-react'
+import { BarChart3, TrendingUp, AlertTriangle, CheckCircle, Users, Clock, Shield, Target, Flag } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { useTheme } from '../hooks/useTheme'
@@ -314,6 +314,28 @@ export default function StatsPage() {
               })}
             </div>
           </CardContent>
+        </Card>
+
+                {/* Feedback Analysis Panel */}
+        <FeedbackAnalysisPanel isDark={isDark} />
+      </div>
+    </div>
+  )
+}
+
+        <Card className={`${cardClass} border shadow-lg mt-8`}>
+            <CardHeader>
+                <CardTitle className={`${textClass} flex items-center gap-2`}>
+                    <Flag className="w-5 h-5 text-red-500" />
+                    ผลวิเคราะห์ Feedback
+                </CardTitle>
+                <CardDescription className={textSecondaryClass}>สถิติของกฎที่ถูกผู้ใช้รายงานว่า 'ถูกลงโทษ' บ่อยที่สุด</CardDescription>
+            </CardHeader>
+            <CardContent>
+                <div className="text-center py-8">
+                    <p className={textSecondaryClass}>เร็วๆ นี้</p>
+                </div>
+            </CardContent>
         </Card>
       </div>
     </div>
