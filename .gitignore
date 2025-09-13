@@ -53,3 +53,12 @@ Thumbs.db
 .vercel
 server.pid
 *.zip
+
+# Screenshots
+*.png
+
+# Temporary clones
+temp-clone/
+
+# Shell history
+.bash_history
