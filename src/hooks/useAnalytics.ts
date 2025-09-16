@@ -1,40 +1,37 @@
 /**
- * useAnalytics - Lightweight client-side analytics stored in localStorage.
- * Purpose: Track simple client events without any external service, and expose
- *          minimal helpers for UI rendering and summary statistics.
- *
- * Exposed API:
- * - events: AnalyticsEvent[] (sorted by timestamp ascending)
- * - track(name, meta?): Record an event with optional metadata
- * - clear(): Remove all recorded events
- * - getStats(): Aggregated stats (total, byName, last)
+ * useAnalytics.ts
+ * Lightweight client-side analytics hook. Stores events in localStorage and exposes helpers:
+ * - track(name, meta?): record an event
+ * - events: chronologically sorted events for UI
+ * - clear(): clear all events
+ * - getStats(): totals and frequency by event name
  *
  * Notes:
- * - Avoids using import.meta.* for maximum bundler compatibility.
- * - Dev-mode detection uses process.env.NODE_ENV with a global fallback.
+ * - Designed to be safe in environments without full globals; all storage I/O is wrapped by try/catch.
+ * - Avoids import.meta and HTML-escaped tokens that may break esbuild parsing.
  */
 
 import { useCallback, useEffect, useMemo, useState } from 'react'
 
-/** Represents a single analytics event payload. */
+/** Event payload structure kept in a compact form for localStorage. */
 export interface AnalyticsEvent {
-  /** Unique event id */
+  /** Unique id for the event */
   id: string
-  /** Event name */
+  /** The event name, used to aggregate in getStats() */
   name: string
-  /** Timestamp (ms since epoch) */
+  /** Unix millis timestamp */
   ts: number
   /** Optional metadata payload */
   meta?: Record<string, any>
 }
 
-/** Aggregated statistics of recorded events. */
+/** Aggregated stats returned by getStats(). */
 export interface AnalyticsStats {
-  /** Total number of events */
+  /** Total events stored */
   total: number
-  /** Aggregated counts by event name */
+  /** Event counts grouped by name */
   byName: Record<string, number>
-  /** The most recent event (or null if none) */
+  /** The last event recorded or null if none */
   last: AnalyticsEvent | null
 }
 
@@ -42,12 +39,12 @@ const STORAGE_KEY = 'fb-analytics-events'
 const MAX_EVENTS = 500
 
 /**
- * Safely determine if we are in development mode.
- * - Tries process.env.NODE_ENV first (guarded)
- * - Falls back to globalThis.__DEV__ if available
+ * Detects whether we are in development mode without relying on import.meta.env
+ * or other bundler-specific variables.
  */
 function isDevMode(): boolean {
   try {
+    // Typical Node env injection in many bundlers
     if (
       typeof process !== 'undefined' &&
       (process as any).env &&
@@ -59,11 +56,12 @@ function isDevMode(): boolean {
     // ignore
   }
   try {
+    // Optional global flags
     const g: any =
       typeof globalThis !== 'undefined'
         ? globalThis
         : typeof window !== 'undefined'
-          ? window
+          ? (window as any)
           : undefined
     if (g && (g.__DEV__ === true || g.__DEV__ === '1')) {
       return true
@@ -75,8 +73,8 @@ function isDevMode(): boolean {
 }
 
 /**
- * Read events from localStorage safely.
- * @returns Valid AnalyticsEvent array or an empty array on failure.
+ * Read events from localStorage.
+ * Returns an empty array on any error or malformed content.
  */
 function readEvents(): AnalyticsEvent[] {
   try {
@@ -93,25 +91,28 @@ function readEvents(): AnalyticsEvent[] {
 }
 
 /**
- * Persist events to localStorage (bounded to MAX_EVENTS).
- * @param events - Events to write.
+ * Persist a capped list of events to localStorage.
  */
 function writeEvents(events: AnalyticsEvent[]) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(events.slice(-MAX_EVENTS)))
   } catch {
-    // ignore
+    // ignore write failures (private mode, quota, etc.)
   }
 }
 
 /**
- * useAnalytics - Hook สำหรับบันทึก event แบบเบาๆ ใน localStorage
- * - เหมาะสำหรับ telemetry ระดับ UI โดยไม่พึ่งบริการภายนอก
+ * useAnalytics
+ * React hook to track lightweight client-side events for UX instrumentation.
+ * Returns stable helpers and a sorted list of events for rendering.
  */
 export function useAnalytics() {
+  // Initialize from storage once
   const [events, setEvents] = useState<AnalyticsEvent[]>(() => readEvents())
 
-  /** Sync updates from other tabs/windows via storage event */
+  /**
+   * Keep this tab in sync if other tabs/windows modify the same storage key.
+   */
   useEffect(() => {
     const onStorage = (e: StorageEvent) => {
       if (e.key === STORAGE_KEY) {
@@ -123,9 +124,7 @@ export function useAnalytics() {
   }, [])
 
   /**
-   * Record an event with optional metadata
-   * @param name - Event name
-   * @param meta - Optional metadata object
+   * Track a new event with optional metadata.
    */
   const track = useCallback((name: string, meta?: Record<string, any>) => {
     const evt: AnalyticsEvent = {
@@ -146,7 +145,7 @@ export function useAnalytics() {
   }, [])
 
   /**
-   * Clear all recorded events
+   * Clear all events and storage record.
    */
   const clear = useCallback(() => {
     setEvents([])
@@ -158,8 +157,7 @@ export function useAnalytics() {
   }, [])
 
   /**
-   * Compute simple aggregated statistics from current events
-   * @returns AnalyticsStats summary
+   * Compute aggregated stats on demand.
    */
   const getStats = useCallback((): AnalyticsStats => {
     const byName: Record<string, number> = {}
@@ -173,7 +171,9 @@ export function useAnalytics() {
     }
   }, [events])
 
-  /** Stable, timestamp-ascending list for easier rendering */
+  /**
+   * Return events sorted by timestamp ascending for timeline-style UIs.
+   */
   const sortedEvents = useMemo(() => {
     return [...events].sort((a, b) => a.ts - b.ts)
   }, [events])

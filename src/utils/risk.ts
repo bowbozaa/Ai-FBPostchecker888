@@ -3,7 +3,7 @@
  * - รองรับโครงสร้าง Rule แบบใหม่ (keyword, category, score, regex)
  * - มี Logic ในการ Migrate ข้อมูลจาก "คำต้องห้าม" แบบเก่าเป็น "กฎ" แบบใหม่โดยอัตโนมัติ
  */
-import defaultRuleFile from '../../config/rules.config.json'
+import defaultRuleFile from '../../config/rules.config.json' assert { type: 'json' }
 
 // --- โครงสร้างข้อมูลและค่าคงที่ ---
 
