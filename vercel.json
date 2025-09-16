@@ -1,9 +1,4 @@
 {
-  "functions": {
-    "api/cron/daily-report.js": {
-      "maxDuration": 300
-    }
-  },
   "crons": [
     {
       "path": "/api/cron/daily-report",
