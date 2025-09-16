@@ -5,23 +5,40 @@ from typing import List
 
 try:
     import gspread
-    from oauth2client.service_account import ServiceAccountCredentials
-except Exception:  # pragma: no cover - libraries might not be installed
+    import google.auth
+    from google.auth.impersonated_credentials import Credentials as ImpersonatedCredentials
+except ImportError:  # pragma: no cover - libraries might not be ininstalled
     gspread = None  # type: ignore
-    ServiceAccountCredentials = None  # type: ignore
+    google = None  # type: ignore
+    ImpersonatedCredentials = None  # type: ignore
 
 
 class GoogleSheetsLogger:
-    """Append rows to a Google Sheet using a service account."""
+    """Append rows to a Google Sheet using an impersonated service account."""
 
-    def __init__(self, creds_file: str, sheet_id: str) -> None:
-        if gspread is None or ServiceAccountCredentials is None:
-            raise ImportError("gspread and oauth2client are required but not installed")
+    def __init__(self, service_account_email: str, sheet_id: str) -> None:
+        if gspread is None or google is None or ImpersonatedCredentials is None:
+            raise ImportError(
+                "gspread and google-auth are required but not installed"
+            )
+        
+        # Define the required scopes
         scope = [
             "https://spreadsheets.google.com/feeds",
             "https://www.googleapis.com/auth/drive",
         ]
-        credentials = ServiceAccountCredentials.from_json_keyfile_name(creds_file, scope)
+
+        # Get the default credentials from the environment (e.g., Cloud Shell)
+        source_credentials, _ = google.auth.default(scopes=scope)
+
+        # Create impersonated credentials
+        credentials = ImpersonatedCredentials(
+            source_credentials=source_credentials,
+            target_principal=service_account_email,
+            target_scopes=scope,
+        )
+
+        # Authorize gspread with the impersonated credentials
         client = gspread.authorize(credentials)
         self.sheet = client.open_by_key(sheet_id).sheet1
 

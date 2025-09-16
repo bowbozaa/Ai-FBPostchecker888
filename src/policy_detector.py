@@ -39,8 +39,8 @@ class PolicyDetector:
             print(f"Warning: Rules file not found at {path}. Using empty rule set.")
             return []
         except json.JSONDecodeError:
-            print(f"Warning: Could not decode JSON from {path}. Using empty rule set.
-")
+            print(f"""Warning: Could not decode JSON from {path}. Using empty rule set.
+""")
             return []
 
     def detect(self, text: str) -> List[Rule]:

@@ -65,3 +65,12 @@ temp-clone/
 
 # Rust toolchain
 .rustup/
+
+# Added by Gemini
+.nvm/
+config.json
+config/config.json
+config/google-credentials.json
+src/__pycache__/
+test_write.txt
+run_checker.py

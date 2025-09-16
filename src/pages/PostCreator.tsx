@@ -650,15 +650,3 @@ export default function PostCreatorPage() {
     </div>
   )
 }
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-    </div>
-  )
-}

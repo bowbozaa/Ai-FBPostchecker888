@@ -323,21 +323,4 @@ export default function StatsPage() {
   )
 }
 
-        <Card className={`${cardClass} border shadow-lg mt-8`}>
-            <CardHeader>
-                <CardTitle className={`${textClass} flex items-center gap-2`}>
-                    <Flag className="w-5 h-5 text-red-500" />
-                    ผลวิเคราะห์ Feedback
-                </CardTitle>
-                <CardDescription className={textSecondaryClass}>สถิติของกฎที่ถูกผู้ใช้รายงานว่า 'ถูกลงโทษ' บ่อยที่สุด</CardDescription>
-            </CardHeader>
-            <CardContent>
-                <div className="text-center py-8">
-                    <p className={textSecondaryClass}>เร็วๆ นี้</p>
-                </div>
-            </CardContent>
-        </Card>
-      </div>
-    </div>
-  )
-}
+        
