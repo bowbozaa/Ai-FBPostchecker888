@@ -124,7 +124,12 @@ export const postService = {
 
   /** อ่านโพสต์ทั้งหมด */
   getPosts(): PostItem[] {
-    return readPosts().sort((a, b) => +new Date(b.updatedAt) - +new Date(a.updatedAt))
+    return readPosts().sort((a, b) => {
+      const dateA = a.updatedAt ? new Date(a.updatedAt).getTime() : 0;
+      const dateB = b.updatedAt ? new Date(b.updatedAt).getTime() : 0;
+      // Fallback to 0 if date is invalid (getTime() returns NaN)
+      return (dateB || 0) - (dateA || 0);
+    });
   },
 
   /** อ่านโพสต์เดียว */
