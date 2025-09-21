@@ -9,6 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button'
 import { useTheme } from '../hooks/useTheme'
 import PageHeader from '@/components/common/PageHeader'
+import FeedbackAnalysisPanel from '@/components/stats/FeedbackAnalysisPanel'
 
 export default function StatsPage() {
   const { theme } = useTheme()
