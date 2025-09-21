@@ -40,11 +40,16 @@ export default function SettingsPage() {
 
         {/* Panels */}
         <div className="grid grid-cols-1 gap-6">
+          <FacebookPagesPanel isDark={isDark} />
           <ApiConfigPanel isDark={isDark} />
           <PolicyRulesPanel isDark={isDark} />
           <AppearancePanel isDark={isDark} />
         </div>
       </div>
+    </div>
+  )
+}
+ </div>
     </div>
   )
 }
