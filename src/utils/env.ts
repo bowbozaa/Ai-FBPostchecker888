@@ -56,10 +56,10 @@ export const appConfig = {
   apiTimeout: parseInt(getEnvVar('REACT_APP_API_TIMEOUT', '31000')),
   
   // OpenAI Configuration
-  openaiApiKey: getEnvVar('REACT_APP_OPENAI_API_KEY', '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'),
+  openaiApiKey: getEnvVar('REACT_APP_OPENAI_API_KEY', ''),
   
   // LINE Bot Configuration
-  lineBotToken: getEnvVar('REACT_APP_LINE_BOT_TOKEN', 'HY8UrlnzZZMRkR6orVWqR3OZUUwYLVVfWshRukJOhLDYlQOd0lumacva9cFJNMeLkhXyxDwmwCZ6gW/4oGQsISy5ecGIyBKhZobo5eBqfKs9fPiIGkYF80yrVQBHd0SyviZmVgjvB7/+DYLhlJKMEwdB04t89/1O/w1cDnyilFU='),
+  lineBotToken: getEnvVar('REACT_APP_LINE_BOT_TOKEN', ''),
   lineUserId: getEnvVar('REACT_APP_LINE_USER_ID', 'Cabc1234567890xyz'),
   
   // Gmail Configuration

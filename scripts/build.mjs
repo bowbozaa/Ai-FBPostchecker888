@@ -13,6 +13,9 @@ await rimraf('dist')
  * @type {esbuild.BuildOptions}
  */
 const esbuildOpts = {
+  banner: {
+    js: 'new EventSource("/esbuild").onmessage = () => location.reload();',
+  },
   color: true,
   entryPoints: ['src/main.tsx', 'index.html'],
   outdir: 'dist',
