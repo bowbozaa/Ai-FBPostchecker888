@@ -10,6 +10,7 @@ import { useTheme } from '@/hooks/useTheme'
 import PolicyRulesPanel from '@/components/settings/PolicyRulesPanel'
 import ApiConfigPanel from '@/components/settings/ApiConfigPanel'
 import AppearancePanel from '@/components/settings/AppearancePanel'
+import FacebookPagesPanel from '@/components/settings/FacebookPagesPanel'
 
 /**
  * หน้า Settings
