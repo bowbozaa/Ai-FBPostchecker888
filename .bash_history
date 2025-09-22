@@ -158,3 +158,6 @@ gemini; exit
 lsof -i :8000
 netstat -tulnp | grep 8000
 gcloud config set project line-webhook-n8n-bigquery
+gcloud config set project ai-fbpostchecker888
+สวสดฟราเดย
+gcloud config set project ai-fbpostchecker888
