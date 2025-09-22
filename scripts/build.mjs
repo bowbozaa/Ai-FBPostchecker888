@@ -3,11 +3,14 @@ import { rimraf } from 'rimraf'
 import stylePlugin from 'esbuild-style-plugin'
 import autoprefixer from 'autoprefixer'
 import tailwindcss from 'tailwindcss'
+import { cp } from 'node:fs/promises'
 
 const args = process.argv.slice(2)
 const isProd = args[0] === '--production'
 
 await rimraf('dist')
+
+await cp('api', 'dist/api', { recursive: true })
 
 /**
  * @type {esbuild.BuildOptions}
