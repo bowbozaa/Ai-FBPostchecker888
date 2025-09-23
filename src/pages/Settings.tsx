@@ -10,7 +10,6 @@ import { useTheme } from '@/hooks/useTheme'
 import PolicyRulesPanel from '@/components/settings/PolicyRulesPanel'
 import ApiConfigPanel from '@/components/settings/ApiConfigPanel'
 import AppearancePanel from '@/components/settings/AppearancePanel'
-import FacebookPagesPanel from '@/components/settings/FacebookPagesPanel'
 
 /**
  * หน้า Settings
@@ -41,7 +40,6 @@ export default function SettingsPage() {
 
         {/* Panels */}
         <div className="grid grid-cols-1 gap-6">
-          <FacebookPagesPanel isDark={isDark} />
           <ApiConfigPanel isDark={isDark} />
           <PolicyRulesPanel isDark={isDark} />
           <AppearancePanel isDark={isDark} />
