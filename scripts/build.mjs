@@ -32,6 +32,9 @@ const esbuildOpts = {
     '.png': 'file',
     '.json': 'json',
   },
+  define: {
+    'process.env.NODE_ENV': isProd ? '"production"' : '"development"',
+  },
   plugins: [
     stylePlugin({
       postcss: {
