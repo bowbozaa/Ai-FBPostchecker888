@@ -27,6 +27,7 @@ const esbuildOpts = {
   minify: isProd,
   treeShaking: true,
   jsx: 'automatic',
+  external: ['jspdf'],
   loader: {
     '.html': 'copy',
     '.png': 'file',
