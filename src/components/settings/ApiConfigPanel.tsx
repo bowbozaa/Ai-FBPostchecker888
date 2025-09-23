@@ -21,6 +21,8 @@ import { apiService, testConnection } from '@/services/apiService'
 export interface ApiConfigPanelProps {
   /** โหมดสีเข้ม */
   isDark?: boolean
+  /** ฟังก์ชันเช็คสิทธิ์ */
+  hasPermission: (permission: string) => boolean;
 }
 
 /** โครงสร้างคอนฟิกที่เก็บใน localStorage */
@@ -53,7 +55,9 @@ function writeStoredConfig(cfg: StoredConfig) {
 /**
  * คอมโพเนนต์หลัก: ตั้งค่า API/Webhook + Authorization
  */
-export default function ApiConfigPanel({ isDark }: ApiConfigPanelProps) {
+export default function ApiConfigPanel({ isDark, hasPermission }: ApiConfigPanelProps) {
+  const canConfigure = hasPermission('api_config');
+
   const defaults = {
     webhookUrl: systemConfig?.n8n?.webhookUrl || '',
   }
@@ -151,6 +155,12 @@ export default function ApiConfigPanel({ isDark }: ApiConfigPanelProps) {
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
+        {!canConfigure && (
+            <div className="mb-4 p-3 bg-yellow-500/20 border border-yellow-500/30 rounded-xl text-sm text-yellow-300">
+                คุณไม่มีสิทธิ์แก้ไขการตั้งค่า API (โหมดดูเท่านั้น)
+            </div>
+        )}
+
         {/* Webhook URL */}
         <div className="grid gap-2">
           <Label htmlFor="webhook" className="flex items-center gap-2">
@@ -161,6 +171,7 @@ export default function ApiConfigPanel({ isDark }: ApiConfigPanelProps) {
             value={webhookUrl}
             onChange={(e) => setWebhookUrl(e.target.value)}
             placeholder="https://example.com/webhook/input"
+            disabled={!canConfigure}
           />
           <p className={`text-xs ${noteText}`}>
             คำแนะนำ: ใช้ URL ของ n8n Webhook ที่เปิดรับข้อมูลสำหรับ Generate/Rewrite
@@ -177,6 +188,7 @@ export default function ApiConfigPanel({ isDark }: ApiConfigPanelProps) {
             value={authHeader}
             onChange={(e) => setAuthHeader(e.target.value)}
             placeholder="เช่น Bearer xxxxx"
+            disabled={!canConfigure}
           />
           <p className={`text-xs ${noteText}`}>
             ถ้า workflow ของคุณต้องการ Header เพื่อยืนยันตัวตน ให้ใส่ไว้ที่นี่ (เช่น Bearer ... )
@@ -197,13 +209,13 @@ export default function ApiConfigPanel({ isDark }: ApiConfigPanelProps) {
               variant="outline"
               className="bg-transparent"
               onClick={handleTest}
-              disabled={testing}
+              disabled={testing || !canConfigure}
               title="ทดสอบการเชื่อมต่อ"
             >
               <Wifi className="w-4 h-4 mr-2" />
               {testing ? 'กำลังทดสอบ…' : 'ทดสอบการเชื่อมต่อ'}
             </Button>
-            <Button onClick={handleSave} title="บันทึกการตั้งค่า">
+            <Button onClick={handleSave} title="บันทึกการตั้งค่า" disabled={!canConfigure}>
               <Save className="w-4 h-4 mr-2" />
               บันทึก
             </Button>
@@ -221,3 +233,4 @@ export default function ApiConfigPanel({ isDark }: ApiConfigPanelProps) {
     </Card>
   )
 }
+

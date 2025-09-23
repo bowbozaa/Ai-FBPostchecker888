@@ -12,9 +12,16 @@ import ApiConfigPanel from '@/components/settings/ApiConfigPanel'
 import AppearancePanel from '@/components/settings/AppearancePanel'
 
 /**
+ * Interface for SettingsPage Props
+ */
+interface SettingsPageProps {
+  hasPermission: (permission: string) => boolean;
+}
+
+/**
  * หน้า Settings
  */
-export default function SettingsPage() {
+export default function SettingsPage({ hasPermission }: SettingsPageProps) {
   const { theme } = useTheme()
   const isDark = theme === 'dark'
 
@@ -40,8 +47,8 @@ export default function SettingsPage() {
 
         {/* Panels */}
         <div className="grid grid-cols-1 gap-6">
-          <ApiConfigPanel isDark={isDark} />
-          <PolicyRulesPanel isDark={isDark} />
+          <ApiConfigPanel isDark={isDark} hasPermission={hasPermission} />
+          <PolicyRulesPanel isDark={isDark} hasPermission={hasPermission} />
           <AppearancePanel isDark={isDark} />
         </div>
       </div>

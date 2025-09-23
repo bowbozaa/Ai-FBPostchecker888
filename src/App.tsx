@@ -179,7 +179,7 @@ export default function App() {
               
               <Route path="settings" element={
                 hasPermission('keywords_manage') || hasPermission('api_config') ? 
-                <SettingsPage /> : 
+                <SettingsPage hasPermission={hasPermission} /> : 
                 <Navigate to="/unauthorized" />
               } />
 
