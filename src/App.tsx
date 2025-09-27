@@ -13,6 +13,7 @@ import { useNotifications } from './hooks/useNotifications';
 import N8nBuilder from './pages/N8nBuilder';
 import PostCreatorPage from './pages/PostCreator';
 import { ClerkProvider, SignedIn, SignedOut, SignIn, SignUp } from '@clerk/clerk-react';
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
