@@ -5,27 +5,15 @@
 import { useState, useEffect } from 'react'
 import { Outlet, useNavigate, useLocation } from 'react-router'
 import { 
-  Shield, Settings, BarChart3, Users, LogOut, Bell, 
-  Menu, X, Sun, Moon, Home, Activity, Zap, Globe, SquarePen,
+  Shield, Settings, BarChart3, Users, Bell, 
+  Menu, X, Sun, Moon, Home, Globe, SquarePen,
   CheckCircle, AlertTriangle, XCircle, Info
 } from 'lucide-react'
 import { useTheme } from '../hooks/useTheme'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
+import { UserButton, useUser } from '@clerk/clerk-react'
 
 /**
- * Interface สำหรับ User
- */
-interface User {
-  id: string
-  username: string
-  email: string
-  role: string
-  permissions?: string[]
-}
-
-/**
- * Interface สำหรับ Notification
+ * Interface for Notification
  */
 interface Notification {
   id: string
@@ -39,11 +27,9 @@ interface Notification {
 }
 
 /**
- * Interface สำหรับ Layout Props
+ * Interface for Layout Props
  */
 interface LayoutProps {
-  user: User
-  onLogout: () => void
   notifications: {
     notifications: Notification[]
     addNotification: (notification: Omit<Notification, 'id' | 'timestamp'>) => void
@@ -56,12 +42,13 @@ interface LayoutProps {
 /**
  * Layout Component with Fixed Notification System
  */
-export default function Layout({ user, onLogout, notifications, hasPermission }: LayoutProps) {
+export default function Layout({ notifications, hasPermission }: LayoutProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const [showNotifications, setShowNotifications] = useState(false)
   const { theme, toggleTheme } = useTheme()
   const navigate = useNavigate()
   const location = useLocation()
+  const { user } = useUser();
 
   /**
    * Navigation items with permissions
@@ -171,10 +158,10 @@ export default function Layout({ user, onLogout, notifications, hasPermission }:
       {/* Sidebar */}
       <div className={`fixed left-0 top-0 h-full w-64 transform transition-transform duration-300 ease-in-out z-50 lg:translate-x-0 ${
         isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
-      } ${theme === 'dark' ? 'bg-slate-800/95 backdrop-blur-sm border-r border-white/10' : 'bg-white/95 backdrop-blur-sm border-r border-gray-200'} shadow-2xl`}>
+      } ${theme === 'dark' ? 'bg-slate-800/95 backdrop-blur-sm border-r border-white/10' : 'bg-white/95 backdrop-blur-sm border-r border-gray-200'} shadow-2xl flex flex-col`}>
         
         {/* Logo & Brand */}
-        <div className="flex items-center justify-between p-6 border-b border-white/10">
+        <div className="flex items-center justify-between p-6 border-b border-white/10 flex-shrink-0">
           <div className="flex items-center space-x-3">
             <div className={`w-10 h-10 ${theme === 'dark' ? 'bg-gradient-to-br from-blue-500 to-purple-600' : 'bg-gradient-to-br from-blue-600 to-purple-700'} rounded-xl flex items-center justify-center shadow-lg`}>
               <Shield className="w-6 h-6 text-white" />
@@ -193,7 +180,7 @@ export default function Layout({ user, onLogout, notifications, hasPermission }:
         </div>
 
         {/* Navigation */}
-        <nav className="flex-1 p-4">
+        <nav className="flex-grow p-4 overflow-y-auto">
           <div className="space-y-2">
             {navigationItems.map((item) => {
               const isActive = location.pathname === item.path
@@ -220,44 +207,6 @@ export default function Layout({ user, onLogout, notifications, hasPermission }:
             })}
           </div>
         </nav>
-
-        {/* User Profile & Logout */}
-        <div className="p-4 border-t border-white/10">
-          <div className={`p-4 ${theme === 'dark' ? 'bg-white/5' : 'bg-gray-50'} rounded-xl mb-4`}>
-            <div className="flex items-center space-x-3 mb-3">
-              <div className={`w-10 h-10 ${theme === 'dark' ? 'bg-purple-500/20' : 'bg-purple-100'} rounded-full flex items-center justify-center`}>
-                <span className={`text-sm font-semibold ${theme === 'dark' ? 'text-purple-400' : 'text-purple-600'}`}>
-                  {user.username.charAt(0).toUpperCase()}
-                </span>
-              </div>
-              <div className="flex-1 min-w-0">
-                <p className={`text-sm font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'} truncate`}>
-                  {user.username}
-                </p>
-                <p className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'} truncate`}>
-                  {user.email}
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center justify-between">
-              <Badge variant="outline" className="text-xs bg-transparent">
-                {user.role}
-              </Badge>
-              <span className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
-                {user.permissions?.length || 0} permissions
-              </span>
-            </div>
-          </div>
-
-          <Button
-            onClick={onLogout}
-            variant="outline"
-            className={`w-full ${theme === 'dark' ? 'border-red-500/30 text-red-400 hover:bg-red-500/10' : 'border-red-300 text-red-600 hover:bg-red-50'} bg-transparent`}
-          >
-            <LogOut className="w-4 h-4 mr-2" />
-            Logout
-          </Button>
-        </div>
       </div>
 
       {/* Main Content */}
@@ -278,7 +227,7 @@ export default function Layout({ user, onLogout, notifications, hasPermission }:
                   {navigationItems.find(item => item.path === location.pathname)?.name || 'Dashboard'}
                 </h2>
                 <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                  Welcome back, {user.username}
+                  Welcome back, {user?.firstName || user?.username}
                 </p>
               </div>
             </div>
@@ -380,6 +329,9 @@ export default function Layout({ user, onLogout, notifications, hasPermission }:
                   </div>
                 )}
               </div>
+              
+              {/* User Button */}
+              <UserButton afterSignOutUrl="/" />
             </div>
           </div>
         </header>

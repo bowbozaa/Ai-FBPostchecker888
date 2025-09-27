@@ -1,131 +1,46 @@
-import { HashRouter, Route, Routes, Navigate } from 'react-router'
-import { useState, useEffect } from 'react'
-import HomePage from './pages/Home'
-import LoginPage from './pages/Login'
-import SettingsPage from './pages/Settings'
-import StatsPage from './pages/Stats'
-import UsersPage from './pages/Users'
-import GrayHatPage from './pages/GrayHat'
-import Layout from './components/Layout'
-import { ErrorBoundary } from './components/ErrorBoundary'
-import { useTheme } from './hooks/useTheme'
-import { useNotifications } from './hooks/useNotifications'
-import N8nBuilder from './pages/N8nBuilder'
-import PostCreatorPage from './pages/PostCreator'
+import { HashRouter, Route, Routes, Navigate, useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { useUser, useClerk } from '@clerk/clerk-react';
 
-/**
- * Interface สำหรับข้อมูล User
- */
-interface User {
-  id: string
-  username: string
-  email: string
-  role: string
-  permissions?: string[]
+import HomePage from './pages/Home';
+import SettingsPage from './pages/Settings';
+import StatsPage from './pages/Stats';
+import UsersPage from './pages/Users';
+import Layout from './components/Layout';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import { useTheme } from './hooks/useTheme';
+import { useNotifications } from './hooks/useNotifications';
+import N8nBuilder from './pages/N8nBuilder';
+import PostCreatorPage from './pages/PostCreator';
+import { ClerkProvider, SignedIn, SignedOut, SignIn, SignUp } from '@clerk/clerk-react';
+
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
+
+if (!PUBLISHABLE_KEY) {
+  throw new Error("Missing Publishable Key");
 }
 
-/**
- * App component - Main routing และ authentication พร้อม Theme & Notifications
- */
-export default function App() {
-  const [user, setUser] = useState<User | null>(null)
-  const [isLoading, setIsLoading] = useState(true)
-  const { theme } = useTheme()
-  const notifications = useNotifications()
+// Main application component with all the pages and logic
+function MainApp() {
+  const { theme } = useTheme();
+  const notifications = useNotifications();
+  const { user, isLoaded } = useUser();
 
-  /**
-   * Role-based permissions preset - แก้ไขสิทธิ์ให้ชัดเจน
-   */
-  const rolePermissions = {
-    'Administrator': [
-      'dashboard_view', 'analysis_run', 'analysis_view', 'stats_view',
-      'keywords_manage', 'api_config', 'export_reports', 'users_manage', 'users_view',
-      'users_create', 'users_edit', 'users_delete', 'system_admin'
-    ],
-    'Admin': [
-      'dashboard_view', 'analysis_run', 'analysis_view', 'stats_view',
-      'keywords_manage', 'api_config', 'export_reports', 'users_manage', 'users_view',
-      'users_create', 'users_edit', 'users_delete'
-    ],
-    'Manager': [
-      'dashboard_view', 'analysis_run', 'analysis_view', 'stats_view',
-      'keywords_manage', 'export_reports', 'users_view'
-    ],
-    'User': [
-      'dashboard_view', 'analysis_run', 'analysis_view', 'stats_view'
-    ],
-    'Viewer': [
-      'dashboard_view', 'analysis_view', 'stats_view'
-    ]
-  }
-
-  /**
-   * ตรวจสอบการล็อกอินจาก localStorage
-   */
-  useEffect(() => {
-    const savedUser = localStorage.getItem('fb-checker-user')
-    if (savedUser) {
-      try {
-        const parsedUser = JSON.parse(savedUser)
-        // กำหนด permissions ตาม role อัตโนมัติ
-        const userWithPermissions = {
-          ...parsedUser,
-          permissions: rolePermissions[parsedUser.role as keyof typeof rolePermissions] || []
-        }
-        setUser(userWithPermissions)
-      } catch (error) {
-        localStorage.removeItem('fb-checker-user')
-      }
-    }
-    setIsLoading(false)
-  }, [])
-
-  /**
-   * ฟังก์ชันล็อกอิน
-   */
-  const handleLogin = (userData: User) => {
-    // กำหนด permissions ตาม role อัตโนมัติ
-    const userWithPermissions = {
-      ...userData,
-      permissions: rolePermissions[userData.role as keyof typeof rolePermissions] || []
-    }
-    
-    setUser(userWithPermissions)
-    localStorage.setItem('fb-checker-user', JSON.stringify(userWithPermissions))
-  }
-
-  /**
-   * ฟังก์ชันล็อกเอาท์
-   */
-  const handleLogout = () => {
-    setUser(null)
-    localStorage.removeItem('fb-checker-user')
-  }
-
-  /**
-   * ตรวจสอบสิทธิ์การเข้าถึง - เข้มงวดมากขึ้น
-   */
+  // RBAC logic - to be fully implemented in Phase 2
   const hasPermission = (permission: string): boolean => {
-    if (!user) return false
-    
-    // Administrator มีสิทธิ์เข้าถึงทุกอย่าง
-    if (user.role === 'Administrator') return true
-    
-    // Admin มีสิทธิ์เข้าถึงเกือบทุกอย่าง ยกเว้น system_admin
-    if (user.role === 'Admin' && permission !== 'system_admin') return true
-    
-    // ตรวจสอบจาก permissions array อย่างเข้มงวด
-    return user.permissions?.includes(permission) || false
-  }
+    if (!isLoaded || !user) return false;
+    // For now, allow all logged in users. In Phase 2, we'll check user.publicMetadata.role
+    console.log(`Checking permission (stub): ${permission} for user ${user.id}`);
+    return true;
+  };
 
-  /**
-   * ตรวจสอบว่าเป็น Super Admin หรือไม่
-   */
   const isSuperAdmin = (): boolean => {
-    return user?.role === 'Administrator' || user?.role === 'Admin'
-  }
+    if (!isLoaded || !user) return false;
+    // In Phase 2, check for specific roles
+    return true;
+  };
 
-  if (isLoading) {
+  if (!isLoaded) {
     return (
       <div className={`min-h-screen ${
         theme === 'dark' 
@@ -133,102 +48,62 @@ export default function App() {
           : 'bg-gradient-to-br from-blue-50 via-white to-blue-50'
       } flex items-center justify-center`}>
         <div className="text-center">
-          <div className={`inline-flex items-center justify-center w-16 h-16 ${theme === 'dark' ? 'bg-blue-500/20' : 'bg-blue-100'} rounded-2xl mb-4`}>
-            <div className={`w-8 h-8 border-4 ${theme === 'dark' ? 'border-blue-400/30 border-t-blue-400' : 'border-blue-600/30 border-t-blue-600'} rounded-full animate-spin`}></div>
-          </div>
-          <div className={`${theme === 'dark' ? 'text-white' : 'text-gray-900'} text-xl font-medium`}>
-            กำลังโหลด...
-          </div>
-          <div className={`${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'} text-sm mt-2`}>
-            กำลังตรวจสอบการเข้าสู่ระบบ
-          </div>
+          <div className={`w-8 h-8 border-4 ${theme === 'dark' ? 'border-blue-400/30 border-t-blue-400' : 'border-blue-600/30 border-t-blue-600'} rounded-full animate-spin`}></div>
         </div>
       </div>
-    )
+    );
   }
 
   return (
-    <ErrorBoundary>
-      <div className={theme === 'dark' ? 'dark' : ''}>
-        <HashRouter>
+    <div className={theme === 'dark' ? 'dark' : ''}>
+      <SignedIn>
+        <Layout 
+          notifications={notifications}
+          hasPermission={hasPermission}
+        >
+          <Routes>
+            <Route index element={<HomePage notifications={notifications} />} />
+            <Route path="post-creator" element={<PostCreatorPage />} />
+            <Route path="stats" element={<StatsPage />} />
+            <Route path="settings" element={<SettingsPage hasPermission={hasPermission} />} />
+            <Route path="n8n-builder" element={<N8nBuilder />} />
+            <Route path="users" element={<UsersPage hasPermission={hasPermission} isSuperAdmin={isSuperAdmin()} />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+        </Layout>
+      </SignedIn>
+      <SignedOut>
         <Routes>
-          {!user ? (
-            <Route path="*" element={<LoginPage onLogin={handleLogin} />} />
-          ) : (
-            <Route path="/" element={
-              <Layout 
-                user={user} 
-                onLogout={handleLogout} 
-                notifications={notifications}
-                hasPermission={hasPermission}
-              />
-            }>
-              <Route index element={<HomePage notifications={notifications} />} />
-              
-              <Route path="post-creator" element={
-                hasPermission('analysis_run') ? 
-                <PostCreatorPage /> : 
-                <Navigate to="/unauthorized" />
-              } />
-
-              <Route path="stats" element={
-                hasPermission('stats_view') ? 
-                <StatsPage /> : 
-                <Navigate to="/unauthorized" />
-              } />
-              
-              <Route path="settings" element={
-                hasPermission('keywords_manage') || hasPermission('api_config') ? 
-                <SettingsPage hasPermission={hasPermission} /> : 
-                <Navigate to="/unauthorized" />
-              } />
-
-              <Route path="n8n-builder" element={
-                hasPermission('api_config') ? 
-                <N8nBuilder /> : 
-                <Navigate to="/unauthorized" />
-              } />
-              
-              <Route path="users" element={
-                hasPermission('users_manage') || hasPermission('users_view') ? 
-                <UsersPage 
-                  hasPermission={hasPermission}
-                  currentUser={user}
-                  isSuperAdmin={isSuperAdmin()}
-                /> : 
-                <Navigate to="/unauthorized" />
-              } />
-              
-              <Route path="unauthorized" element={
-                <div className="container mx-auto px-6 py-8 text-center">
-                  <div className={`${theme === 'dark' ? 'bg-red-500/20 text-red-300 border-red-500/30' : 'bg-red-100 text-red-600 border-red-300'} p-8 rounded-2xl border max-w-md mx-auto`}>
-                    <div className="text-6xl mb-4">🚫</div>
-                    <h1 className="text-2xl font-bold mb-4">ไม่มีสิทธิ์เข้าถึง</h1>
-                    <p className="mb-4">คุณไม่มีสิทธิ์เข้าถึงหน้านี้</p>
-                    <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'} mb-6`}>
-                      <p>บทบาทปัจจุบัน: <span className="font-medium">{user.role}</span></p>
-                      <p>สิทธิ์ที่มี: {user.permissions?.length || 0} รายการ</p>
-                    </div>
-                    <button
-                      onClick={() => window.history.back()}
-                      className={`px-6 py-3 ${
-                        theme === 'dark' 
-                          ? 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 border-blue-500/30' 
-                          : 'bg-blue-100 hover:bg-blue-200 text-blue-600 border-blue-300'
-                      } border rounded-xl transition-all duration-300`}
-                    >
-                      ← กลับหน้าเดิม
-                    </button>
-                  </div>
-                </div>
-              } />
-              
-              <Route path="*" element={<Navigate to="/" />} />
-            </Route>
-          )}
+          <Route path="/sign-in/*" element={<SignIn routing="path" path="/sign-in" signUpUrl="/sign-up" />} />
+          <Route path="/sign-up/*" element={<SignUp routing="path" path="/sign-up" signInUrl="/sign-in" />} />
+          <Route path="*" element={<Navigate to="/sign-in" />} />
         </Routes>
-        </HashRouter>
-      </div>
+      </SignedOut>
+    </div>
+  );
+}
+
+// Component to provide Clerk and Router context
+function App() {
+  const navigate = useNavigate();
+
+  return (
+    <ClerkProvider 
+      publishableKey={PUBLISHABLE_KEY}
+      navigate={(to) => navigate(to)}
+    >
+      <MainApp />
+    </ClerkProvider>
+  );
+}
+
+// Top-level export with ErrorBoundary and Router
+export default function Root() {
+  return (
+    <ErrorBoundary>
+      <HashRouter>
+        <App />
+      </HashRouter>
     </ErrorBoundary>
-  )
+  );
 }
