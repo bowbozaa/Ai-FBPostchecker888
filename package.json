@@ -51,7 +51,7 @@
     "html2canvas": "latest",
     "i18next": "^25.1.2",
     "input-otp": "^1.4.2",
-    "jspdf": "^2.5.1",
+    "jspdf": "^3.0.2",
     "jspdf-autotable": "^5.0.2",
     "lucide-react": "^0.544.0",
     "motion": "^12.17.0",
