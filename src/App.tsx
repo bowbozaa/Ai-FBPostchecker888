@@ -12,7 +12,7 @@ import { useTheme } from './hooks/useTheme';
 import { useNotifications } from './hooks/useNotifications';
 import N8nBuilder from './pages/N8nBuilder';
 import PostCreatorPage from './pages/PostCreator';
-import SandboxTestPage from './pages/SandboxTest';
+
 import LoginPage from './pages/LoginPage';
 import { ClerkProvider, SignedIn, SignedOut, SignIn, SignUp } from '@clerk/clerk-react';
 import { SpeedInsights } from "@vercel/speed-insights/react";
@@ -71,7 +71,7 @@ function MainApp() {
             <Route path="settings" element={<SettingsPage hasPermission={hasPermission} />} />
             <Route path="n8n-builder" element={<N8nBuilder />} />
             <Route path="users" element={<UsersPage hasPermission={hasPermission} isSuperAdmin={isSuperAdmin()} />} />
-            <Route path="sandbox-test" element={<SandboxTestPage />} />
+
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </Layout>
