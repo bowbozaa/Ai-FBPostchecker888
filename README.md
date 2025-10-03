@@ -38,3 +38,4 @@ checker.run(limit=10)
 ```
 
 The script uses the Facebook Graph API to retrieve posts, flags posts that contain banned keywords, classifies risk level, sends a notification via LINE, and appends the results to a Google Sheet.
+
