@@ -1,3 +1,6 @@
+process.on('uncaughtException', e => { console.error('UNCaught', e); process.exit(1); });
+process.on('unhandledRejection', e => { console.error('UNhandled', e); process.exit(1); });
+
 const express = require('express');
 require('dotenv/config');
 const axios = require('axios');
@@ -31,6 +34,28 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'dist')));
 
 // --- API Routes ---
+
+// TODO: Install the actual DB library, e.g., `pnpm add pg` or `pnpm add mysql2`
+// const { connect } = require('some-db-library'); 
+
+app.get('/api/connect-db', async (req, res) => {
+  const dbUrl = process.env.DATABASE_URL;
+
+  if (!dbUrl) {
+    console.error("FATAL: DATABASE_URL environment variable is not set.");
+    return res.status(500).json({ error: "Server is not configured correctly." });
+  }
+
+  try {
+    // const connection = await connect(dbUrl); // This would be the real connection
+    console.log("Attempting to connect to DB...");
+    // For now, we'll just simulate a successful connection
+    res.status(200).json({ message: "Connected (Simulated)" });
+  } catch (error) {
+    console.error("Database connection failed:", error);
+    res.status(500).json({ error: "Failed to connect to the database." });
+  }
+});
 
 // API endpoint for Gray Hat analysis
 app.post('/api/analyze', (req, res) => {
