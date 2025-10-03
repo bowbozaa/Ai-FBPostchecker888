@@ -35,8 +35,7 @@ app.use(express.static(path.join(__dirname, 'dist')));
 
 // --- API Routes ---
 
-// TODO: Install the actual DB library, e.g., `pnpm add pg` or `pnpm add mysql2`
-// const { connect } = require('some-db-library'); 
+const { Pool } = require('pg');
 
 app.get('/api/connect-db', async (req, res) => {
   const dbUrl = process.env.DATABASE_URL;
@@ -46,14 +45,21 @@ app.get('/api/connect-db', async (req, res) => {
     return res.status(500).json({ error: "Server is not configured correctly." });
   }
 
+  const pool = new Pool({
+    connectionString: dbUrl,
+  });
+
   try {
-    // const connection = await connect(dbUrl); // This would be the real connection
-    console.log("Attempting to connect to DB...");
-    // For now, we'll just simulate a successful connection
-    res.status(200).json({ message: "Connected (Simulated)" });
+    const client = await pool.connect();
+    console.log("Successfully connected to the database.");
+    const result = await client.query('SELECT NOW()');
+    res.status(200).json({ message: "Database connection successful.", time: result.rows[0].now });
+    client.release();
   } catch (error) {
     console.error("Database connection failed:", error);
     res.status(500).json({ error: "Failed to connect to the database." });
+  } finally {
+    await pool.end();
   }
 });
 
