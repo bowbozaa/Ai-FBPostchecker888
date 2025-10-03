@@ -1,7 +1,5 @@
 {
-  "build": {
-    "command": "pnpm build"
-  },
+  "buildCommand": "pnpm build",
   "version": 2,
   "builds": [
     {
