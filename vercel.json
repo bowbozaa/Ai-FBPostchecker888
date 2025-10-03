@@ -1,25 +1,29 @@
 {
+  "build": {
+    "command": "pnpm build"
+  },
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "dist/**"
+        ]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
+    }
+  ],
   "crons": [
     {
       "path": "/api/cron/daily-report",
       "schedule": "0 9 * * *"
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Content-Security-Policy",
-              "value": "script-src 'self' https://vercel.live *.vercel.live 'unsafe-inline' 'unsafe-eval' *.clerk.dev *.clerk.accounts.dev; worker-src blob:;"
-        }
-      ]
     }
   ]
 }
