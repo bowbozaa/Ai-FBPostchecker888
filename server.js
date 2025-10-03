@@ -165,7 +165,7 @@ app.get('/auth/facebook/callback', async (req, res) => {
 
 // --- SPA Catch-all ---
 // For any other request, serve the index.html file
-app.get('*', (req, res) => {
+app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
