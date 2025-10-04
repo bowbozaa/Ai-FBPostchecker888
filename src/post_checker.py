@@ -32,11 +32,30 @@ class PostChecker:
         """Fetch recent posts and handle policy checks."""
         posts = self.fb.get_page_posts(self.page_id, limit=limit)
         for post in posts:
-            message = post.get("message", "")
+            # Extract text content from various post fields
+            # Different post types use different fields:
+            # - Regular posts: "message"
+            # - Photo/video posts: "message" or "description" or "caption"
+            # - Shared posts: "story"
+            # - Link posts: "message", "name", "description"
+            text_parts = []
+            for field in ["message", "story", "description", "caption", "name"]:
+                if field in post and post[field]:
+                    text_parts.append(post[field])
+            
+            message = " ".join(text_parts)
+            
+            # Skip posts with no text content
+            if not message.strip():
+                continue
+            
+            # Get post ID with fallback
+            post_id = post.get("id", "unknown")
+            
             violation, reason = self.detector.detect(message)
             risk = self.classifier.classify(message)
 
             if violation or risk == "high":
-                note = f"Post {post['id']} flagged: {reason} (risk={risk})"
+                note = f"Post {post_id} flagged: {reason} (risk={risk})"
                 self.notifier.send(note)
-            self.logger.log(post["id"], message, risk)
+            self.logger.log(post_id, message, risk)
