@@ -1,16 +1,28 @@
 {
+  "_comment": "Copy this file to config.json and fill in your actual credentials",
   "facebook": {
+    "_comment": "Get access token from Facebook Graph API Explorer. Get page_id from your Facebook page About section",
     "access_token": "YOUR_FACEBOOK_ACCESS_TOKEN",
     "page_id": "YOUR_FACEBOOK_PAGE_ID"
   },
   "line": {
+    "_comment": "Get token from https://notify-bot.line.me/my/ after logging in",
     "token": "YOUR_LINE_NOTIFY_TOKEN"
   },
   "google_sheets": {
-    "credentials_file": "path/to/credentials.json",
-    "sheet_id": "YOUR_SHEET_ID"
+    "_comment": "credentials_file: path to your service account JSON file. sheet_id: from the Google Sheets URL",
+    "credentials_file": "config/service-account-credentials.json",
+    "sheet_id": "YOUR_GOOGLE_SHEET_ID"
   },
   "policy": {
-    "banned_keywords": ["ban", "forbidden", "secret"]
+    "_comment": "List of keywords to flag in posts (case-insensitive). Customize based on your needs",
+    "banned_keywords": [
+      "spam",
+      "scam",
+      "fraud",
+      "phishing",
+      "fake",
+      "unauthorized"
+    ]
   }
 }
