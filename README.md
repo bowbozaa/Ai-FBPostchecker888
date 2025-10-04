@@ -4,6 +4,32 @@ An automated Facebook post monitoring system that analyzes posts for policy viol
 
 **ระบบวิเคราะห์ความเสี่ยงของโพสต์ Facebook ด้วย AI ตรวจจับคำผิดนโยบาย แยกระดับความเสี่ยง พร้อมแจ้งเตือนผ่าน LINE และบันทึกลง Google Sheets โดยอัตโนมัติ**
 
+---
+
+📚 **Quick Links**: [Quick Start Guide](QUICKSTART.md) | [FAQ](FAQ.md) | [Examples](EXAMPLES.md) | [Contributing](CONTRIBUTING.md)
+
+---
+
+## Table of Contents
+
+- [Features](#features)
+- [Architecture Overview](#architecture-overview)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Configuration](#configuration)
+  - [Facebook Developer Setup](#step-1-facebook-developer-setup)
+  - [LINE Notify Setup](#step-2-line-notify-setup)
+  - [Google Cloud Service Account Setup](#step-3-google-cloud-service-account-setup)
+  - [Configure the Application](#step-4-configure-the-application)
+- [Usage](#usage)
+- [Troubleshooting](#troubleshooting)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
+- [Support](#support)
+
+---
+
 ## Features
 
 - 📱 **Facebook Post Monitoring**: Automatically fetches recent posts from configured Facebook pages
