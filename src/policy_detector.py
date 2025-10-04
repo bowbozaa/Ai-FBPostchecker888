@@ -1,6 +1,7 @@
 """Policy detection and risk classification helpers."""
 from __future__ import annotations
 
+import re
 from typing import Iterable, Tuple, List
 
 
@@ -16,8 +17,20 @@ class PolicyDetector:
 
     def detect(self, text: str) -> Tuple[bool, str]:
         """Return a tuple ``(violation, reason)`` for the supplied text."""
+        if not text:
+            return False, ""
+        
         lowered = text.lower()
-        offending: List[str] = [k for k in self._keywords if k in lowered]
+        offending: List[str] = []
+        
+        # Use word boundary matching to avoid false positives
+        # e.g., "sale" won't match "Jerusalem" or "wholesale"
+        for keyword in self._keywords:
+            # Use regex word boundaries for more accurate matching
+            pattern = r'\b' + re.escape(keyword) + r'\b'
+            if re.search(pattern, lowered):
+                offending.append(keyword)
+        
         if offending:
             reason = f"Found banned keywords: {', '.join(offending)}"
             return True, reason
@@ -35,7 +48,13 @@ class RiskClassifier:
     _high_risk_terms = {"urgent", "alert", "warning"}
 
     def classify(self, text: str) -> str:
+        if not text:
+            return "low"
+        
         lowered = text.lower()
-        if any(term in lowered for term in self._high_risk_terms):
-            return "high"
+        # Use word boundary matching for more accurate risk detection
+        for term in self._high_risk_terms:
+            pattern = r'\b' + re.escape(term) + r'\b'
+            if re.search(pattern, lowered):
+                return "high"
         return "low"

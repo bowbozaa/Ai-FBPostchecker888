@@ -27,5 +27,7 @@ class FacebookClient:
 
     def get_page_posts(self, page_id: str, limit: int = 10) -> List[Dict[str, Any]]:
         """Return recent posts from the specified page."""
-        data = self.graph.get_connections(page_id, "posts", limit=limit)
+        # Request additional fields to handle different post types
+        fields = "id,message,story,description,caption,name,from,created_time,type"
+        data = self.graph.get_connections(page_id, "posts", limit=limit, fields=fields)
         return data.get("data", [])
