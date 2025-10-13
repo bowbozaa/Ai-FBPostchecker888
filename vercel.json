@@ -1,1 +1,12 @@
-{"buildCommand":"npm run build","outputDirectory":".","installCommand":"npm install","framework":null,"rewrites":[{"source":"/(.*)","destination":"/index.html"}]}
+{
+  "buildCommand": "pnpm run build",
+  "installCommand": "pnpm install",
+  "outputDirectory": ".",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    }
+  ]
+}
