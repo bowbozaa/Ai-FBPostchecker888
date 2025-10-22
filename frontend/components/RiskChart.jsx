@@ -16,9 +16,9 @@ export default function RiskChart({ stats }) {
   ];
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-6">
+    <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
       <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-        <BarChart2 className="h-5 w-5" />
+        <BarChart2 className="h-5 w-5 text-blue-600" />
         การกระจายตามระดับความเสี่ยง
       </h2>
       <ResponsiveContainer width="100%" height={300}>

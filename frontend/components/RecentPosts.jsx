@@ -28,9 +28,9 @@ export default function RecentPosts({ posts }) {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-6">
+    <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
       <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-        <AlertCircle className="h-5 w-5" />
+        <AlertCircle className="h-5 w-5 text-blue-600" />
         โพสต์ล่าสุดที่ตรวจพบ
       </h2>
       <div className="space-y-4">
@@ -40,7 +40,7 @@ export default function RecentPosts({ posts }) {
           posts.map((post) => (
             <div
               key={post.id}
-              className="border border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-colors"
+              className="border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:shadow-sm transition-all"
             >
               <div className="flex items-start justify-between mb-2">
                 <span className={`px-2 py-1 rounded-full text-xs font-medium ${riskColors[post.risk]}`}>

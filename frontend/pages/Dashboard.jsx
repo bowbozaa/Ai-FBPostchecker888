@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { AlertCircle, Activity, TrendingUp, Shield, AlertTriangle } from 'lucide-react';
+import { AlertCircle, Activity, TrendingUp, Shield, AlertTriangle, RefreshCw } from 'lucide-react';
 import StatsCard from '../components/StatsCard';
 import RecentPosts from '../components/RecentPosts';
 import RiskChart from '../components/RiskChart';
@@ -14,6 +14,7 @@ export default function Dashboard() {
   });
   const [recentPosts, setRecentPosts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
     // Fetch data from API or mock data
@@ -95,18 +96,37 @@ export default function Dashboard() {
     );
   }
 
+  const handleRefresh = async () => {
+    setRefreshing(true);
+    await fetchDashboardData();
+    setRefreshing(false);
+  };
+
   return (
-    <div className="container mx-auto px-4 py-8">
-      {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 flex items-center gap-2">
-          <Shield className="h-8 w-8 text-blue-600" />
-          Facebook Post Risk Monitor
-        </h1>
-        <p className="text-gray-600 mt-2">
-          ระบบตรวจจับและวิเคราะห์ความเสี่ยงของโพสต์ Facebook แบบเรียลไทม์
-        </p>
-      </div>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+      <div className="container mx-auto px-4 py-8">
+        {/* Header */}
+        <div className="mb-8 flex items-center justify-between">
+          <div>
+            <h1 className="text-3xl font-bold text-gray-900 flex items-center gap-3 mb-2">
+              <div className="p-2 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl shadow-lg">
+                <Shield className="h-8 w-8 text-white" />
+              </div>
+              Facebook Post Risk Monitor
+            </h1>
+            <p className="text-gray-600">
+              ระบบตรวจจับและวิเคราะห์ความเสี่ยงของโพสต์ Facebook แบบเรียลไทม์
+            </p>
+          </div>
+          <button
+            onClick={handleRefresh}
+            disabled={refreshing}
+            className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors disabled:opacity-50"
+          >
+            <RefreshCw className={`h-4 w-4 ${refreshing ? 'animate-spin' : ''}`} />
+            <span className="hidden sm:inline">รีเฟรช</span>
+          </button>
+        </div>
 
       {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
@@ -136,10 +156,11 @@ export default function Dashboard() {
         />
       </div>
 
-      {/* Charts and Recent Posts */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <RiskChart stats={stats} />
-        <RecentPosts posts={recentPosts} />
+        {/* Charts and Recent Posts */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <RiskChart stats={stats} />
+          <RecentPosts posts={recentPosts} />
+        </div>
       </div>
     </div>
   );
