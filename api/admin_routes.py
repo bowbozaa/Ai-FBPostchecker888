@@ -6,7 +6,7 @@ from flask import Blueprint, jsonify, request
 from flask_jwt_extended import jwt_required
 from datetime import datetime, timedelta
 import os
-
+import logging
 from api.database import db
 from api.models import User, Post, Config
 from api.auth import admin_required, get_current_user
@@ -150,8 +150,8 @@ def backup_database():
             "filename": f"backup_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.db"
         })
     except Exception as e:
-        return jsonify({"success": False, "error": str(e)}), 500
-
+        logging.exception("Error occurred during database backup")
+        return jsonify({"success": False, "error": "Database backup failed due to an internal error."}), 500
 
 @admin_bp.route('/system/health', methods=['GET'])
 @jwt_required()
