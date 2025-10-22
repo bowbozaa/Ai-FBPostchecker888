@@ -12,6 +12,24 @@ dist
 dist-ssr
 *.local
 
+# Build outputs
+main.js
+main.css
+main.js.map
+main.css.map
+
+# Lock files
+pnpm-lock.yaml
+
+# Environment variables
+.env
+.env.local
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
