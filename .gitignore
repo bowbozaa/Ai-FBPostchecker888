@@ -21,6 +21,15 @@ main.css.map
 # Lock files
 pnpm-lock.yaml
 
+# Environment variables
+.env
+.env.local
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
