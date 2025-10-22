@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react'
 import { Dashboard } from './pages/Dashboard'
 import { PostMonitor } from './pages/PostMonitor'
 import { Settings } from './pages/Settings'
+import { AdminPanel } from './pages/AdminPanel'
 import { Login } from './pages/Login'
 import { Register } from './pages/Register'
-import { LayoutDashboard, FileSearch, Settings as SettingsIcon, LogOut } from 'lucide-react'
+import { LayoutDashboard, FileSearch, Settings as SettingsIcon, LogOut, Shield } from 'lucide-react'
 
-type Page = 'dashboard' | 'monitor' | 'settings'
+type Page = 'dashboard' | 'monitor' | 'settings' | 'admin'
 type AuthPage = 'login' | 'register'
 
 interface User {
@@ -86,6 +87,7 @@ function App() {
     { id: 'dashboard' as Page, name: 'Dashboard', icon: LayoutDashboard },
     { id: 'monitor' as Page, name: 'Post Monitor', icon: FileSearch },
     { id: 'settings' as Page, name: 'Settings', icon: SettingsIcon },
+    ...(user?.is_admin ? [{ id: 'admin' as Page, name: 'Admin Panel', icon: Shield }] : []),
   ]
 
   return (
@@ -175,6 +177,7 @@ function App() {
           {currentPage === 'dashboard' && <Dashboard />}
           {currentPage === 'monitor' && <PostMonitor />}
           {currentPage === 'settings' && <Settings />}
+          {currentPage === 'admin' && user?.is_admin && <AdminPanel />}
         </main>
       </div>
     </div>

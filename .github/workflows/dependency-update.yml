@@ -1,0 +1,49 @@
+name: Dependency Update
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # Every Sunday at midnight
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  update-dependencies:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Update Python dependencies
+      run: |
+        pip install --upgrade pip
+        pip list --outdated
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v2
+      with:
+        version: 8
+
+    - name: Check for outdated packages
+      run: |
+        pnpm outdated || true
+
+    - name: Create Issue for Updates
+      uses: actions/github-script@v6
+      with:
+        script: |
+          github.rest.issues.create({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            title: '🔄 Weekly Dependency Update Check',
+            body: 'Please review outdated dependencies and update if necessary.',
+            labels: ['dependencies', 'maintenance']
+          })

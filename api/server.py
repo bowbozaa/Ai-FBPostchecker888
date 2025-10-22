@@ -13,6 +13,8 @@ from dotenv import load_dotenv
 from api.database import db, init_db
 from api.models import User, Post, Config, get_config, set_config, init_default_config
 from api.auth import admin_required, get_current_user
+from api.email_service import email_service
+from api.admin_routes import admin_bp
 
 # Load environment variables
 load_dotenv()
@@ -32,6 +34,12 @@ jwt = JWTManager(app)
 
 # Initialize database
 init_db(app)
+
+# Initialize email service
+email_service.init_app(app)
+
+# Register blueprints
+app.register_blueprint(admin_bp)
 
 # Create default admin user if not exists
 with app.app_context():
