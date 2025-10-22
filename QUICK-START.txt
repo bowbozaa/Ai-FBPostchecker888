@@ -1,0 +1,101 @@
+╔════════════════════════════════════════════════════════════════╗
+║     AI Facebook Post Checker 888 - QUICK START GUIDE          ║
+║                    C:\Projects Version                         ║
+╚════════════════════════════════════════════════════════════════╝
+
+📋 เริ่มใช้งานใน 1 ขั้นตอน:
+
+┌─────────────────────────────────────────────────────────────┐
+│ เริ่มโปรเจค                                                 │
+└─────────────────────────────────────────────────────────────┘
+
+  ดับเบิลคลิกที่ไฟล์:  START-DEV.bat
+
+  ⚡ สคริปต์นี้จะ:
+     ✓ Kill dev servers เก่า
+     ✓ เริ่ม Vite dev server ที่ port 3000
+     ✓ เปิด HMR (Hot Module Replacement)
+
+────────────────────────────────────────────────────────────────
+
+🎯 หน้าที่ใช้งานได้:
+
+  🏠 Home
+     → http://localhost:3000/
+
+  🤖 AI Chat
+     → http://localhost:3000/ai-chat
+     → แชทกับ AI (Mock Mode ฟรี!)
+
+  ⚙️ AI Settings
+     → http://localhost:3000/ai-settings
+     → ตั้งค่า API Key (OpenAI/Claude)
+
+  🔍 FB Post Checker
+     → http://localhost:3000/fb-post-checker
+     → วิเคราะห์โพสต์ Facebook
+
+  📊 Dashboard
+     → http://localhost:3000/fb-checker-dashboard
+     → ดูสถิติและรายงาน
+
+  🔄 Real-time Monitoring
+     → http://localhost:3000/fb-monitoring
+     → ตรวจสอบอัตโนมัติ
+
+────────────────────────────────────────────────────────────────
+
+💡 เริ่มต้นใช้งาน AI Chat:
+
+  1. ดับเบิลคลิก START-DEV.bat
+  2. เปิด http://localhost:3000/ai-chat
+  3. พิมพ์: "สวัสดี"
+  4. AI จะตอบกลับทันที! (Mock Mode)
+
+  ⚠️ ถ้าต้องการ AI จริง:
+     - ไปที่ /ai-settings
+     - ใส่ OpenAI API Key หรือ Claude API Key
+     - เลือก Model (GPT-3.5, GPT-4, Claude)
+     - บันทึก
+
+────────────────────────────────────────────────────────────────
+
+📚 ไฟล์สำคัญ:
+
+  • START-DEV.bat          - เริ่มต้นโปรเจค
+  • src/App.tsx            - Main routing
+  • src/pages/AIChat.tsx   - AI Chat interface (Simple version)
+  • src/pages/AISettings.tsx - AI Settings
+  • src/services/chatService.ts - AI API service
+
+────────────────────────────────────────────────────────────────
+
+🆘 มีปัญหา?
+
+  ❌ Port 3000 ถูกใช้แล้ว:
+     → เปิด Terminal: npm run dev -- --port 3001
+
+  ❌ AI ไม่ตอบกลับ:
+     → ใช้ Mock Mode ได้เลย (ไม่ต้อง API Key)
+     → หรือตั้งค่า API Key ที่ /ai-settings
+
+  ❌ Dev server ไม่เริ่ม:
+     → รัน: npm install
+     → แล้วลองอีกครั้ง: START-DEV.bat
+
+  ❌ Vite cache issues:
+     → ลบ: node_modules/.vite
+     → รันใหม่: npm run dev
+
+────────────────────────────────────────────────────────────────
+
+✨ พร้อมใช้งานแล้ว!
+
+   ดับเบิลคลิก START-DEV.bat → เสร็จ!
+
+────────────────────────────────────────────────────────────────
+
+⚠️ สำคัญ: โปรเจคนี้ทำงานที่ C:\Projects แล้ว
+   ไม่ใช้ Dropbox อีกต่อไป (แก้ปัญหา file locking)
+
+════════════════════════════════════════════════════════════════
